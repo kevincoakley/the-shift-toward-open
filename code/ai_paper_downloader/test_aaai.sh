@@ -1,0 +1,11 @@
+python -m ai_paper_downloader --conference AAAI --year 2014
+python -m ai_paper_downloader --conference AAAI --year 2015
+python -m ai_paper_downloader --conference AAAI --year 2016
+python -m ai_paper_downloader --conference AAAI --year 2017
+python -m ai_paper_downloader --conference AAAI --year 2018
+python -m ai_paper_downloader --conference AAAI --year 2019
+python -m ai_paper_downloader --conference AAAI --year 2020
+python -m ai_paper_downloader --conference AAAI --year 2021
+python -m ai_paper_downloader --conference AAAI --year 2022
+python -m ai_paper_downloader --conference AAAI --year 2023
+python -m ai_paper_downloader --conference AAAI --year 2024

@@ -1,0 +1,9 @@
+---
+llm: chatgpt-azure
+structured_output: True
+model:
+  name: gpt-4.1-nano-2025-04-14
+  input_cost: 0.10
+  output_cost: 0.40
+azure_endpoint: https://xxx.openai.azure.com/
+api_key: XXX

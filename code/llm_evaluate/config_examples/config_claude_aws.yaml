@@ -1,0 +1,7 @@
+---
+llm: claude-aws
+# Prices: Input / Output per MTok^
+model: anthropic.claude-3-5-sonnet-20240620-v1:0 # $3.00 / $15.00
+aws_access_key: XXX
+aws_secret_key: XXX
+aws_region: us-east-1

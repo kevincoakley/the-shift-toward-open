@@ -1,0 +1,785 @@
+{
+    "long_shortterm_memory_and_learningtolearn_in_networks_of_spiking_neurons__181492b6": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "We first show (section 4) that this approach produces new computational performance levels of RSNNs for two common benchmark tasks: Sequential MNIST and TIMIT (a speech processing task). We then show that it makes L2L applicable to RSNNs (section 5), similarly as for LSTM networks. A performance comparison is given in Fig. 1B. LSNNs achieve 94.7% and 96.4% classiﬁcation accuracy on the test set when every pixel is presented for 1 and 2ms respectively."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "The inclusion of adapting neurons drastically increases the computing and learning capability of RSNNs if they are trained and conﬁgured by deep learning (BPTT combined with a rewiring algorithm that optimizes the network architecture). In fact, the computational performance of these RSNNs approaches for the ﬁrst time that of LSTM networks."
+        },
+        "affiliation": {
+            "result": 0,
+            "paper_text": "Guillaume Bellec*, Darjan Salaj*, Anand Subramoney*, Robert Legenstein & Wolfgang Maass Institute for Theoretical Computer Science Graz University of Technology, Austria {bellec,salaj,subramoney,legenstein,maass}@igi.tugraz.at"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "But computing and learning capabilities of RSNN models have remained poor, at least in comparison with artiﬁcial neural networks (ANNs). We address two possible reasons for that."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "No explicit statement of the research objective or goal using the words 'goal' or 'objective' was found for the paper itself, only for a sub-task within the experiments: 'The objective was to maximize the number of goals reached within the episode.'"
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "No explicit statement of research methodology using the exact phrases 'the methodology', 'our methodology', 'the research methodology', 'the research method', or 'our research method' was found."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "No explicit research questions labeled as 'RQ', 'Research Question', or structured as formal question statements were found."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "No explicit statement of a research hypothesis using the word 'hypothesis' was found. The paper mentions a 'conjecture' instead."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "No explicit predicted outcome using phrases like 'we predict', 'we expect', or 'predicted outcome' was found in the paper's main research statements."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "We have demonstrated that deep learning provides a useful new tool for the investigation of networks of spiking neurons: It allows us to create architectures and learning algorithms for RSNNs with enhanced computing and learning capabilities."
+        },
+        "pseudocode": {
+            "result": 0,
+            "paper_text": "The paper does not contain any structured pseudocode or algorithm blocks."
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper does not provide concrete access to source code for the methodology described, nor does it explicitly state that the code is released or available."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper does not include concrete access to experiment code used to run its experiments, nor does it state that such code is available."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "Sequential MNIST: We tested the performance of LSNNs on a standard benchmark task that requires continuous updates of short term memory over a long time span: sequential MNIST [24, 25]. Speech recognition (TIMIT): We also tested the performance of LSNNs for a real-world speech recognition task, the TIMIT dataset."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "The paper mentions 'training data' and 'test set' for some experiments but does not explicitly provide specific validation dataset splits, percentages, or detailed splitting methodology needed for reproduction. It mentions '500 of these input pairs and targets were used as training data' for the L2L task, but no validation set for that either."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "LSNNs achieve 94.7% and 96.4% classiﬁcation accuracy on the test set when every pixel is presented for 1 and 2ms respectively."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents experimental results in figures and tables within the document itself, but does not include any external links or statements about results being available in supplementary materials or external repositories."
+        },
+        "hardware_specification": {
+            "result": 1,
+            "paper_text": "We gratefully acknowledge the support of NVIDIA Corporation with the donation of the Quadro P6000 GPU used for this research."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly provide specific ancillary software details, such as library or solver names with version numbers, needed to replicate the experiment."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "The size of the LSNN, in the case of full connectivity, was chosen to match the number of parameters of the LSTM network. This led to 120 regular spiking and 100 adaptive neurons (with adaptation time constant τa of 700 ms) in comparison to 128 LSTM units. We found that a standard LSNN consisting of 300 regularly ﬁring (200 excitatory and 100 inhibitory) and 100 excitatory adapting neurons with an adaptation time constant of 200 ms, and with 20% connection probability in the network, achieved a classiﬁcation error of 33.2%. We considered a LSNN N consisting of 180 regularly ﬁring neurons (population R) and 120 adapting neurons (population A) with a spread of adaptation time constants sampled uniformly between 1 and 1000 ms and with full connectivity."
+        },
+        "input_tokens": 16749,
+        "thoughts_tokens": 4166,
+        "output_tokens": 1261,
+        "cost": 0.018592
+    },
+    "image_inpainting_via_generative_multicolumn_convolutional_neural_networks__e9d077e8": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "Extensive experiments on challenging street view, face, natural objects and scenes manifest that our method produces visual compelling results even without previously common post-processing. (from abstract) and 4 Experiments (Section title)."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "Extensive experiments on challenging street view, face, natural objects and scenes manifest that our method produces visual compelling results even without previously common post-processing. (from abstract); As shown in Table 1, our method produces decent results with comparable or better PSNR and SSIM. (from Section 4.3); In all conditions, our method outperforms the baselines. (from Section 4.3, User Studies)."
+        },
+        "affiliation": {
+            "result": 1,
+            "paper_text": "1The Chinese University of Hong Kong 2You Tu Lab, Tencent {yiwang, xtao, xjqi, leojia}@cse.cuhk.edu.hk goodshenxy@gmail.com"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "Image inpainting (also known as image completion) aims to estimate suitable pixel information to ﬁll holes in images. It serves various applications such as object removal, image restoration, image denoising, to name a few. Though studied for many years, it remains an open and challenging problem since it is highly ill-posed."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "The paper describes its aim and what it proposes (e.g., 'aims to estimate suitable pixel information', 'we propose a generative multi-column network'), but it does not explicitly use the words 'goal' or 'objective' in a formal research statement."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper includes a section titled '3 Our Method' and describes its approach (e.g., 'Our inpainting system is trainable in an end-to-end fashion'), but it does not explicitly use the terms 'methodology' or 'research method' in a formal statement."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state any formal research questions using phrases like 'the research questions are' or 'this research seeks to answer'."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state a research hypothesis using the word 'hypothesis' in a formal research statement."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper describes the capabilities and outcomes of its method (e.g., 'produces visual compelling results', 'can produce high quality results') but does not include explicit predictive statements like 'we predict that...' or 'we expect that...' regarding the experimental outcomes."
+        },
+        "contribution": {
+            "result": 0,
+            "paper_text": "The paper describes its proposed framework and its improvements (e.g., 'The overall framework is a Generative Multi-column Convolutional Neural Network (GMCNN) for image inpainting.'), but it does not explicitly list or state its contributions using phrases like 'Our contributions are...' or 'This paper contributes...'"
+        },
+        "pseudocode": {
+            "result": 0,
+            "paper_text": "The paper describes its method in Section 3 and uses network diagrams (Figure 2), but does not include any structured pseudocode or algorithm blocks."
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper states 'More inpainting results are in our project website.' but does not explicitly state that the source code for the described methodology is publicly available, nor does it provide a direct link to a code repository."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper states 'More inpainting results are in our project website.' but does not explicitly state that the code used to run the experiments is publicly available, nor does it provide a direct link to a code repository."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "We evaluate our method on ﬁve datasets of Paris street view [18], Places2 [28], Image Net [19], Celeb A [15], and Celeb A-HQ [12]."
+        },
+        "validation": {
+            "result": 1,
+            "paper_text": "We train our models on the training set and evaluate our model on the testing set (for Paris street view) or validation set (for Places2, Image Net, Celeb A, and Celeb A-HQ)."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "We train our models on the training set and evaluate our model on the testing set (for Paris street view) or validation set (for Places2, Image Net, Celeb A, and Celeb A-HQ)."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents results in tables (Table 1, Table 2) and figures (Figures 4-10) within the paper itself. It also mentions 'More inpainting results are in our project website.' but does not provide specific links to raw experimental result files, visualizations, spreadsheets, or dashboards."
+        },
+        "hardware_specification": {
+            "result": 1,
+            "paper_text": "The hardware is with an Intel CPU E5 (2.60GHz) and TITAN X GPU."
+        },
+        "software_dependencies": {
+            "result": 1,
+            "paper_text": "Our implementation is with Tensorﬂow v1.4.1, CUDNN v6.0, and CUDA v8.0."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "After our model G converges, we set λmrf = 0.05 and λadv = 0.001 for ﬁne tuning until converge. The training procedure is optimized using Adam solver [13] with learning rate 1e 4. We set β1 = 0.5 and β2 = 0.9. The batch size is 16."
+        },
+        "input_tokens": 14361,
+        "thoughts_tokens": 3132,
+        "output_tokens": 1496,
+        "cost": 0.015878
+    },
+    "learning_temporal_point_processes_via_reinforcement_learning__489cd889": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "We conducted experiments on various synthetic and real sequences of event data and showed that our approach outperforms the state-of-the-art regarding both data description and computational efﬁciency. 6 Experiments We evaluate our algorithm by comparing with state-of-the-arts on both synthetic and real datasets."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "we show that it performs well in both synthetic and real data. our approach outperforms the state-of-the-art regarding both data description and computational efﬁciency."
+        },
+        "affiliation": {
+            "result": 1,
+            "paper_text": "Shuang Li 1, Shuai Xiao 2, Shixiang Zhu1, Nan Du3, Yao Xie1, and Le Song1,2 1Georgia Institute of Technology 2Ant Financial 3Google Brain"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "However, the existing maximum-likelihood-estimation (MLE) learning paradigm requires hand-crafting the intensity function beforehand and cannot directly monitor the goodness-of-ﬁt of the estimated model in the process of training. To alleviate the risk of model-misspeciﬁcation in MLE, we propose to generate samples from the generative model and monitor the quality of the samples in the process of training until the samples and the real data are indistinguishable."
+        },
+        "goal_objective": {
+            "result": 1,
+            "paper_text": "The goal is to learn a policy which we call learner that mimics the distribution of the observed expert event sequences."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "No explicit mention of \"methodology\" or \"research method\" was found."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "No explicit research questions were found in the paper."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The term \"hypothesis\" is used in the context of statistical testing (null hypothesis for KS test), but not as a formal research hypothesis stated by the authors for their work."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "No explicit predictions of outcomes were found in the paper."
+        },
+        "contribution": {
+            "result": 0,
+            "paper_text": "The paper describes its approach and findings but does not explicitly list its contributions using phrases like 'Our contributions are...' or 'This paper contributes...'"
+        },
+        "pseudocode": {
+            "result": 1,
+            "paper_text": "Algorithm RLPP: Mini-batch Reinforcement Learning for Learning Point Processes"
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper provides links to open source codes for baseline methods (WGANTPP and RMTPP) in footnotes (e.g., 'https://github.com/xiaoshuai09/Wasserstein-Learning-For-Point-Process' and 'https://github.com/dunan/Neural Point Process'), but does not provide specific access to the source code for their own proposed method, RLPP."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper provides links to open source codes for baseline methods (WGANTPP and RMTPP) used in experiments, but does not provide specific access to the experimental code for their own proposed method, RLPP."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "Medical Information Mart for Intensive Care III (MIMIC-III) contains de-identiﬁed clinical visit records from 2001 to 2012 for more than 40,000 patients."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly provide specific dataset split information (e.g., percentages or sample counts for train/validation/test sets). It describes batch size for training but not data partitioning."
+        },
+        "test": {
+            "result": 0,
+            "paper_text": "The paper evaluates performance on synthetic and real datasets and compares empirical intensity functions, but it does not explicitly describe a 'test data split' or 'testing subset' with specific details for evaluation."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents experimental results directly within its figures and tables (e.g., Figure 4, 5, 6, 7, 8 and Table 1). No external links or specific access information to raw experimental result files are provided."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "The paper does not provide specific hardware details (e.g., GPU/CPU models, memory specifications) used for running experiments."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper mentions software like 'Tensorflow' and 'GPy package' but does not specify their version numbers."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "The policy in our method RLPP is parameterized as LSTM with 64 hidden neurons, and π(a|Θ(h)) is chosen to be exponential distribution. Batch size is 32 (the number of sampled sequences L and M are 32 in Algorithm 1, and learning rate is 1e-3. We use Gaussian kernel k(t, t ) = exp( t t 2/σ2) for the reward function. The kernel bandwidth σ is estimated using the median trick based on the observations [13]."
+        },
+        "input_tokens": 16910,
+        "thoughts_tokens": 2938,
+        "output_tokens": 1371,
+        "cost": 0.015845
+    },
+    "deep_state_space_models_for_time_series_forecasting__0785d82b": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "We provide qualitative as well as quantitative results with the proposed method, showing that it compares favorably to the state-of-the-art."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "We provide qualitative as well as quantitative results with the proposed method, showing that it compares favorably to the state-of-the-art. ... Overall our method achieves the best performance except for one case. Moreover, our method achieves very good performance even with 2-weeks data since it can explicitly incorporate seasonal structures (i.e., hour-of-day seasonality). Although ets and auto.arima incorporate such seasonal structures, their results are much worse."
+        },
+        "affiliation": {
+            "result": 2,
+            "paper_text": "Syama Sundar Rangapuram Matthias Seeger Jan Gasthaus Lorenzo Stella Yuyang Wang Tim Januschowski Amazon Research {rangapur, matthis, gasthaus, stellalo, yuyawang, tjnsch}@amazon.com"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "The general probabilistic forecasting problem is the following. Let N be a set of univariate time series {z(i) 1:Ti}N i=1, where z(i) 1:Ti = (z(i) 1 , z(i) 2 , . . . , z(i) Ti ) and z(i) t R denotes the value of the i-th time series at time t."
+        },
+        "goal_objective": {
+            "result": 1,
+            "paper_text": "Our goal is to produce a set of probabilistic forecasts, i.e. for each i = 1, . . . , N we are interested in the probability distribution of future trajectories z(i) Ti+1:Ti+τ given the past:"
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper describes its approach as a \"novel approach\" and later \"forecasting method\", but does not use the specific terms \"methodology\" or \"research method\" to describe its overall research strategy."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state any formal research questions using phrases like \"the research questions are\" or numbered RQ statements."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper discusses assumptions made in the model (e.g., independence of time series) but does not explicitly state a research hypothesis using the term \"hypothesis\" or phrases like \"we hypothesize that\"."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper discusses the task of generating \"probabilistic forecasts\" and \"prediction samples\" and evaluates performance using \"rolling-day prediction,\" but it does not include an explicit statement predicting the outcome of its own research using phrases like \"we predict that\" or \"our expectation is that\"."
+        },
+        "contribution": {
+            "result": 0,
+            "paper_text": "The paper describes its novel approach and its advantages (e.g., \"We present a novel approach to probabilistic time series forecasting...\"), but it does not use the specific terms \"contribution\" or \"contributes\" in a formal statement to list its research contributions."
+        },
+        "pseudocode": {
+            "result": 0,
+            "paper_text": "The paper describes the computational procedures involved (e.g., Kalman filtering, RNN unrolling) but does not provide any explicitly labeled pseudocode or algorithm blocks."
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper does not contain any explicit statements about releasing the source code for their proposed method or provide a link to a code repository."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper does not include any specific repository links or explicit statements about the availability of the code used to run its experiments."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "For this, we use the publicly available datasets electricity and traffic [28]. ... This includes monthly and quarterly time series from the tourism competition dataset [2] describing tourism demand, hourly time series from the M4 competition [20] and parts dataset [6] which contains monthly demand of spare parts at a US auto-mobile company."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "We train each method on all time series of these datasets but vary the size of the training range Ti {14, 21, 28} days. We evaluate all the methods on the next τ = 7 days after the forecast start time using the standard p50 and p90quantile losses. (The paper defines training and prediction ranges but does not explicitly mention a separate validation split.)"
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "We evaluate all the methods on the next τ = 7 days after the forecast start time using the standard p50 and p90quantile losses. ... For tourism and M4 datasets, train and test splits are already provided. ... For parts dataset we use the last 12 months as the prediction range while the training range contains 39 months."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The experimental results are presented directly within the paper in Table 1, Table 2, and Table 3. No external links to result files or supplementary materials are provided."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "The paper does not provide specific hardware details (e.g., GPU/CPU models, memory) used for running its experiments. It only mentions using the Amazon Sagemaker machine learning platform for one of the baselines (Deep AR) without further hardware specifications."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper mentions using a 'neural network framework (MXNet)' and 'R’s forecast package' for baselines, but it does not provide specific version numbers for these or any other software dependencies."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "For Deep State the size of SSM (i.e., latent dimension) directly depends on the granularity of the time series which determines the number of seasons. For hourly data, we use hour-of-day (24 seasons) as well as day-of-week (7 seasons) models and hence latent dimension is 31. ... We train each method on all time series of these datasets but vary the size of the training range Ti {14, 21, 28} days."
+        },
+        "input_tokens": 16060,
+        "thoughts_tokens": 3899,
+        "output_tokens": 1610,
+        "cost": 0.018591
+    },
+    "communication_efficient_parallel_algorithms_for_optimization_on_manifolds__be3d5d3f": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "To examine the quality of our parallel algorithm we ﬁrst apply it to the estimation of Fréchet means on spheres, which has closed form expressions for the estimation of the extrinsic mean (true empirical minimizer). In addition, we apply our algorithm to Netﬂix movie-ranking data set as an example of optimization over Grassmannian manifolds in the low-rank matrix completion problem. In the following results, we demonstrate the utility of our algorithm both for high dimensional manifold-valued data (Section 5.1) and Euclidean space data with non-Euclidean parameters (Section 5.2)."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "We show that our proposed algorithm is both communication efﬁcient and carries theoretical convergence guarantees. In addition, we demonstrate the performance of our algorithm to the estimation of Fréchet means on simulated spherical data and the low-rank matrix completion problem over Grassmann manifolds applied to the Netﬂix prize data set. Notably, our parallel optimization algorithm has several key features: (1) Our parallel algorithm efﬁciently exploits the geometric information of the data or parameters. (2) The algorithm minimizes expensive inter-processor communication. (3) The algorithm has theoretical guarantees in approximating the true optimizer, characterized in terms of convergence rates. (4) The algorithm has outstanding practical performance in simulation studies and real data examples."
+        },
+        "affiliation": {
+            "result": 0,
+            "paper_text": "Bayan Saparbayeva Department of Applied and Computational Mathematics and Statistics University of Notre Dame Notre Dame, Indiana 46556, USA bsaparba@nd.edu Michael Minyi Zhang Department of Computer Science Princeton University Princeton, New Jersey 08540, USA mz8@cs.princeton.edu Lizhen Lin Department of Applied and Computational Mathematics and Statistics University of Notre Dame Notre Dame, Indiana 46556, USA lizhen.lin@nd.edu"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "However, the existing literature on parallel inference almost exclusively focuses on Euclidean data and parameters. While this assumption is valid for many applications, it is increasingly more common to encounter problems where the data or the parameters lie on a non-Euclidean space, like a manifold for example. Our work aims to ﬁll a critical gap in the literature by generalizing parallel inference algorithms to optimization on manifolds."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "The paper uses phrases like 'Our work aims to fill a critical gap' and 'We aim to fill this critical gap', but does not explicitly use the terms 'goal' or 'objective' in a formal research statement."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper describes its 'parallel optimization framework' and 'parallel inference strategy' but does not explicitly use the terms 'methodology' or 'research method'."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state research questions using phrases like 'the research questions are', 'this research seeks to answer', or labeled RQs."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state a research hypothesis using the word 'hypothesis'."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state a predicted outcome using specific prediction language like 'we predict', 'we expect', or 'predicted outcome'."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "Our work aims to ﬁll a critical gap in the literature by generalizing parallel inference algorithms to optimization on manifolds. We show that our proposed algorithm is both communication efﬁcient and carries theoretical convergence guarantees. In addition, we demonstrate the performance of our algorithm to the estimation of Fréchet means on simulated spherical data and the low-rank matrix completion problem over Grassmann manifolds applied to the Netﬂix prize data set. Notably, our parallel optimization algorithm has several key features: (1) Our parallel algorithm efﬁciently exploits the geometric information of the data or parameters. (2) The algorithm minimizes expensive inter-processor communication. (3) The algorithm has theoretical guarantees in approximating the true optimizer, characterized in terms of convergence rates. (4) The algorithm has outstanding practical performance in simulation studies and real data examples."
+        },
+        "pseudocode": {
+            "result": 1,
+            "paper_text": "Algorithm 1: ILEA for Manifolds"
+        },
+        "open_source_code": {
+            "result": 1,
+            "paper_text": "Our code is available at https://github.com/michaelzhang01/parallel_manifold_opt"
+        },
+        "open_experiment_code": {
+            "result": 1,
+            "paper_text": "Our code is available at https://github.com/michaelzhang01/parallel_manifold_opt"
+        },
+        "train": {
+            "result": 0,
+            "paper_text": "We apply our algorithm to Netﬂix movie-ranking data set as an example of optimization over Grassmannian manifolds in the low-rank matrix completion problem. In our example we set the matrix rank to r = 10 and the regularization parameter to λ = 0.1 and divided the data randomly across 4 processors. For this example, we simulate one million observations from a 100-dimensional von Mises distribution projected onto the unit sphere with mean sampled randomly from N(0,I) and a precision of 2. The paper names the datasets used but does not provide any specific link, DOI, repository name, or formal citation (with author and year) for accessing them."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "The paper mentions applying the algorithm to the Netﬂix movie-ranking data set and simulated data, and states 'divided the data randomly across 4 processors' and 'we run 20 trials of our algorithm over 1, 2, 4, 6, 8 and 10 processors.' However, it does not provide specific training/validation/test dataset splits by percentages or sample counts, nor does it reference predefined splits with citations."
+        },
+        "test": {
+            "result": 0,
+            "paper_text": "Figure 3 caption refers to 'Test set RMSE of the Netﬂix example over time, evaluated on 10 trials.' This indicates the use of a test set, but the paper does not provide specific details about the test data split (e.g., its size, percentage, or how it was separated from the main dataset)."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents results within its main text via figures (Figure 1, Figure 2, Figure 3) but does not provide any external links to result files, visualizations, or spreadsheets."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "The paper does not provide specific details about the hardware (e.g., GPU/CPU models, memory, or cloud resources) used for running its experiments."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "We wrote the code for our implementations in Python and carried out the parallelization of the code through MPI1[7]. The paper mentions 'Python' and 'MPI' but does not provide specific version numbers for these software components."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "In our example we set the matrix rank to r = 10 and the regularization parameter to λ = 0.1 and divided the data randomly across 4 processors. We select the step size parameter according to the modiﬁed Armijo algorithm seen in [6]."
+        },
+        "input_tokens": 14457,
+        "thoughts_tokens": 4178,
+        "output_tokens": 1819,
+        "cost": 0.01933
+    },
+    "adversarial_multiple_source_domain_adaptation__40a106f5": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "To demonstrate the effectiveness of MDAN, we conduct extensive experiments showing superior adaptation performance on both classiﬁcation and regression problems: sentiment analysis, digit classiﬁcation, and vehicle counting."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "Empirically, to demonstrate the effectiveness of MDAN as well as the relevance of our theoretical results, we conduct extensive experiments on real-world datasets, including both natural language and vision tasks, classiﬁcation and regression problems. We achieve consistently superior adaptation performances on all the tasks, validating the effectiveness of our models."
+        },
+        "affiliation": {
+            "result": 0,
+            "paper_text": "Carnegie Mellon University IST, Universidade de Lisboa {hzhao1,shanghaz,guanhanw,moura,ggordon}@andrew.cmu.edu, jpc@isr.ist.utl.pt"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "However, due to the possible shift between training and test samples, learning algorithms based on these cheaper datasets still suffer from high generalization error. Domain adaptation (DA) focuses on such problems by establishing knowledge transfer from a labeled source domain to an unlabeled target domain, and by exploring domain-invariant structures and representations to bridge the gap [38]. Such problem calls for an efﬁcient technique for multiple source domain adaptation."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state a research objective or goal using the words 'goal' or 'objective'."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper describes its approach as 'adversarial learning strategy' and proposes 'multisource domain adversarial networks (MDAN)' but does not explicitly use the terms 'research method' or 'methodology'."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly present formal research questions labeled as 'RQ' or 'Research Question', nor does it use structured question statements."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper uses the term 'hypothesis' in the context of theoretical definitions (e.g., 'hypothesis class H'), but it does not state a research hypothesis that the authors are testing."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state a predicted outcome using specific prediction language like 'we predict', 'we expect', or 'predicted outcome'."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "Contributions. Our contributions are three-fold: 1). Theoretically, we provide average case generalization bounds for both classiﬁcation and regression problems under the multisource domain adaptation setting. 2). Inspired by our theoretical results, we also propose efﬁcient algorithms that tackle multisource domain adaptation problems using adversarial learning strategy. 3). Empirically, to demonstrate the effectiveness of MDAN as well as the relevance of our theoretical results, we conduct extensive experiments on real-world datasets, including both natural language and vision tasks, classiﬁcation and regression problems. We achieve consistently superior adaptation performances on all the tasks, validating the effectiveness of our models."
+        },
+        "pseudocode": {
+            "result": 0,
+            "paper_text": "The paper describes the algorithm in text and provides a network architecture diagram (Figure 1), but it does not include structured pseudocode or algorithm blocks."
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper does not provide any explicit statement about making the source code available, nor does it include a link to a code repository."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper does not provide any explicit statement about making the experiment code available, nor does it include a link to a code repository for reproducibility of experiments."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "We evaluate both hard and soft MDAN and compare them with state-of-the-art methods on three real-world datasets: the Amazon benchmark dataset [11] for sentiment analysis, a digit classiﬁcation task that includes 4 datasets: MNIST [29], MNIST-M [17], SVHN [37], and Synth Digits [17], and a public, large-scale image dataset on vehicle counting from multiple city cameras [52]."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "For Amazon Reviews: 'Each source domain has 2000 labeled examples, and the target test set has 3000 to 6000 examples. During training, we randomly sample the same number of unlabeled target examples as the source examples in each mini-batch.' For Digits: 'Each source domain has 20, 000 labeled images and the target test set has 9, 000 examples.' While training and testing data are specified, there is no explicit mention of a separate validation set or its size/proportion."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "For Amazon Reviews: 'Each source domain has 2000 labeled examples, and the target test set has 3000 to 6000 examples.' For Digits: 'Each source domain has 20, 000 labeled images and the target test set has 9, 000 examples.' For Web Cam T: 'It has 60, 000 frames annotated with vehicle bounding box and count, divided into training and testing sets, with 42, 200 and 17, 800 frames, respectively.'"
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The results are presented directly in the paper's main text through tables (Table 1, 2, 3) and figures (Figure 2, 3), with no external links to result files."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "The paper does not provide specific hardware details (e.g., GPU/CPU models, processor types, memory amounts, or cloud instance types) used for running its experiments."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper mentions various methods (e.g., DANN, ADDA, MTAE) and uses neural networks, implying software dependencies, but it does not specify any particular software names with version numbers (e.g., 'PyTorch 1.9', 'TensorFlow 2.x')."
+        },
+        "experiment_setup": {
+            "result": 0,
+            "paper_text": "Due to space limit, details about network architecture and training parameters of proposed and baseline methods, and detailed dataset description are described in appendix."
+        },
+        "input_tokens": 18749,
+        "thoughts_tokens": 3553,
+        "output_tokens": 1647,
+        "cost": 0.018625
+    },
+    "towards_text_generation_with_adversarially_learned_neural_outlines__5dade794": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "Our quantitative evaluations suggests that conditioning information from generated outlines is able to guide the autoregressive model to produce realistic samples, comparable to maximum-likelihood trained language models, even at high temperatures with multinomial sampling. Qualitative results also demonstrate that this generative procedure yields natural-looking sentences and interpolations."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "Our quantitative evaluations suggests that conditioning information from generated outlines is able to guide the autoregressive model to produce realistic samples, comparable to maximum-likelihood trained language models, even at high temperatures with multinomial sampling."
+        },
+        "affiliation": {
+            "result": 1,
+            "paper_text": "Sandeep Subramanian1,2,4 , Sai Rajeswar1,2,5, Alessandro Sordoni4, Adam Trischler4, Aaron Courville1,2,6, Christopher Pal1,3,5 1Montr eal Institute for Learning Algorithms, 2Universit e de Montr eal, 3 Ecole Polytechnique de Montr eal, 4Microsoft Research Montr eal, 5Element AI, Montr eal, 6CIFAR Fellow"
+        },
+        "problem_description": {
+            "result": 0,
+            "paper_text": "This is due to the posterior collapse problem: the model ends up relying solely on the auto-regressive properties of the decoder while ignoring the latent variables, which become uninformative."
+        },
+        "goal_objective": {
+            "result": 1,
+            "paper_text": "We propose a combination of both approaches with the goal of learning generative models of text."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "Our method ﬁrst produces a high-level sentence outline and then generates words sequentially, conditioning on both the outline and the previous outputs."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "In this paper, we study how pre-trained sentence representations, obtained by general purpose sentence encoders, can be leveraged to train better models for text generation."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "In this work, we argue that generative adversarial training on latent representations of a sentence not only alleviates the non-differentiability issue of regular GAN training on discrete sequences, but also eases the learning process by instead modeling an already smoothed manifold of the underlying discrete data distribution."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "Therefore, samples from G(z) will likely produce data points that are off-manifold; this may lead to unexpected behavior in the decoder, since it has been trained only on samples from the true distribution P(hx)."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "The takeaways from our work are: We propose the use of ﬁxed-length representations induced by general-purpose sentence encoders for training generative models of text, and demonstrate their potential both qualitatively and quantitatively. We extend our model to conditional text generation. Speciﬁcally, we train a conditional GAN that learns to transform a given hypothesis representation in the sentence embedding space into a premise embedding that satisﬁes a speciﬁed entailment relationship. We propose a gradient-based technique to generate meaningful interpolations between two given sentence embeddings."
+        },
+        "pseudocode": {
+            "result": 0,
+            "paper_text": "The paper describes algorithms in text and equations (e.g., 'min G max D V (D, G) = E x PD [log D(E(x))] + E z P (z)[log(1 D(G(z)))]' and 'ht = ht 1 + α ht 1 log P(x2|ht 1)') but does not include structured pseudocode blocks."
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "Ofﬁcial code from https://github.com/jakezhaojb/ARAE"
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper does not provide a specific link or explicit statement about the availability of the code used to run its experiments."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "We consider the SNLI [4], Book Corpus [59] and WMT15 (English fraction of the En-De parallel corpus) datasets in unconditional text generation experiments."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "In all settings, we partition the dataset into equally sized halves, one on which we train our generative model (GAN & Decoder) and the other for evaluation."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "NLI classiﬁcation accuracies of generated samples on the test set evaluated by the ESIM model [7]."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents results directly within its main text, primarily in Tables 1, 4, 5, 6, 7, 8, 9, and 10, and figures."
+        },
+        "hardware_specification": {
+            "result": 1,
+            "paper_text": "We thank NVIDIA for donating a DGX-1 computer used in this work and Fonds de recherche du Qu ebec Nature et technologies for funding."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "We are also grateful to the Py Torch development team [38]. We trained all models with the Adam [27] stochastic optimization algorithm with a learning rate of 2e-4 and β1 = 0.5, β2 = 0.9."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "In our generator and discriminator, we use 5-layer MLPs with 1024 hidden dimensions and leaky Re LU activation functions. We use the WGAN-GP formulation [19] in all experiments, with 5 discriminator updates for every generator update and a gradient penalty coefﬁcient of 10. Our decoder architecture is identical to the multi-task decoders used in [51]. We trained all models with the Adam [27] stochastic optimization algorithm with a learning rate of 2e-4 and β1 = 0.5, β2 = 0.9. We used a noise radius of 0.12 for experiments involving SNLI and 0.2 for others."
+        },
+        "input_tokens": 18621,
+        "thoughts_tokens": 3105,
+        "output_tokens": 1558,
+        "cost": 0.017244
+    },
+    "nonmetric_similarity_graphs_for_maximum_inner_product_search__9203424a": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "By an extensive comparison to the existing approaches, we show that the proposed method is a game-changer in terms of the runtime/accuracy trade-off for the MIPS problem. We introduce a new large-scale dataset for the MIPS algorithms evaluation to facilitate research in this direction."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "By an extensive comparison to the existing approaches, we show that the proposed method is a game-changer in terms of the runtime/accuracy trade-off for the MIPS problem. Overall, the proposed ip-NSW method outperforms the existing approaches by a substantial margin. For example, ip-NSW reaches 0.9 recall level ten times faster that the fastest baseline."
+        },
+        "affiliation": {
+            "result": 1,
+            "paper_text": "Stanislav Morozov Yandex, Lomonosov Moscow State University stanis-morozov@yandex.ru Artem Babenko Yandex, National Research University Higher School of Economics artem.babenko@phystech.edu"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "In this paper we address the problem of Maximum Inner Product Search (MIPS) that is currently the computational bottleneck in a large number of machine learning applications. The MIPS problem formulates as follows."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "The paper states that it 'addresses the problem' and 'proposes to solve' it, but does not explicitly use the terms 'goal' or 'objective' in a formal statement."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper describes its 'approach' and 'framework' for solving the problem but does not explicitly use the phrases 'research method' or 'methodology'."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state formal research questions using phrases like 'research questions are' or numbered RQs."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state a research hypothesis using the word 'hypothesis' in a formal statement."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper states findings and demonstrations but does not use explicit prediction language such as 'we predict' or 'we expect' for its outcomes."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "We summarize the main contributions of this paper below: 1. We provide the theoretical analysis to justify the use of similarity graphs for inner product similarity function. 2. We demonstrate both theoretically and experimentally that typical MIPS-to-NNS reductions are detrimental for similarity graphs. 3. We introduce a new large-scale dataset for the MIPS algorithms evaluation to facilitate research in this direction."
+        },
+        "pseudocode": {
+            "result": 1,
+            "paper_text": "Algorithm 1 Greedy walk; Algorithm 2 NSW graph construction"
+        },
+        "open_source_code": {
+            "result": 1,
+            "paper_text": "The dataset and the C++ implementation of our method are available online1. Footnote 1: https://github.com/stanis-morozov/ip-nsw"
+        },
+        "open_experiment_code": {
+            "result": 1,
+            "paper_text": "The dataset and the C++ implementation of our method are available online1. Footnote 1: https://github.com/stanis-morozov/ip-nsw"
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "Datasets. We summarize the information on the benchmark datasets in Table 1. The Netﬂix, Movie Lens and Yahoo!Music datasets are the established benchmarks for the MIPS problem. Music100 is a new dataset that we introduce to the community2. This dataset was obtained by IALSfactorization[26]... Footnote 2: https://github.com/stanis-morozov/ip-nsw"
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "The paper mentions training, testing, and evaluation metrics but does not provide specific details on validation dataset splits, percentages, or methods for creating them."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "For all the datasets, the groundtruth neighbors were computed by sequential scan. The recall values were averaged over 10, 000 randomly sampled queries."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The experimental results are presented directly within the paper in figures and tables (e.g., Figures 2, 3, 4 and Table 2). No external links or repositories for result files are provided."
+        },
+        "hardware_specification": {
+            "result": 1,
+            "paper_text": "All the experiments were performed on Intel Xeon E5-2650 machine in a single thread mode."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper mentions using the 'Intel MKL library' and provides a 'C++ implementation' but does not specify version numbers for any software dependencies or libraries."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "The primary parameter of the NSW is the maximum vertex degree M... In our experiments we use M = 32 edges per vertex. We performed the experiments with K = 1 and K = 10. The recall values were averaged over 10, 000 randomly sampled queries."
+        },
+        "input_tokens": 14920,
+        "thoughts_tokens": 3887,
+        "output_tokens": 1357,
+        "cost": 0.017586
+    },
+    "learning_beam_search_policies_via_imitation_learning__9b5d0ff8": {
+        "research_type": {
+            "result": 1,
+            "paper_text": "Our contributions are: an algorithm for learning beam search policies (Section 4.2) with accompanying regret guarantees (Section 5), a meta-algorithm that captures much of the existing literature (Section 4), and new theoretical results for the early update [6] and La SO [7] algorithms (Section 5.3)."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "We are the first to prove no-regret guarantees for an algorithm to learn beam search policies."
+        },
+        "affiliation": {
+            "result": 1,
+            "paper_text": "1Machine Learning Department, Carnegie Mellon University 2Microsoft Research"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "Most models that use beam search at test time ignore the beam at train time and instead are learned via methods like likelihood maximization. They therefore suffer from two issues that we jointly address in this work: (1) learning ignores the existence of the beam and (2) learning uses only oracle trajectories. These issues lead to mismatches between the train and test settings that negatively affect performance."
+        },
+        "goal_objective": {
+            "result": 1,
+            "paper_text": "Our goal is to learn a policy π( , θ) : Vk (Vk) induced by a scoring function s( , θ) : V R that achieves small expected cumulative transition cost along the induced trajectories."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper describes its approach as being within the 'learning to search framework' and introduces a 'meta-algorithm', but does not explicitly use the terms 'methodology' or 'research method' to describe its overall research approach."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state any formal research questions."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state a research hypothesis."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state any predicted outcomes."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "Our contributions are: an algorithm for learning beam search policies (Section 4.2) with accompanying regret guarantees (Section 5), a meta-algorithm that captures much of the existing literature (Section 4), and new theoretical results for the early update [6] and La SO [7] algorithms (Section 5.3)."
+        },
+        "pseudocode": {
+            "result": 1,
+            "paper_text": "Algorithm 1 Beam Search\nAlgorithm 2 Meta-algorithm"
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper does not include any statements about releasing code or links to a code repository."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper does not include any statements or links regarding the availability of code used to run experiments."
+        },
+        "train": {
+            "result": 0,
+            "paper_text": "The paper defines 'Input-output training pairs D = {(x1, y1), . . . , (xm, ym)}' as part of its theoretical framework, but does not specify any publicly available datasets used for empirical training."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "The paper mentions 'return best θt on validation' within its meta-algorithm (Algorithm 2), but does not provide specific details on empirical validation splits or methodology as it is a theoretical paper."
+        },
+        "test": {
+            "result": 0,
+            "paper_text": "The paper conceptually discusses 'test time' in the context of model usage, but does not describe any specific test data splits or subsets used for empirical evaluation."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper does not provide links to external files, visualizations, or repositories containing experimental results. The 'results' presented are theoretical guarantees and theorems within the paper itself."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "The paper does not provide any specific hardware details such as GPU/CPU models, memory, or cloud instance types used for experiments."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper mentions 'Adam [18]' as an online optimization algorithm but does not specify its version number or any other software dependencies with their versions."
+        },
+        "experiment_setup": {
+            "result": 0,
+            "paper_text": "The paper does not include specific experimental setup details such as hyperparameter values, training configurations, or system-level settings, consistent with its theoretical focus."
+        },
+        "input_tokens": 16513,
+        "thoughts_tokens": 3701,
+        "output_tokens": 1188,
+        "cost": 0.017176
+    },
+    "filter_stopwords": false,
+    "lemmatize": false,
+    "model": "gemini-2.5-flash",
+    "permute": "none",
+    "prompt": "You will be provided with a research paper, and your task is to answer questions about the contents of the research paper.\n\nNow, please analyze the following research paper:\n",
+    "questions": "## Questions for Paper Analysis\n\nReturn the results of your analysis as a valid JSON object with the following structure. Each JSON key must contain two sub-elements:\n\n### Output Format Requirements\n\nReturn your analysis as a valid JSON object with the following structure. Each field must contain two sub-elements:\n- **result**: An Int with the specific value as defined for each question (varies by question - see below)\n- **paper_text**: A string containing the relevant text excerpt from the paper that supports your answer, or a brief explanation if not found\n\nThe questions and JSON keys are as follows:\n\n\nDetermine whether the paper is based on **experimental research** or **theoretical research**.\n\nReturn **Experimental** (0) if:\n- It conducts empirical studies, including running experiments, analyzing data, reporting metrics, or validating hypotheses\n- Indicators include evaluation on datasets, comparisons to baselines, test/train/validation splits, ablation studies, and performance tables or graphs\n\nReturn **Theoretical** (1) if:\n- It focuses only on conceptual or mathematical contributions without empirical validation\n- Examples include algorithm design, proofs, lemmas, or symbolic derivations\n- These papers may include pseudocode but do not analyze results from actual experiments\n\nIf the paper includes both theoretical and empirical components, classify it as **Experimental**.\n\nQuote the text from the paper that supports your decision.\n\n**Does the paper conduct EMPIRICAL STUDIES WITH DATA ANALYSIS (experiments, dataset evaluation, performance metrics, or hypothesis validation) rather than purely theoretical work?**\n Return 0 for experimental research or 1 for theoretical framework and use research_type as the JSON key.\nDetermine whether the paper reports a **positive** or **negative** outcome based on its main findings.\n\nReturn **Yes** (positive outcome) if:\n- The authors explicitly state that their method improves upon prior work, achieves higher accuracy or F1 scores, or reaches state-of-the-art (SOTA) results\n- Key indicators include phrases like \"Our method significantly outperforms...\", \"We achieve better results than...\", \"These results confirm the effectiveness...\"\n\nReturn **No** (negative outcome) if:\n- The method fails to outperform baselines, results are marginal or inconclusive, or the hypothesis is not supported\n- Typical phrases include \"No significant improvement was observed...\", \"Comparable to existing methods...\", \"Results were not conclusive...\"\n- Only classify as positive if the paper clearly claims at least one success\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper report CLEAR SUCCESS CLAIMS (explicit statements of outperformance, higher accuracy, or confirmed effectiveness) in its main findings?**\n Return 1 for positive or 0 for negative and use result_outcome as the JSON key.\nDetermine whether the paper's authors have **industry**, **academic**, or **collaborative** affiliations.\n\nThe authors' affiliations and email addresses are usually listed in the first few paragraphs of the paper. Use this information to classify the affiliation type:\n\nReturn **2** (classify as Industry) if:\n- All authors are affiliated with corporations or private-sector labs\n- Email addresses end in domains like `.com`, `.ai`, `.tech`, or have company names like \"IBM,\" \"Google,\" \"DeepMind,\" etc.\n\nReturn **0** (classify as Academia) if:\n- All authors are from universities or public research institutions\n- Email domains include `.edu`, `.ac.uk`, `.edu.cn`, or subdomains like `cs.cmu.edu`, `eecs.mit.edu`, etc.\n\nReturn **1** (classify as Collaboration) if:\n- There is a mix of academic and industry affiliations based on the institutional names or email domains\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CLEAR INSTITUTIONAL AFFILIATIONS (university names, company names, or email domains) that allow classification of author affiliation types?**\n Return 0 for academia only, 1 for collaboration of both academia and industry, or 2 for industry only and use affiliation as the JSON key.\nDetermine whether the paper includes an **explicit statement of the research problem**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes a sentence that uses one of the following patterns: \"the problem [is|we address|this paper addresses]...\", \"to solve [this problem|the problem of]...\"\n- Statements that clearly describe what the research aims to solve if they are framed like a problem, such as \"the challenge we tackle is...\", \"the main issue is...\"\n\nReturn **No** if:\n- There are vague uses of the word \"problem\" or general task descriptions like \"we study...\" or \"our method is designed to...\" unless they directly align with the problem framing above\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include an EXPLICIT RESEARCH PROBLEM STATEMENT (using phrases like \"the problem is\", \"to solve the problem of\", or \"the challenge we tackle\")?**\n Return 1 for yes or 0 for no and use problem_description as the JSON key.\nDetermine whether the paper includes an **explicit statement of the research objective or goal**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence with one of these forms: \"the objective [of this paper|is|was]...\", \"our objective [is|was]...\", \"the goal [of this research|is|was]...\", \"our goal [is|was]...\"\n- Clear variations such as \"a key objective of this study is...\", \"one objective of this work is...\", \"the main goal of this approach is...\", \"this study has the objective/goal of...\", \"the research objective is defined as...\", \"an explicit goal is to...\"\n\nReturn **No** if:\n- There are vague motivation or general intent phrases (e.g., \"we aim to...\", \"we explore...\", \"our focus is...\") unless they use the words **goal** or **objective** in the sentence\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly state a RESEARCH GOAL OR OBJECTIVE (using the exact words \"goal\" or \"objective\" in formal research statements)?**\n Return 1 for yes or 0 for no and use goal_objective as the JSON key.\nDetermine whether the paper explicitly states the **research methodology**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that includes any of the following exact or near-exact expressions: \"the methodology...\", \"our methodology...\", \"the research methodology...\", \"the research method...\", \"our research method...\"\n- Variants like \"this paper uses the methodology...\", \"we follow the research method of...\" are also acceptable, but only if they use the key phrases **\"methodology\"** or **\"research method\"** directly\n\nReturn **No** if:\n- There are phrases like \"our approach...\" or \"we propose a method...\" unless they use one of the key phrases above\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly use the phrase METHODOLOGY OR RESEARCH METHOD (exact terminology \"methodology\" or \"research method\" in formal statements)?**\n Return 1 for yes or 0 for no and use research_method as the JSON key.\nDetermine whether the paper explicitly states one or more **research questions**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes phrases like \"the research questions are...\", \"this research seeks to answer...\", \"we pose the following research questions...\"\n- Lists labeled as \"RQ\", \"RQ1\", \"RQ2\", or \"Research Question 1\", etc.\n- A clearly structured sentence like \"we aim to answer the following question(s)...\", followed by one or more question-like statements\n\nReturn **No** if:\n- There are vague intent statements like \"we explore...\" or \"we investigate...\" unless they are tied to a numbered or explicitly labeled research question\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper clearly present FORMAL RESEARCH QUESTIONS (explicitly labeled as \"RQ\", \"Research Question\", or structured question statements)?**\n Return 1 for yes or 0 for no and use research_question as the JSON key.\nDetermine whether the paper explicitly states a **research hypothesis**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes a sentence that uses the word **\"hypothesis\"** in any of the following accepted forms: \"the hypothesis is...\", \"the hypothesis that...\", \"we hypothesize that...\", \"our hypothesis is...\", \"our hypothesis assumes...\", \"our guiding hypothesis is...\", \"the central hypothesis...\", \"this hypothesis suggests that...\", \"we test the hypothesis that...\", \"this paper tests the hypothesis...\", \"we formulate the hypothesis that...\", references to a \"Null Hypothesis\" or \"Alternative Hypothesis\"\n\nReturn **No** if:\n- There are statements that imply assumptions or beliefs unless the term **\"hypothesis\"** appears in the sentence\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly refer to a RESEARCH HYPOTHESIS (using the exact word \"hypothesis\" in formal research statements)?**\n Return 1 for yes or 0 for no and use hypothesis as the JSON key.\nDetermine whether the paper explicitly states a **predicted outcome**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that uses any of the following phrases: \"we predict that...\", \"the predicted outcome is...\", \"we expect that...\", \"our expectation is that...\", \"it is expected that...\"\n- Phrasings like \"the model is expected to...\" or \"our approach is predicted to...\"\n\nReturn **No** if:\n- There are vague goal statements like \"we aim to...\" or \"we intend to...\" unless they include the words **predict** or **expect**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include an EXPLICIT PREDICTED OUTCOME (using specific prediction language like \"we predict\", \"we expect\", or \"predicted outcome\")?**\n Return 1 for yes or 0 for no and use prediction as the JSON key.\nDetermine whether the paper explicitly states the **contributions** of the research, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that clearly lists or describes contributions using any of the following: \n  - \"The contributions of this paper are...\"\n  - \"Our contributions are...\"\n  - \"This paper contributes the following...\"\n  - \"This contributes to...\" (only if it refers to novel findings or technical contributions)\n- Phrases like: \"The main contribution is...\", \"A key contribution of this work is...\"\n\nReturn **No** if:\n- There are vague mentions of impact or relevance unless the word **\"contribution\"** is clearly tied to something new, original, or specific to this research\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly list or state the CONTRIBUTIONS using the accepted phrasing to describe novel findings or technical advances?**\n Return 1 for yes or 0 for no and use contribution as the JSON key.\nDetermine whether the paper contains **pseudocode** or a clearly labeled algorithm block.\n\nReturn **Yes** if:\n- The paper includes a figure, block, or section labeled \"Pseudocode\", \"Algorithm\", or \"Algorithm X\"\n- Structured steps for a method or procedure formatted like code or an algorithm (even if not explicitly called \"pseudocode\")\n\nReturn **No** if:\n- The paper only describes steps in regular paragraph text without structured formatting\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper contain STRUCTURED PSEUDOCODE OR ALGORITHM BLOCKS (clearly labeled algorithm sections or code-like formatted procedures)?**\n Return 1 for yes or 0 for no and use pseudocode as the JSON key.\nDetermine whether the paper provides **open-source code for the methodology it describes**.\n\nReturn **Yes** if:\n- The paper includes an unambiguous sentence where the authors state they are releasing the code **for the work described in this paper** (e.g., \"We release our code...\", \"The source code for our method is available at...\")\n- A direct link to a source-code repository (e.g., GitHub, GitLab, Bitbucket) that contains the code for the paper's methodology\n- A clear statement that code is provided in **supplementary material**, **appendices**, or via an **anonymous review link**\n\nReturn **No** if:\n- The code is promised for the future using phrases like \"we plan to release...\", \"code will be made available...\", or \"our tool will be publicly available...\"\n- The code is only available \"upon request\"\n- The text discusses the source code of a **third-party tool or platform that the authors used**, but does not provide their own implementation code\n- The link points to a resource that is explicitly a `dataset`, `benchmark`, `corpus`, `taxonomy`, or `data`, and does not also clearly host the source code\n- The URL provided is for a general domain, a personal homepage, **a project demonstration page, or a high-level project overview page** instead of a specific code repository\n- **The text is ambiguous or lacks a clear, affirmative statement of release**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CONCRETE ACCESS TO SOURCE CODE (specific repository link, explicit code release statement, or code in supplementary materials) for the methodology described in this paper?**\n Return 1 for yes or 0 for no and use open_source_code as the JSON key.\nDetermine whether the paper includes a link to the **actual code used to run the experiments** described in the paper.\n\nReturn **Yes** if:\n- The paper provides a link to a GitHub, GitLab, Bitbucket, or anonymous repository and does **not** specify that the code is unrelated to experiments\n- The text mentions that code, scripts, or software used to run the experiments is \"available at...\", \"shared in supplementary material\" or \"appendix\"\n- The linked repo is implied to contain code that produces the **results, tables, or figures** in the paper\n\nReturn **No** if:\n- The paper includes **no link**\n- The link is unrelated to this paper's experiments (e.g., a third-party baseline, pretrained model, or unrelated library)\n- The code is **only promised** or **available upon request**\n- The link is to a **dataset**, **benchmark**, or **corpus**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include CONCRETE ACCESS TO EXPERIMENT CODE (specific repository links or explicit statements about code availability) used to run its experiments?**\n Return 1 for yes or 0 for no and use open_experiment_code as the JSON key.\nDetermine whether the paper explicitly states that the **dataset** used in the experiments is **publicly available** or an **open** dataset.\n\nReturn **Yes** if:\n- The paper uses a well-known public dataset (e.g., \"CIFAR-10\", \"MNIST\", \"ImageNet\", \"COCO\", \"Penn Treebank\")\n- Provides a direct URL, DOI, or specific repository name (e.g., GitHub, Zenodo, Figshare) where the dataset can be accessed\n- Cites a published paper or resource that contains the dataset with proper bibliographic information **including author names and year in brackets or parentheses**\n- States the dataset is in supplementary material with specific file names or section references\n- **References standard academic datasets with citations** or **mentions datasets from well-known repositories or benchmarks with proper attribution**\n\nReturn **No** if:\n- The paper mentions the dataset but gives no indication of availability\n- The dataset is proprietary, private, or internal\n- The authors created their own dataset but do not provide public access (no link, DOI, repository, or citation)\n- The paper describes or mentions a dataset but does not provide any source, link, citation, or repository information for accessing it\n- The dataset is described as \"available upon request\" or \"available from authors\" without permanent public access\n- The paper only describes the dataset characteristics, collection process, or statistics without providing access information\n- The paper mentions using \"publicly available data\" but does not specify the exact source or provide access details\n- **The dataset name is mentioned but no citation, link, repository, or author attribution is provided**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CONCRETE ACCESS INFORMATION (specific link, DOI, repository name, formal citation with authors/year, or reference to established benchmark datasets) for a publicly available or open dataset?**\n Return 1 for yes or 0 for no and use train as the JSON key.\nDetermine whether the paper explicitly provides **training/test/validation dataset splits** needed to reproduce the experiment.\n\nReturn **Yes** if:\n- The paper specifies exact split percentages (e.g., \"80/10/10 split\", \"70% training, 15% validation, 15% test\")\n- Provides absolute sample counts for each split (e.g., \"40,000 training samples, 5,000 validation, 5,000 test\")\n- References predefined splits with citations (e.g., \"we use the standard train/test split from [Author et al., 2020]\")\n- Mentions specific file names or URLs for custom splits (e.g., \"train.txt, val.txt, test.txt available at...\")\n- Describes stratified or group-based splitting methodology (e.g., \"stratified by class\", \"split by subject ID\", \"temporal split\")\n- Provides random seed with splitting strategy (e.g., \"random split with seed 42\")\n- Specifies cross-validation setup (e.g., \"5-fold cross-validation\", \"leave-one-out cross-validation\")\n- Uses standard benchmark splits that are well-defined (e.g., \"CIFAR-10 standard split\", \"ImageNet validation set\")\n\nReturn **No** if:\n- References datasets without mentioning splits (e.g., \"we use the XYZ dataset\")\n- Splits are mentioned vaguely (e.g., \"we split the data appropriately\")\n- Only mentions total dataset size without split information\n- Defers split details to supplementary materials or other papers without providing access\n- Uses phrases like \"standard split\" or \"typical split\" without specification\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC DATASET SPLIT INFORMATION (exact percentages, sample counts, citations to predefined splits, or detailed splitting methodology) needed to reproduce the data partitioning?**\n Return 1 for yes or 0 for no and use validation as the JSON key.\nDetermine whether the paper explicitly states the **test data split** or **testing subset** used to evaluate the model's performance.\n\nReturn **Yes** if:\n- The paper explicitly mentions phrases like \"test set\", \"testing set\", \"test portion\", \"test split\", \"held-out test data\"\n- Mentions of dataset names used for testing (e.g., \"CIFAR-10 test set\", \"evaluated on the test set of ImageNet\")\n- Quantitative indicators such as \"10K examples for testing\", \"20% used as test data\"\n\nReturn **No** if:\n- There are vague mentions like \"test accuracy\" or \"we tested our model\" with no details about the test data\n- \"Test results\" or \"testing performance\" without indicating the data used\n- References to standard datasets (like \"we used MNIST\") without specifying the test subset or split\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper clearly describe the TEST DATA SPLIT (explicit mention of test set, split, or subset with specific details) used for evaluation?**\n Return 1 for yes or 0 for no and use test as the JSON key.\nDetermine whether the paper includes links to the **results of the experiment**.\n\nReturn **Yes** if:\n- The paper includes a URL (e.g., to GitHub, Google Drive, institutional repository, Zenodo, Dropbox, etc.) pointing to result files, visualizations, spreadsheets, or dashboards\n- It says results are in supplementary material, appendix, or provided anonymously for review\n- It includes phrases like \"Results available at...\", \"Our results can be found in...\", \"The experimental output is linked at...\"\n\nReturn **No** if:\n- Results are only shown in the paper's main text (figures or tables inside the PDF)\n- The paper mentions results will be released later or are available upon request\n- The link is only to datasets, tools, or pretrained models not tied to the paper's experimental output\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper link to or externally share CONCRETE ACCESS TO EXPERIMENTAL RESULTS (specific URLs, repositories, or supplementary materials containing result files)?**\n Return 1 for yes or 0 for no and use results as the JSON key.\nDetermine whether the paper **explicitly describes the hardware used** to run its experiments.\n\nReturn **Yes** if:\n- The paper mentions any specific hardware setup, including:\n  - **Specific GPU models** (e.g., \"NVIDIA A100\", \"RTX 2080 Ti\", \"Tesla V100\")\n  - **Specific CPU models or processors** (e.g., \"Intel Core i7-4770K\", \"Intel Xeon E5-2630\", \"AMD Ryzen 9 5950X\", \"Intel Core i5-3210M\", \"Intel i7-2600\")\n  - **TPU or other accelerator references** (e.g., \"TPU v2\", \"Google TPU\", \"Intel Neural Compute Stick\")\n  - **Cloud or cluster resources with specs** (e.g., \"AWS p3.8xlarge with V100 GPUs\", \"Google Cloud TPU v3\")\n  - **Computer specifications with processor details** (e.g., \"laptop with Intel Core i5\", \"workstation with Intel Xeon\", \"desktop PC with Intel Core i7\")\n- Direct statements about where experiments were run, such as:\n  - \"We trained our models using...\"\n  - \"Experiments were performed on...\"\n  - \"Hardware specifications include...\"\n  - \"All experiments ran on...\"\n  - \"Our machine has...\"\n  - \"Results are obtained on...\"\n\nReturn **No** if:\n- No hardware is mentioned\n- The paper only discusses software, datasets, or **vague terms like \"on a GPU\", \"using a High Performance Computing Resource\", or \"on a server\" without any specific model numbers, processor types, or memory details**\n- Any mention of hardware is disconnected from the experimental process\n- The hardware mentioned (like mobile phones, tablets, or IoT devices) is not used for training or inference in the experiments\n- **Only general computing environments are mentioned without any specific hardware details (e.g., \"on a cluster\", \"using cloud computing\" with no specifications)**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC HARDWARE DETAILS (exact GPU/CPU models, processor types with speeds, memory amounts, or detailed computer specifications) used for running its experiments?**\n Return 1 for yes or 0 for no and use hardware_specification as the JSON key.\nDetermine whether the paper provides a reproducible description of the ancillary software. A reproducible description **must include specific version numbers** for key software components.\n\nReturn **Yes** if the paper meets one of the following criteria:\n- It lists multiple key software components with their versions (e.g., \"Python 3.8, PyTorch 1.9, and CUDA 11.1\")\n- It names a self-contained solver, simulation environment, or specialized package with a specific version number (e.g., \"CPLEX 12.4\", \"Gecode 4.2.0\", \"Choco 2.1.5\")\n\nReturn **No** if the paper only mentions:\n- Software names without version numbers (e.g., \"using Caffe\", \"the scikit-learn package\")\n- A programming language, even with a version, without listing any versioned libraries or solvers (e.g., \"implemented in Java 7\" by itself is not enough)\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC ANCILLARY SOFTWARE DETAILS (e.g., library or solver names with version numbers like Python 3.8, CPLEX 12.4) needed to replicate the experiment?**\n Return 1 for yes or 0 for no and use software_dependencies as the JSON key.\nDetermine whether the paper explicitly provides details about the **experimental setup**, especially hyperparameters or system-level training settings.\n\nReturn **Yes** if:\n- The paper contains specific hyperparameter values (e.g., learning rate, batch size, number of epochs, optimizer settings)\n- Details on model initialization, dropout rate, or training schedules\n- A clearly labeled table or paragraph describing training settings\n- A section titled \"Experimental Setup\" or similar with configuration information\n\nReturn **No** if:\n- The paper only mentions that \"we trained a model\" or refers to \"standard settings\" without elaboration\n- The only details about training are deferred to supplemental materials, code, or prior work\n- There is no mention of hyperparameters, optimizer settings, or explicit configuration steps\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper contain SPECIFIC EXPERIMENTAL SETUP DETAILS (concrete hyperparameter values, training configurations, or system-level settings) in the main text?**\n Return 1 for yes or 0 for no and use experiment_setup as the JSON key.\n",
+    "temperature": -1,
+    "top_p": -1,
+    "evaluation_seconds": "266"
+}

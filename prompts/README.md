@@ -1,0 +1,373 @@
+# prompts
+
+The prompt that is sent to the LLM is constructed from three files in this order:
+
+1. The text from `prompt.txt`.
+2. The paper text as a `.txt` file converted to text from PDF using the `code/pdf_to_txt`.
+3. The questions from `questions.yaml`.
+    1. First the `prompt` key is used.
+    2. For each of the `questions` keys:  
+        1. The `question` key.
+        2. The `return` key.
+
+Example:
+
+```
+    You will be provided with a research paper, and your task is to answer questions about the contents of the research paper.
+
+    Now, please analyze the following research paper:
+
+    [PAPER TEXT]
+    
+    ## Questions for Paper Analysis
+
+    Return the results of your analysis as a valid JSON object with the following structure. Each JSON key must contain two sub-elements:
+
+    ### Output Format Requirements
+
+    Return your analysis as a valid JSON object with the following structure. Each field must contain two sub-elements:
+    - **result**: An Int with the specific value as defined for each question (varies by question - see below)
+    - **paper_text**: A string containing the relevant text excerpt from the paper that supports your answer, or a brief explanation if not found
+
+    The questions and JSON keys are as follows:
+
+
+    Determine whether the paper is based on **experimental research** or **theoretical research**.
+
+    Return **Experimental** (0) if:
+    - It conducts empirical studies, including running experiments, analyzing data, reporting metrics, or validating hypotheses
+    - Indicators include evaluation on datasets, comparisons to baselines, test/train/validation splits, ablation studies, and performance tables or graphs
+
+    Return **Theoretical** (1) if:
+    - It focuses only on conceptual or mathematical contributions without empirical validation
+    - Examples include algorithm design, proofs, lemmas, or symbolic derivations
+    - These papers may include pseudocode but do not analyze results from actual experiments
+
+    If the paper includes both theoretical and empirical components, classify it as **Experimental**.
+
+    Quote the text from the paper that supports your decision.
+
+    **Does the paper conduct EMPIRICAL STUDIES WITH DATA ANALYSIS (experiments, dataset evaluation, performance metrics, or hypothesis validation) rather than purely theoretical work?**
+    Return 0 for experimental research or 1 for theoretical framework and use research_type as the JSON key.
+    Determine whether the paper reports a **positive** or **negative** outcome based on its main findings.
+
+    Return **Yes** (positive outcome) if:
+    - The authors explicitly state that their method improves upon prior work, achieves higher accuracy or F1 scores, or reaches state-of-the-art (SOTA) results
+    - Key indicators include phrases like "Our method significantly outperforms...", "We achieve better results than...", "These results confirm the effectiveness..."
+
+    Return **No** (negative outcome) if:
+    - The method fails to outperform baselines, results are marginal or inconclusive, or the hypothesis is not supported
+    - Typical phrases include "No significant improvement was observed...", "Comparable to existing methods...", "Results were not conclusive..."
+    - Only classify as positive if the paper clearly claims at least one success
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper report CLEAR SUCCESS CLAIMS (explicit statements of outperformance, higher accuracy, or confirmed effectiveness) in its main findings?**
+    Return 1 for positive or 0 for negative and use result_outcome as the JSON key.
+    Determine whether the paper's authors have **industry**, **academic**, or **collaborative** affiliations.
+
+    The authors' affiliations and email addresses are usually listed in the first few paragraphs of the paper. Use this information to classify the affiliation type:
+
+    Return **2** (classify as Industry) if:
+    - All authors are affiliated with corporations or private-sector labs
+    - Email addresses end in domains like `.com`, `.ai`, `.tech`, or have company names like "IBM," "Google," "DeepMind," etc.
+
+    Return **0** (classify as Academia) if:
+    - All authors are from universities or public research institutions
+    - Email domains include `.edu`, `.ac.uk`, `.edu.cn`, or subdomains like `cs.cmu.edu`, `eecs.mit.edu`, etc.
+
+    Return **1** (classify as Collaboration) if:
+    - There is a mix of academic and industry affiliations based on the institutional names or email domains
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper provide CLEAR INSTITUTIONAL AFFILIATIONS (university names, company names, or email domains) that allow classification of author affiliation types?**
+    Return 0 for academia only, 1 for collaboration of both academia and industry, or 2 for industry only and use affiliation as the JSON key.
+    Determine whether the paper includes an **explicit statement of the research problem**, using exact phrasing or close lexical variants.
+
+    Return **Yes** if:
+    - The paper includes a sentence that uses one of the following patterns: "the problem [is|we address|this paper addresses]...", "to solve [this problem|the problem of]..."
+    - Statements that clearly describe what the research aims to solve if they are framed like a problem, such as "the challenge we tackle is...", "the main issue is..."
+
+    Return **No** if:
+    - There are vague uses of the word "problem" or general task descriptions like "we study..." or "our method is designed to..." unless they directly align with the problem framing above
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper include an EXPLICIT RESEARCH PROBLEM STATEMENT (using phrases like "the problem is", "to solve the problem of", or "the challenge we tackle")?**
+    Return 1 for yes or 0 for no and use problem_description as the JSON key.
+    Determine whether the paper includes an **explicit statement of the research objective or goal**, using exact phrasing or close lexical variants.
+
+    Return **Yes** if:
+    - The paper contains a sentence with one of these forms: "the objective [of this paper|is|was]...", "our objective [is|was]...", "the goal [of this research|is|was]...", "our goal [is|was]..."
+    - Clear variations such as "a key objective of this study is...", "one objective of this work is...", "the main goal of this approach is...", "this study has the objective/goal of...", "the research objective is defined as...", "an explicit goal is to..."
+
+    Return **No** if:
+    - There are vague motivation or general intent phrases (e.g., "we aim to...", "we explore...", "our focus is...") unless they use the words **goal** or **objective** in the sentence
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper explicitly state a RESEARCH GOAL OR OBJECTIVE (using the exact words "goal" or "objective" in formal research statements)?**
+    Return 1 for yes or 0 for no and use goal_objective as the JSON key.
+    Determine whether the paper explicitly states the **research methodology**, using exact phrasing or close lexical variants.
+
+    Return **Yes** if:
+    - The paper contains a sentence that includes any of the following exact or near-exact expressions: "the methodology...", "our methodology...", "the research methodology...", "the research method...", "our research method..."
+    - Variants like "this paper uses the methodology...", "we follow the research method of..." are also acceptable, but only if they use the key phrases **"methodology"** or **"research method"** directly
+
+    Return **No** if:
+    - There are phrases like "our approach..." or "we propose a method..." unless they use one of the key phrases above
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper explicitly use the phrase METHODOLOGY OR RESEARCH METHOD (exact terminology "methodology" or "research method" in formal statements)?**
+    Return 1 for yes or 0 for no and use research_method as the JSON key.
+    Determine whether the paper explicitly states one or more **research questions**, using exact phrasing or close lexical variants.
+
+    Return **Yes** if:
+    - The paper includes phrases like "the research questions are...", "this research seeks to answer...", "we pose the following research questions..."
+    - Lists labeled as "RQ", "RQ1", "RQ2", or "Research Question 1", etc.
+    - A clearly structured sentence like "we aim to answer the following question(s)...", followed by one or more question-like statements
+
+    Return **No** if:
+    - There are vague intent statements like "we explore..." or "we investigate..." unless they are tied to a numbered or explicitly labeled research question
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper clearly present FORMAL RESEARCH QUESTIONS (explicitly labeled as "RQ", "Research Question", or structured question statements)?**
+    Return 1 for yes or 0 for no and use research_question as the JSON key.
+    Determine whether the paper explicitly states a **research hypothesis**, using exact phrasing or close lexical variants.
+
+    Return **Yes** if:
+    - The paper includes a sentence that uses the word **"hypothesis"** in any of the following accepted forms: "the hypothesis is...", "the hypothesis that...", "we hypothesize that...", "our hypothesis is...", "our hypothesis assumes...", "our guiding hypothesis is...", "the central hypothesis...", "this hypothesis suggests that...", "we test the hypothesis that...", "this paper tests the hypothesis...", "we formulate the hypothesis that...", references to a "Null Hypothesis" or "Alternative Hypothesis"
+
+    Return **No** if:
+    - There are statements that imply assumptions or beliefs unless the term **"hypothesis"** appears in the sentence
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper explicitly refer to a RESEARCH HYPOTHESIS (using the exact word "hypothesis" in formal research statements)?**
+    Return 1 for yes or 0 for no and use hypothesis as the JSON key.
+    Determine whether the paper explicitly states a **predicted outcome**, using exact phrasing or close lexical variants.
+
+    Return **Yes** if:
+    - The paper contains a sentence that uses any of the following phrases: "we predict that...", "the predicted outcome is...", "we expect that...", "our expectation is that...", "it is expected that..."
+    - Phrasings like "the model is expected to..." or "our approach is predicted to..."
+
+    Return **No** if:
+    - There are vague goal statements like "we aim to..." or "we intend to..." unless they include the words **predict** or **expect**
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper include an EXPLICIT PREDICTED OUTCOME (using specific prediction language like "we predict", "we expect", or "predicted outcome")?**
+    Return 1 for yes or 0 for no and use prediction as the JSON key.
+    Determine whether the paper explicitly states the **contributions** of the research, using exact phrasing or close lexical variants.
+
+    Return **Yes** if:
+    - The paper contains a sentence that clearly lists or describes contributions using any of the following: 
+    - "The contributions of this paper are..."
+    - "Our contributions are..."
+    - "This paper contributes the following..."
+    - "This contributes to..." (only if it refers to novel findings or technical contributions)
+    - Phrases like: "The main contribution is...", "A key contribution of this work is..."
+
+    Return **No** if:
+    - There are vague mentions of impact or relevance unless the word **"contribution"** is clearly tied to something new, original, or specific to this research
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper explicitly list or state the CONTRIBUTIONS using the accepted phrasing to describe novel findings or technical advances?**
+    Return 1 for yes or 0 for no and use contribution as the JSON key.
+    Determine whether the paper contains **pseudocode** or a clearly labeled algorithm block.
+
+    Return **Yes** if:
+    - The paper includes a figure, block, or section labeled "Pseudocode", "Algorithm", or "Algorithm X"
+    - Structured steps for a method or procedure formatted like code or an algorithm (even if not explicitly called "pseudocode")
+
+    Return **No** if:
+    - The paper only describes steps in regular paragraph text without structured formatting
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper contain STRUCTURED PSEUDOCODE OR ALGORITHM BLOCKS (clearly labeled algorithm sections or code-like formatted procedures)?**
+    Return 1 for yes or 0 for no and use pseudocode as the JSON key.
+    Determine whether the paper provides **open-source code for the methodology it describes**.
+
+    Return **Yes** if:
+    - The paper includes an unambiguous sentence where the authors state they are releasing the code **for the work described in this paper** (e.g., "We release our code...", "The source code for our method is available at...")
+    - A direct link to a source-code repository (e.g., GitHub, GitLab, Bitbucket) that contains the code for the paper's methodology
+    - A clear statement that code is provided in **supplementary material**, **appendices**, or via an **anonymous review link**
+
+    Return **No** if:
+    - The code is promised for the future using phrases like "we plan to release...", "code will be made available...", or "our tool will be publicly available..."
+    - The code is only available "upon request"
+    - The text discusses the source code of a **third-party tool or platform that the authors used**, but does not provide their own implementation code
+    - The link points to a resource that is explicitly a `dataset`, `benchmark`, `corpus`, `taxonomy`, or `data`, and does not also clearly host the source code
+    - The URL provided is for a general domain, a personal homepage, **a project demonstration page, or a high-level project overview page** instead of a specific code repository
+    - **The text is ambiguous or lacks a clear, affirmative statement of release**
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper provide CONCRETE ACCESS TO SOURCE CODE (specific repository link, explicit code release statement, or code in supplementary materials) for the methodology described in this paper?**
+    Return 1 for yes or 0 for no and use open_source_code as the JSON key.
+    Determine whether the paper includes a link to the **actual code used to run the experiments** described in the paper.
+
+    Return **Yes** if:
+    - The paper provides a link to a GitHub, GitLab, Bitbucket, or anonymous repository and does **not** specify that the code is unrelated to experiments
+    - The text mentions that code, scripts, or software used to run the experiments is "available at...", "shared in supplementary material" or "appendix"
+    - The linked repo is implied to contain code that produces the **results, tables, or figures** in the paper
+
+    Return **No** if:
+    - The paper includes **no link**
+    - The link is unrelated to this paper's experiments (e.g., a third-party baseline, pretrained model, or unrelated library)
+    - The code is **only promised** or **available upon request**
+    - The link is to a **dataset**, **benchmark**, or **corpus**
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper include CONCRETE ACCESS TO EXPERIMENT CODE (specific repository links or explicit statements about code availability) used to run its experiments?**
+    Return 1 for yes or 0 for no and use open_experiment_code as the JSON key.
+    Determine whether the paper explicitly states that the **dataset** used in the experiments is **publicly available** or an **open** dataset.
+
+    Return **Yes** if:
+    - The paper uses a well-known public dataset (e.g., "CIFAR-10", "MNIST", "ImageNet", "COCO", "Penn Treebank")
+    - Provides a direct URL, DOI, or specific repository name (e.g., GitHub, Zenodo, Figshare) where the dataset can be accessed
+    - Cites a published paper or resource that contains the dataset with proper bibliographic information **including author names and year in brackets or parentheses**
+    - States the dataset is in supplementary material with specific file names or section references
+    - **References standard academic datasets with citations** or **mentions datasets from well-known repositories or benchmarks with proper attribution**
+
+    Return **No** if:
+    - The paper mentions the dataset but gives no indication of availability
+    - The dataset is proprietary, private, or internal
+    - The authors created their own dataset but do not provide public access (no link, DOI, repository, or citation)
+    - The paper describes or mentions a dataset but does not provide any source, link, citation, or repository information for accessing it
+    - The dataset is described as "available upon request" or "available from authors" without permanent public access
+    - The paper only describes the dataset characteristics, collection process, or statistics without providing access information
+    - The paper mentions using "publicly available data" but does not specify the exact source or provide access details
+    - **The dataset name is mentioned but no citation, link, repository, or author attribution is provided**
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper provide CONCRETE ACCESS INFORMATION (specific link, DOI, repository name, formal citation with authors/year, or reference to established benchmark datasets) for a publicly available or open dataset?**
+    Return 1 for yes or 0 for no and use train as the JSON key.
+    Determine whether the paper explicitly provides **training/test/validation dataset splits** needed to reproduce the experiment.
+
+    Return **Yes** if:
+    - The paper specifies exact split percentages (e.g., "80/10/10 split", "70% training, 15% validation, 15% test")
+    - Provides absolute sample counts for each split (e.g., "40,000 training samples, 5,000 validation, 5,000 test")
+    - References predefined splits with citations (e.g., "we use the standard train/test split from [Author et al., 2020]")
+    - Mentions specific file names or URLs for custom splits (e.g., "train.txt, val.txt, test.txt available at...")
+    - Describes stratified or group-based splitting methodology (e.g., "stratified by class", "split by subject ID", "temporal split")
+    - Provides random seed with splitting strategy (e.g., "random split with seed 42")
+    - Specifies cross-validation setup (e.g., "5-fold cross-validation", "leave-one-out cross-validation")
+    - Uses standard benchmark splits that are well-defined (e.g., "CIFAR-10 standard split", "ImageNet validation set")
+
+    Return **No** if:
+    - References datasets without mentioning splits (e.g., "we use the XYZ dataset")
+    - Splits are mentioned vaguely (e.g., "we split the data appropriately")
+    - Only mentions total dataset size without split information
+    - Defers split details to supplementary materials or other papers without providing access
+    - Uses phrases like "standard split" or "typical split" without specification
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper provide SPECIFIC DATASET SPLIT INFORMATION (exact percentages, sample counts, citations to predefined splits, or detailed splitting methodology) needed to reproduce the data partitioning?**
+    Return 1 for yes or 0 for no and use validation as the JSON key.
+    Determine whether the paper explicitly states the **test data split** or **testing subset** used to evaluate the model's performance.
+
+    Return **Yes** if:
+    - The paper explicitly mentions phrases like "test set", "testing set", "test portion", "test split", "held-out test data"
+    - Mentions of dataset names used for testing (e.g., "CIFAR-10 test set", "evaluated on the test set of ImageNet")
+    - Quantitative indicators such as "10K examples for testing", "20% used as test data"
+
+    Return **No** if:
+    - There are vague mentions like "test accuracy" or "we tested our model" with no details about the test data
+    - "Test results" or "testing performance" without indicating the data used
+    - References to standard datasets (like "we used MNIST") without specifying the test subset or split
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper clearly describe the TEST DATA SPLIT (explicit mention of test set, split, or subset with specific details) used for evaluation?**
+    Return 1 for yes or 0 for no and use test as the JSON key.
+    Determine whether the paper includes links to the **results of the experiment**.
+
+    Return **Yes** if:
+    - The paper includes a URL (e.g., to GitHub, Google Drive, institutional repository, Zenodo, Dropbox, etc.) pointing to result files, visualizations, spreadsheets, or dashboards
+    - It says results are in supplementary material, appendix, or provided anonymously for review
+    - It includes phrases like "Results available at...", "Our results can be found in...", "The experimental output is linked at..."
+
+    Return **No** if:
+    - Results are only shown in the paper's main text (figures or tables inside the PDF)
+    - The paper mentions results will be released later or are available upon request
+    - The link is only to datasets, tools, or pretrained models not tied to the paper's experimental output
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper link to or externally share CONCRETE ACCESS TO EXPERIMENTAL RESULTS (specific URLs, repositories, or supplementary materials containing result files)?**
+    Return 1 for yes or 0 for no and use results as the JSON key.
+    Determine whether the paper **explicitly describes the hardware used** to run its experiments.
+
+    Return **Yes** if:
+    - The paper mentions any specific hardware setup, including:
+    - **Specific GPU models** (e.g., "NVIDIA A100", "RTX 2080 Ti", "Tesla V100")
+    - **Specific CPU models or processors** (e.g., "Intel Core i7-4770K", "Intel Xeon E5-2630", "AMD Ryzen 9 5950X", "Intel Core i5-3210M", "Intel i7-2600")
+    - **TPU or other accelerator references** (e.g., "TPU v2", "Google TPU", "Intel Neural Compute Stick")
+    - **Cloud or cluster resources with specs** (e.g., "AWS p3.8xlarge with V100 GPUs", "Google Cloud TPU v3")
+    - **Computer specifications with processor details** (e.g., "laptop with Intel Core i5", "workstation with Intel Xeon", "desktop PC with Intel Core i7")
+    - Direct statements about where experiments were run, such as:
+    - "We trained our models using..."
+    - "Experiments were performed on..."
+    - "Hardware specifications include..."
+    - "All experiments ran on..."
+    - "Our machine has..."
+    - "Results are obtained on..."
+
+    Return **No** if:
+    - No hardware is mentioned
+    - The paper only discusses software, datasets, or **vague terms like "on a GPU", "using a High Performance Computing Resource", or "on a server" without any specific model numbers, processor types, or memory details**
+    - Any mention of hardware is disconnected from the experimental process
+    - The hardware mentioned (like mobile phones, tablets, or IoT devices) is not used for training or inference in the experiments
+    - **Only general computing environments are mentioned without any specific hardware details (e.g., "on a cluster", "using cloud computing" with no specifications)**
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper provide SPECIFIC HARDWARE DETAILS (exact GPU/CPU models, processor types with speeds, memory amounts, or detailed computer specifications) used for running its experiments?**
+    Return 1 for yes or 0 for no and use hardware_specification as the JSON key.
+    Determine whether the paper provides a reproducible description of the ancillary software. A reproducible description **must include specific version numbers** for key software components.
+
+    Return **Yes** if the paper meets one of the following criteria:
+    - It lists multiple key software components with their versions (e.g., "Python 3.8, PyTorch 1.9, and CUDA 11.1")
+    - It names a self-contained solver, simulation environment, or specialized package with a specific version number (e.g., "CPLEX 12.4", "Gecode 4.2.0", "Choco 2.1.5")
+
+    Return **No** if the paper only mentions:
+    - Software names without version numbers (e.g., "using Caffe", "the scikit-learn package")
+    - A programming language, even with a version, without listing any versioned libraries or solvers (e.g., "implemented in Java 7" by itself is not enough)
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper provide SPECIFIC ANCILLARY SOFTWARE DETAILS (e.g., library or solver names with version numbers like Python 3.8, CPLEX 12.4) needed to replicate the experiment?**
+    Return 1 for yes or 0 for no and use software_dependencies as the JSON key.
+    Determine whether the paper explicitly provides details about the **experimental setup**, especially hyperparameters or system-level training settings.
+
+    Return **Yes** if:
+    - The paper contains specific hyperparameter values (e.g., learning rate, batch size, number of epochs, optimizer settings)
+    - Details on model initialization, dropout rate, or training schedules
+    - A clearly labeled table or paragraph describing training settings
+    - A section titled "Experimental Setup" or similar with configuration information
+
+    Return **No** if:
+    - The paper only mentions that "we trained a model" or refers to "standard settings" without elaboration
+    - The only details about training are deferred to supplemental materials, code, or prior work
+    - There is no mention of hyperparameters, optimizer settings, or explicit configuration steps
+
+    Quote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.
+
+    **Does the paper contain SPECIFIC EXPERIMENTAL SETUP DETAILS (concrete hyperparameter values, training configurations, or system-level settings) in the main text?**
+    Return 1 for yes or 0 for no and use experiment_setup as the JSON key.
+
+```
+
+The complete prompt is sent as one message to the LLM API and one API call is made per paper.
+
+See `code/llm_evaluate/evaluate_papers/main.py` for the exact way the prompt is constructed.
+

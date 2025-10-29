@@ -1,0 +1,613 @@
+{
+    "featured_graph_coarsening_with_similarity_guarantees__490849b7": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "Extensive experiments with both real and synthetic benchmark datasets elucidate the proposed framework s efficacy and applicability for numerous graph-based applications, including graph clustering, node classification, stochastic block model identification, and graph summarization. In this section, we demonstrate the effectiveness of the proposed algorithm through a comprehensive set of experiments conducted on both real and synthetic graph data sets."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "To the best of our knowledge, this is the first work that guarantees that the learned coarsened graph is \",1) similar to the original graph. Extensive experiments with both real and synthetic benchmark datasets elucidate the proposed framework s efficacy and applicability for numerous graph-based applications, including graph clustering, node classification, stochastic block model identification, and graph summarization. Throughout all the experiments, the FGC has shown superior performance."
+        },
+        "affiliation": {
+            "result": 0,
+            "paper_text": "1Department of Electrical Engineering, IIT Delhi, New Delhi, India 2Department of Mathematics and Computing, IIT Delhi, New Delhi, India 3Bharti School Of Telecommunications Technology Management, IIT Delhi, New Delhi, India 4Yardi School of Artificial Intelligence, IIT Delhi, New Delhi, India."
+        },
+        "problem_description": {
+            "result": 0,
+            "paper_text": "No explicit statement using phrases like 'the problem is', 'to solve the problem of', or 'the challenge we tackle' was found. The paper describes limitations of existing methods and then introduces its approach to address those limitations."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "No explicit statement using phrases like 'the objective is' or 'our goal is' was found for the paper's specific research. The paper defines the general goal of graph coarsening but not its own particular research objective with that phrasing."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "No explicit statement using the phrases 'the methodology', 'our methodology', 'the research methodology', 'the research method', or 'our research method' was found."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "No explicit research questions (e.g., 'RQ1', 'research questions are') were stated in the paper."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly use the word 'hypothesis' to state a formal research hypothesis being tested. It mentions assumptions like 'homophily assumption'."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "No explicit statement using phrases like 'we predict that', 'the predicted outcome is', 'we expect that', or 'our expectation is that' was found."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "In this paper, we introduce a novel optimization-based framework for graph coarsening that takes both the graph matrix and the node features as the input and jointly learns the coarsened graph matrix and the coarsened feature matrix while ensuring desired properties. To the best of our knowledge, this is the first work that guarantees that the learned coarsened graph is \\epsilon [0, 1) similar to the original graph."
+        },
+        "pseudocode": {
+            "result": 1,
+            "paper_text": "Algorithm 1 FGC Algorithm; Algorithm 2 Algorithm for node classification"
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper does not include an explicit statement or a link to a public repository for the source code of the described methodology."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper does not provide an explicit statement or a link to a public repository for the code used to run the experiments."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "Datasets: Real and synthetic datasets, dataset(p, m, n) where p is the number of nodes, m is the number of edges and n is the number of features, used in our experiments are: (i) Cora (2708,5278,1433), (ii) Citeseer (3312,4536,3703), (iii) Polblogs (1490,16715,5000), (iv) ACM (3025,13128,1870), (v) Erdos Renyi (ER) (1000, 25010, 5000), (vi) Watts Strogatz (WS) (1000, 5000, 5000), (vii) Barabasi Albert (BA) (1000, 9800, 5000), (viii) Random Geometric Graph (RGG) (1000, 7265, 5000), (ix) Minnesota (2642, 3304, 5000), (x) Yeast (2361, 13292, 5000), (xi) Airfoil (4253, 12289, 5000) and (xii) Bunny (2503, 78292, 5000) (xiii) Pubmed(19717,88648,500) (34493, 247962, 8, 415) (xiv) Coauthor Physics(Co-phy) (34493, 247962, 8, 415) . The features of Polblogs, ER, WS, BA, RGG, Yeast, Minnesota, Airfoil and Bunny are generated as following X N(0, L ) (5), where L is the Laplacian matrix of the given graph. Further details of datasets are in the appendix B."
+        },
+        "validation": {
+            "result": 1,
+            "paper_text": "All the results are calculated using 10-fold cross-validation."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "All the results are calculated using 10-fold cross-validation."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents all experimental results directly within its main text, in tables (e.g., Table 1, 3, 4, 5, 6) and figures (e.g., Figure 2, 4, 5, 6, 7, 8, 9, 10, 11). No external links to result files or dashboards are provided."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "The paper does not provide any specific hardware details (e.g., GPU/CPU models, memory amounts, or detailed computer specifications) used for running its experiments."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper mentions software like GCN, GAT, and APPNP architectures, but it does not specify version numbers for these or any other software dependencies (e.g., programming languages, libraries, or frameworks)."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "The learning rate and decay rate used in the node classification experiments are 0.01 and 0.0001, respectively. Hyperparameters used in FGC algorithms for Cora: (\",=500, \",=500, \",=716.5); for Citeseer: (\",=500, \",=500, \",=1851.5); for Polblogs: (\",=500, \",=500, \",=2500); for ACM: (\",=2000, \",=500, \",=935); etc. (details in Appendix B)."
+        },
+        "input_tokens": 30312,
+        "thoughts_tokens": 5660,
+        "output_tokens": 1927,
+        "cost": 0.028061
+    },
+    "evidential_interactive_learning_for_medical_image_captioning__0bd0cb42": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "Experiments on two medical image datasets illustrate that the proposed framework can effectively learn from human feedback and improve performance in the future."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "Experiments on two medical image datasets illustrate that the proposed framework can effectively learn from human feedback and improve performance in the future. ... The proposed framework outperforms other baselines."
+        },
+        "affiliation": {
+            "result": 0,
+            "paper_text": "Ervine Zheng 1 Qi Yu 1 1Rochester Institute of Technology. Correspondence to: Qi Yu <qi.yu@rit.edu>."
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "It is more challenging than conventional image captioning due to the complexity of medical images and the difficulty of aligning image regions with medical terms. In this paper, we propose an evidential interactive learning framework that leverages evidence-based uncertainty estimation and interactive machine learning to improve image captioning with limited labeled data. ... To address the above challenges, we propose an interactive learning framework that effectively involves user interactions to improve the model s performance."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly use the terms \"goal\" or \"objective\" in a formal statement. It uses phrases like \"Medical image captioning aims to automatically generate...\" and \"we propose... to improve...\", which describe the purpose but do not meet the strict criteria."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly use the terms \"methodology\" or \"research method\" in a formal statement. It describes its \"framework\" and \"approach\" but not as a defined methodology."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state any formal research questions."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly refer to a research hypothesis using the word \"hypothesis\"."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper does not include an explicit predicted outcome using phrases like \"we predict that\" or \"we expect that\"."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "Our contributions are summarized as follows: An interactive medical image captioning framework that effectively involves human users in the loop to predict accurate keywords and captions; A theoretical analysis of evidence-based uncertainty to integrate two sources of uncertainty; An evidential uncertainty-guided keyword sampling strategy that queries most informative keywords for user interaction to reduce users burden; An evidential uncertainty-guided update strategy that trains the model in an annotation-efficient way based on sparse user feedback."
+        },
+        "pseudocode": {
+            "result": 0,
+            "paper_text": "The paper does not contain any structured pseudocode or algorithm blocks."
+        },
+        "open_source_code": {
+            "result": 1,
+            "paper_text": "The source code is provided at https://github.com/ritmininglab/EIL-MIC"
+        },
+        "open_experiment_code": {
+            "result": 1,
+            "paper_text": "The source code is provided at https://github.com/ritmininglab/EIL-MIC"
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "We evaluate the proposed method on medical image captioning datasets. The IU X-RAY (Young et al., 2014) dataset includes a collection of radiology examinations, including images and narrative reports by radiologists. The PEIR Gross (Library, 2022) dataset is released by the Pathology Education Informational Resource digital library and includes teaching images of gross lesions along with their associated captions."
+        },
+        "validation": {
+            "result": 1,
+            "paper_text": "We use five-fold cross-validation for hyperparameter tuning."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "The evaluation is conducted on both the keyword prediction task and the caption generation task, where we make the updated model generate automated keyword and caption predictions and compare them with the ground truth. ... and the model is evaluated on its performance on the hold-out test set, which includes the remaining data."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents quantitative results in tables (Tables 1, 2, 3, 4, 5, 7, 8, 9) and figures (Figure 4, 5, 6) within the main text and appendix, but it does not provide an external link to raw result files or a repository for them."
+        },
+        "hardware_specification": {
+            "result": 1,
+            "paper_text": "For experiments, the proposed method and baselines are trained with Intel Core i7-3820 CPU and NVIDIA Ge Force RTX2070 GPU."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper mentions the use of 'Efficient Net' and 'Adam optimizer' but does not specify version numbers for general software dependencies like Python, PyTorch, or other relevant libraries."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "The embedding dimension is tuned via grid search and set to 512, and the number of attention heads is tuned and set to 2. The number of stacked transformer blocks for keyword prediction and caption generation is tuned and set to 4. λ is set to 1. We use stochastic gradient descent and Adam optimizer with a learning rate scheduled from 5e-5 to 1e-5."
+        },
+        "input_tokens": 20851,
+        "thoughts_tokens": 1697,
+        "output_tokens": 1381,
+        "cost": 0.01395
+    },
+    "lessvfl_communicationefficient_feature_selection_for_vertical_federated_learning__8cfb9a24": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "We provide extensive empirical evidence that LESS-VFL can achieve high accuracy and remove spurious features at a fraction of the communication cost of other feature selection approaches."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "We provide extensive empirical evidence that LESS-VFL can achieve high accuracy and remove spurious features at a fraction of the communication cost of other feature selection approaches."
+        },
+        "affiliation": {
+            "result": 1,
+            "paper_text": "1Rensselaer Polytechnic Institute 2IBM Research."
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "Although a few works propose VFL feature selection algorithms (summarized in Table 1), no work formally analyzes the feature selection problem in VFL and creates a method that provably removes spurious features."
+        },
+        "goal_objective": {
+            "result": 1,
+            "paper_text": "Our main goal in feature selection is to determine the set of significant features for Θ ."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly use the phrases \"the methodology\", \"our methodology\", \"the research methodology\", \"the research method\", or \"our research method\" to describe its overall approach."
+        },
+        "research_question": {
+            "result": 1,
+            "paper_text": "In this work, we seek to answer the following: Can we design a communication-efficient VFL feature selection algorithm and formally verify that it removes spurious features and achieves high accuracy?"
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper makes assumptions about data distribution and model properties (e.g., Assumption 4.1), but it does not explicitly state a research hypothesis using the word \"hypothesis\" or similar accepted forms."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper does not contain explicit statements of predicted outcomes using phrases like \"we predict that\", \"the predicted outcome is\", \"we expect that\", or \"our expectation is that\"."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "In this work, we formalize the VFL feature selection problem and propose Local communication Efficient group la SSo for Vertical Federated Learning (LESS-VFL), an embedded feature selection method for VFL that provably removes spurious features in a communication-efficient manner. Our method utilizes group lasso regularization (Zhao et al., 2015; Zhang et al., 2020; Wang et al., 2021) in a novel way that reduces the amount of communication between parties. We summarize our contributions:"
+        },
+        "pseudocode": {
+            "result": 1,
+            "paper_text": "Algorithm 1 LESS-VFL implemented using P-SGD"
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper does not contain an explicit statement about the release of its source code, nor does it provide a link to a code repository."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper does not provide a specific link or explicit statement indicating that the code used for running the experiments is publicly available."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "MIMIC-III (Johnson et al., 2016; Harutyunyan et al., 2019): Hospital dataset... Activity (Anguita et al., 2013): Time-series positional data... Phishing (Dua & Graff, 2017): Dataset... Gina (Guyon, 2007): Hand-written two-digit images. Sylva (Guyon, 2007): Forest cover type information."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "The paper mentions splitting features among parties but does not provide specific details on training, validation, or test dataset splits (e.g., percentages, sample counts, or references to predefined splits)."
+        },
+        "test": {
+            "result": 0,
+            "paper_text": "The paper frequently mentions \"test accuracy\" and \"test dataset\" but does not explicitly describe the specific test data split (e.g., percentage, sample count, or dedicated test set details) used for evaluation."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The experimental results are presented within the paper's tables and figures (e.g., Table 2, Figure 3, Figure 4), but no external links to raw result files, visualizations, or dashboards are provided."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "The paper does not provide specific details about the hardware used for running experiments, such as GPU or CPU models, memory specifications, or cloud computing instance types."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper mentions the ADAM optimizer and P-SGD but does not provide specific version numbers for any software libraries, frameworks, or operating systems used in the experimental setup."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "We run a grid search to determine regularization parameters for LESS-VFL, local lasso, and group lasso, and the number of pre-training epochs for LESS-VFL and local lasso. We use the ADAM optimizer with a learning rate of 0.01 when employing Algorithm 2 in VFL (Original and Spurious) and pre-training and post feature selection in local lasso and LESS-VFL. We run 150 epochs of P-SGD for embedding component selection in LESS-VFL and feature selection in LESS-VFL and local lasso, which we found to be a sufficient amount of iterations for the training loss to plateau."
+        },
+        "input_tokens": 38540,
+        "thoughts_tokens": 3913,
+        "output_tokens": 1417,
+        "cost": 0.024887
+    },
+    "oneshot_federated_conformal_prediction__ce333c39": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "In this section, we evaluate Fed CP-QQ on synthetic and real regression data sets. Additional experiments on unbalanced data sets and on Fed CP2-QQ are presented in Appendices A.1 and B.2."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "Finally, over a wide range of experiments, we show that our method returns prediction sets with coverage and length very similar to those obtained in a centralized setting. Overall, these results demonstrate that our method is particularly well-suited to perform conformal predictions in a one-shot federated learning setting."
+        },
+        "affiliation": {
+            "result": 0,
+            "paper_text": "1Universit e Paris-Saclay, CNRS, Inria, Laboratoire de math ematiques d Orsay, 91405, Orsay, France. 2Universit e Lille, Inria, CNRS, Centrale Lille, UMR 9189, CRISt AL, F-59000 Lille."
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "FL poses further challenges regarding model evaluation, as this step must also be done without access to centralized data. ... As a single round of communication is allowed, the main difficulty is to choose what should be sent from the agents to the server, and what kind of aggregation should be done by the server to yield the desired coverage."
+        },
+        "goal_objective": {
+            "result": 1,
+            "paper_text": "Our objective is now to find (ℓ, k) such that P(Y ˆ Cℓ,k(X)) is closest possible to 1 α while being guaranteed to be above."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper uses 'Our method is based on...' and 'Our method extends this idea...' but does not formally state 'research method' or 'methodology'."
+        },
+        "research_question": {
+            "result": 1,
+            "paper_text": "The main questions that then arise are (i) which quantile of the scores the agents should send, and (ii) how to aggregate them at the central server level."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper uses the word 'hypothesis' in a theoretical sense (e.g., 'only the scores need to satisfy this hypothesis') but does not state a formal research hypothesis."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper focuses on constructing 'prediction sets' and discussing outcomes, but does not contain an explicit statement using phrases like 'we predict that' or 'we expect that' regarding a research outcome."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "Contributions. In this paper, we present an intuitive one-shot FL method based on Conformal Prediction (CP) (Vovk et al., 2005; Papadopoulos et al., 2002) to construct distribution-free prediction sets satisfying (1)."
+        },
+        "pseudocode": {
+            "result": 1,
+            "paper_text": "Algorithm 1 Fed CP-QQ"
+        },
+        "open_source_code": {
+            "result": 1,
+            "paper_text": "The code of our two methods is available at https://github.com/pierre Hmbt/Fed CP-QQ."
+        },
+        "open_experiment_code": {
+            "result": 1,
+            "paper_text": "The code of our two methods is available at https://github.com/pierre Hmbt/Fed CP-QQ."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "We evaluate our method on five public-domain regression data sets also considered by Romano et al. (2019) and Sesia & Romano (2021): physicochemical properties of protein tertiary structure (bio) (Rana, 2013); bike sharing (bike) (Fanaee-T & Gama, 2013); communities and crimes (community) (Redmond, 2011); Tennessee s student teacher achievement ratio (star) (Achilles et al., 2008); and concrete compressive strength (concrete) (Yeh, 1998)."
+        },
+        "validation": {
+            "result": 1,
+            "paper_text": "For each experiment, we split the full data set into three parts: a training set (40%), a calibration set (40%), and a test set (20%)."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "For each experiment, we split the full data set into three parts: a training set (40%), a calibration set (40%), and a test set (20%)."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents experimental results directly within its figures (e.g., Figure 4, Figures 8-17) and does not provide external links to result files or dashboards."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "The paper does not provide specific hardware details (e.g., GPU/CPU models, memory) used for running its experiments."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper mentions software components like 'quantile regression forests' and 'Neural Networks for quantile regression', but does not provide specific version numbers for software dependencies or libraries."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "The number of trees in the forest is set to 1000, the two parameters controlling the coverage rate on the training data are tuned using cross-validation and the remaining hyperparameters are set as done by Romano et al. (2019). ... CQR with Neural Networks (NN) for quantile regression (Taylor, 2000) the architecture and the parameters are those used by Romano et al. (2019)."
+        },
+        "input_tokens": 29632,
+        "thoughts_tokens": 3399,
+        "output_tokens": 1465,
+        "cost": 0.02105
+    },
+    "leveraging_offline_data_in_online_reinforcement_learning__e3b41e26": {
+        "research_type": {
+            "result": 1,
+            "paper_text": "We characterize the necessary number of online samples needed in this setting given access to some offline dataset, and develop an algorithm, FTPEDEL, which is provably optimal, up to H factors. In addition to introducing the Fine Tune RL setting, we make the following contributions: ... 2. We show there exists an algorithm, FTPEDEL, which, up to lower-order terms, only collects, for each step h, min Ton Ton s.t. Ch o2o(Doff, ϵ, Ton) 1 online episodes the minimal number of online episodes which ensures the offline-to-online concentrability coefficient is sufficiently small and returns a policy that is ϵ-optimal. Furthermore, we show that this complexity is necessary no algorithm can collect fewer online samples and return a policy guaranteed to be ϵ-optimal."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "We characterize the necessary number of online samples needed in this setting given access to some offline dataset, and develop an algorithm, FTPEDEL, which is provably optimal, up to H factors. We show through an explicit example that combining offline data with online interactions can lead to a provable improvement over either purely offline or purely online RL. Furthermore, Theorem 1 shows that the leading-order term in Theorem 2 is unimprovable in a minimax sense (up to H factors). We show that there is a provable gain in combining offline data with online interactions in this setting, over either purely offline or purely online RL (Proposition 1)."
+        },
+        "affiliation": {
+            "result": 1,
+            "paper_text": "1University of Washington, Seattle. 2Work done while at Microsoft Research, New York. Current Affiliation: Broad Institute of MIT and Harvard and Boston University."
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "if we have some set of offline data and may also interact with the environment, how can we best use the offline data to minimize the number of online interactions necessary to learn an ϵ-optimal policy? ... Problem Definition (Fine Tune RL). For any linear MDP M satisfying Assumption 1, given access to some dataset Doff which satisfies Assumption 2 on MDP M as well as the ability to interact online with M, return some policy bπ such that PM[V bπ 0 V 0 ϵ] 1 δ, using as few online interactions as possible."
+        },
+        "goal_objective": {
+            "result": 1,
+            "paper_text": "Here, the goal is to minimize the number of online interactions we assume the offline data is available for free."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly use the terms \"research method\" or \"methodology\" to describe its approach. It refers to \"our approach\" or \"our algorithm\" instead."
+        },
+        "research_question": {
+            "result": 1,
+            "paper_text": "if we have some set of offline data and may also interact with the environment, how can we best use the offline data to minimize the number of online interactions necessary to learn an ϵ-optimal policy?"
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state a research hypothesis using the term \"hypothesis\"."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper presents theoretical guarantees and proven outcomes (e.g., FTPEDEL is provably optimal, will return an ϵ-optimal policy) rather than explicit predictions of results."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "1.1. Summary of Contributions In addition to introducing the Fine Tune RL setting, we make the following contributions:"
+        },
+        "pseudocode": {
+            "result": 1,
+            "paper_text": "Algorithm 1 Fine-Tuning Policy Learning via Experiment Design in Linear MDPs (FTPEDEL, informal), Algorithm 2 Fine-Tuning Policy Learning via Experiment Design in Linear MDPs (FTPEDEL), Algorithm 3 Online Frank-Wolfe via Regret Minimization (FWREGRET), Algorithm 4 Collect Optimal Covariates (OPTCOV)"
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper does not provide any statement or link regarding the availability of its source code."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper does not provide any statement or link regarding the availability of code used to run experiments."
+        },
+        "train": {
+            "result": 0,
+            "paper_text": "This paper is theoretical and does not involve experiments with a specific dataset. It refers to 'offline data' in a conceptual manner as part of its problem definition rather than as a concrete dataset used for training."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "This paper is theoretical and does not involve experiments or dataset splits for validation."
+        },
+        "test": {
+            "result": 0,
+            "paper_text": "This paper is theoretical and does not involve experiments or dataset splits for testing."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents theoretical results (theorems, propositions) but does not link to or externally share any empirical experimental results."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "This paper is theoretical and does not describe any experimental setup or specific hardware used."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "This paper is theoretical and does not describe any experimental setup or specific software dependencies with version numbers."
+        },
+        "experiment_setup": {
+            "result": 0,
+            "paper_text": "This paper is theoretical and does not describe any experimental setup, hyperparameters, or training settings."
+        },
+        "input_tokens": 44756,
+        "thoughts_tokens": 2920,
+        "output_tokens": 1421,
+        "cost": 0.024279
+    },
+    "feature_learning_in_deep_classifiers_through_intermediate_neural_collapse__b36b67e1": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "In this paper, we conduct an empirical study of the feature learning process in deep classifiers."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "Our results show that when deep networks exhibit NC at the last layer, they also display signs of collapse in intermediate layers. We identify layers where the within-class covariance of representations is dominated by the between-class covariance (NC1) and observe that in these layers, class means to form a simplex ETF (NC2), the subspaces spanned by class means are aligned with the input subspace of linear transformations (NC3), and nearest class center classification using the layer s representations align with the decision of the deep network (NC4)."
+        },
+        "affiliation": {
+            "result": 0,
+            "paper_text": "1Center for Brains, Minds, and Machines, Massachusetts Institute of Technology. Correspondence to: Akshay Rangamani <arangam@mit.edu>."
+        },
+        "problem_description": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state the research problem using the requested phrasing, such as 'the problem is' or 'the challenge we tackle'."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state a research goal or objective using the exact words 'goal' or 'objective'."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly use the phrases 'methodology' or 'research method' in formal statements."
+        },
+        "research_question": {
+            "result": 1,
+            "paper_text": "These observations raise the question of whether similar phenomena also occur in the intermediate layers of the neural network."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly refer to a research hypothesis using the exact word 'hypothesis'."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper does not include an explicit predicted outcome using specific prediction language like 'we predict' or 'we expect'."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "Contributions. In this paper, we investigate whether similar phenomena to Neural Collapse (NC) occur in intermediate layers of deep classifiers. ... This is the first study to provide a comprehensive description of NC in intermediate layers, and we also measure the rank of weight matrices and covariances of representations to understand how features are transformed in the NC regime."
+        },
+        "pseudocode": {
+            "result": 0,
+            "paper_text": "The paper does not contain structured pseudocode or algorithm blocks."
+        },
+        "open_source_code": {
+            "result": 1,
+            "paper_text": "The code for running our experiments is available at https://github.com/ mariuslindegaard/Intermediate_Neural_ Collapse/tree/ICML2023"
+        },
+        "open_experiment_code": {
+            "result": 1,
+            "paper_text": "The code for running our experiments is available at https://github.com/ mariuslindegaard/Intermediate_Neural_ Collapse/tree/ICML2023"
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "We consider the MNIST (Le Cun et al., 1998), Fashion MNIST (Xiao et al., 2017), CIFAR10 (Krizhevsky & Hinton, 2009), and SVHN (Netzer et al., 2011) datasets."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "The paper mentions 'batch-size of 128' and '350 training epochs' but does not specify explicit training, validation, or test dataset splits."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "We run our measurements on the model with the best test accuracy in the final epoch."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents its results through figures and text within the document and does not provide external links or explicit statements about external availability of result files."
+        },
+        "hardware_specification": {
+            "result": 1,
+            "paper_text": "All experiments were conducted on a cluster with NVIDIA Tesla V100, Ge Force GTX 1080 TI, and A100 GPUs."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper does not list specific software dependencies with version numbers (e.g., Python 3.8, PyTorch 1.9, CUDA 11.1) to ensure reproducibility."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "This includes a logarithmic learning rate sweep between 0.0001 and 0.25 decayed twice by a factor of 0.1,a momentum of 0.9, a weight decay of 5e-4, for 350 training epochs, and batch-size of 128."
+        },
+        "input_tokens": 23734,
+        "thoughts_tokens": 3847,
+        "output_tokens": 1258,
+        "cost": 0.019883
+    },
+    "dynamic_constrained_submodular_optimization_with_polylogarithmic_update_time__bedce95f": {
+        "research_type": {
+            "result": 1,
+            "paper_text": "In this paper, we develop a simpler algorithm for the problem that maintains a ( 1/2 ϵ)-approximate solution for submodular maximization under cardinality constraint k using a polylogarithmic amortized update time. ... In this paper, we answer the polylogarithmic question affirmatively; we develop a new simpler algorithm which maintains a ( 1/2 ϵ)-approximate solution for submodular maximization problem under cardinality constraint k with a poly-logarithmic amortized query complexity. ... In this section, we analyze the query complexity of our algorithm. ... To prove this result, we establish two theorems that consider the approximation factor and query complexity of our algorithm, respectively."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "In this paper, we answer the polylogarithmic question affirmatively; we develop a new simpler algorithm which maintains a ( 1/2 ϵ)-approximate solution for submodular maximization problem under cardinality constraint k with a poly-logarithmic amortized query complexity."
+        },
+        "affiliation": {
+            "result": 0,
+            "paper_text": "1Department of Computer Science, University of Maryland, MD, USA 2Department of Mathematics and Computer Science, TU Eindhoven, the Netherlands."
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "The problem of maximizing a monotone submodular function under cardinality constraint k is defined as follows: Let f : 2V R+ be a non-negative monotone submodular function defined on subsets of a ground set V. Let k N be a parameter. We are asked to return a set X of at most k elements such that f(X) is maximum among all k subsets of V."
+        },
+        "goal_objective": {
+            "result": 1,
+            "paper_text": "The goal is to maintain a good approximate set of at most k elements after every insertion and deletion using a fast query complexity."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper describes its approach through sections like 'Overview of our algorithm' and 'Proposed Algorithm' which detail the algorithmic design, but it does not use the specific phrasing 'the methodology', 'our methodology', 'the research method', or 'our research method'."
+        },
+        "research_question": {
+            "result": 1,
+            "paper_text": "Polylogarithmic question: Is there any dynamic algorithm for submodular maximization that maintains a ( 1/2 ϵ)-approximate solution under cardinality constraint k with a query complexity poly(log(n), log(k), 1/ϵ) where n is the size of underlying ground set V?"
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper discusses claims made by other papers and presents its own algorithmic solution and proofs, but it does not explicitly state a research hypothesis using the term 'hypothesis'."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper designs and analyzes an algorithm, proving its approximation ratio and query complexity. It does not contain statements like 'we predict that...' or 'we expect that...' regarding the outcome of its research."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "In this paper, we answer the polylogarithmic question affirmatively; we develop a new simpler algorithm which maintains a ( 1/2 ϵ)-approximate solution for submodular maximization problem under cardinality constraint k with a poly-logarithmic amortized query complexity."
+        },
+        "pseudocode": {
+            "result": 1,
+            "paper_text": "Algorithm 1 Offline algorithm; Algorithm 2 Insert; Algorithm 3 Delete; Algorithm 4 CALCSAMPLECOUNT"
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper does not contain any explicit statements about releasing source code or provide links to a code repository for the described methodology."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper is theoretical and does not describe experiments that would involve experiment-specific code. No links or statements about experiment code are provided."
+        },
+        "train": {
+            "result": 0,
+            "paper_text": "The paper is theoretical and focuses on algorithm design and analysis. It does not describe experiments using datasets, thus no information on training datasets or their availability is present."
+        },
+        "validation": {
+            "result": 0,
+            "paper_text": "The paper is theoretical and focuses on algorithm design and analysis. It does not describe empirical experiments with data, so no training, validation, or test split information is provided."
+        },
+        "test": {
+            "result": 0,
+            "paper_text": "The paper is theoretical and focuses on algorithm design and analysis. It does not describe empirical experiments with data, so no specific test data split information is provided."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper is theoretical, presenting proofs and analysis within the document itself. It does not provide external links to experimental results."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "The paper describes a theoretical algorithm and its analysis, not empirical experiments. Therefore, no hardware specifications for running experiments are mentioned."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper is theoretical and focuses on algorithm design and analysis. It does not describe empirical experiments or specific software dependencies with version numbers needed for replication."
+        },
+        "experiment_setup": {
+            "result": 0,
+            "paper_text": "The paper describes a theoretical algorithm and its analysis, not empirical experiments. Therefore, no details about an experimental setup, such as hyperparameters or training settings, are provided."
+        },
+        "input_tokens": 39181,
+        "thoughts_tokens": 1820,
+        "output_tokens": 1378,
+        "cost": 0.019749
+    },
+    "filter_stopwords": false,
+    "lemmatize": false,
+    "model": "gemini-2.5-flash",
+    "permute": "none",
+    "prompt": "You will be provided with a research paper, and your task is to answer questions about the contents of the research paper.\n\nNow, please analyze the following research paper:\n",
+    "questions": "## Questions for Paper Analysis\n\nReturn the results of your analysis as a valid JSON object with the following structure. Each JSON key must contain two sub-elements:\n\n### Output Format Requirements\n\nReturn your analysis as a valid JSON object with the following structure. Each field must contain two sub-elements:\n- **result**: An Int with the specific value as defined for each question (varies by question - see below)\n- **paper_text**: A string containing the relevant text excerpt from the paper that supports your answer, or a brief explanation if not found\n\nThe questions and JSON keys are as follows:\n\n\nDetermine whether the paper is based on **experimental research** or **theoretical research**.\n\nReturn **Experimental** (0) if:\n- It conducts empirical studies, including running experiments, analyzing data, reporting metrics, or validating hypotheses\n- Indicators include evaluation on datasets, comparisons to baselines, test/train/validation splits, ablation studies, and performance tables or graphs\n\nReturn **Theoretical** (1) if:\n- It focuses only on conceptual or mathematical contributions without empirical validation\n- Examples include algorithm design, proofs, lemmas, or symbolic derivations\n- These papers may include pseudocode but do not analyze results from actual experiments\n\nIf the paper includes both theoretical and empirical components, classify it as **Experimental**.\n\nQuote the text from the paper that supports your decision.\n\n**Does the paper conduct EMPIRICAL STUDIES WITH DATA ANALYSIS (experiments, dataset evaluation, performance metrics, or hypothesis validation) rather than purely theoretical work?**\n Return 0 for experimental research or 1 for theoretical framework and use research_type as the JSON key.\nDetermine whether the paper reports a **positive** or **negative** outcome based on its main findings.\n\nReturn **Yes** (positive outcome) if:\n- The authors explicitly state that their method improves upon prior work, achieves higher accuracy or F1 scores, or reaches state-of-the-art (SOTA) results\n- Key indicators include phrases like \"Our method significantly outperforms...\", \"We achieve better results than...\", \"These results confirm the effectiveness...\"\n\nReturn **No** (negative outcome) if:\n- The method fails to outperform baselines, results are marginal or inconclusive, or the hypothesis is not supported\n- Typical phrases include \"No significant improvement was observed...\", \"Comparable to existing methods...\", \"Results were not conclusive...\"\n- Only classify as positive if the paper clearly claims at least one success\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper report CLEAR SUCCESS CLAIMS (explicit statements of outperformance, higher accuracy, or confirmed effectiveness) in its main findings?**\n Return 1 for positive or 0 for negative and use result_outcome as the JSON key.\nDetermine whether the paper's authors have **industry**, **academic**, or **collaborative** affiliations.\n\nThe authors' affiliations and email addresses are usually listed in the first few paragraphs of the paper. Use this information to classify the affiliation type:\n\nReturn **2** (classify as Industry) if:\n- All authors are affiliated with corporations or private-sector labs\n- Email addresses end in domains like `.com`, `.ai`, `.tech`, or have company names like \"IBM,\" \"Google,\" \"DeepMind,\" etc.\n\nReturn **0** (classify as Academia) if:\n- All authors are from universities or public research institutions\n- Email domains include `.edu`, `.ac.uk`, `.edu.cn`, or subdomains like `cs.cmu.edu`, `eecs.mit.edu`, etc.\n\nReturn **1** (classify as Collaboration) if:\n- There is a mix of academic and industry affiliations based on the institutional names or email domains\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CLEAR INSTITUTIONAL AFFILIATIONS (university names, company names, or email domains) that allow classification of author affiliation types?**\n Return 0 for academia only, 1 for collaboration of both academia and industry, or 2 for industry only and use affiliation as the JSON key.\nDetermine whether the paper includes an **explicit statement of the research problem**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes a sentence that uses one of the following patterns: \"the problem [is|we address|this paper addresses]...\", \"to solve [this problem|the problem of]...\"\n- Statements that clearly describe what the research aims to solve if they are framed like a problem, such as \"the challenge we tackle is...\", \"the main issue is...\"\n\nReturn **No** if:\n- There are vague uses of the word \"problem\" or general task descriptions like \"we study...\" or \"our method is designed to...\" unless they directly align with the problem framing above\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include an EXPLICIT RESEARCH PROBLEM STATEMENT (using phrases like \"the problem is\", \"to solve the problem of\", or \"the challenge we tackle\")?**\n Return 1 for yes or 0 for no and use problem_description as the JSON key.\nDetermine whether the paper includes an **explicit statement of the research objective or goal**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence with one of these forms: \"the objective [of this paper|is|was]...\", \"our objective [is|was]...\", \"the goal [of this research|is|was]...\", \"our goal [is|was]...\"\n- Clear variations such as \"a key objective of this study is...\", \"one objective of this work is...\", \"the main goal of this approach is...\", \"this study has the objective/goal of...\", \"the research objective is defined as...\", \"an explicit goal is to...\"\n\nReturn **No** if:\n- There are vague motivation or general intent phrases (e.g., \"we aim to...\", \"we explore...\", \"our focus is...\") unless they use the words **goal** or **objective** in the sentence\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly state a RESEARCH GOAL OR OBJECTIVE (using the exact words \"goal\" or \"objective\" in formal research statements)?**\n Return 1 for yes or 0 for no and use goal_objective as the JSON key.\nDetermine whether the paper explicitly states the **research methodology**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that includes any of the following exact or near-exact expressions: \"the methodology...\", \"our methodology...\", \"the research methodology...\", \"the research method...\", \"our research method...\"\n- Variants like \"this paper uses the methodology...\", \"we follow the research method of...\" are also acceptable, but only if they use the key phrases **\"methodology\"** or **\"research method\"** directly\n\nReturn **No** if:\n- There are phrases like \"our approach...\" or \"we propose a method...\" unless they use one of the key phrases above\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly use the phrase METHODOLOGY OR RESEARCH METHOD (exact terminology \"methodology\" or \"research method\" in formal statements)?**\n Return 1 for yes or 0 for no and use research_method as the JSON key.\nDetermine whether the paper explicitly states one or more **research questions**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes phrases like \"the research questions are...\", \"this research seeks to answer...\", \"we pose the following research questions...\"\n- Lists labeled as \"RQ\", \"RQ1\", \"RQ2\", or \"Research Question 1\", etc.\n- A clearly structured sentence like \"we aim to answer the following question(s)...\", followed by one or more question-like statements\n\nReturn **No** if:\n- There are vague intent statements like \"we explore...\" or \"we investigate...\" unless they are tied to a numbered or explicitly labeled research question\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper clearly present FORMAL RESEARCH QUESTIONS (explicitly labeled as \"RQ\", \"Research Question\", or structured question statements)?**\n Return 1 for yes or 0 for no and use research_question as the JSON key.\nDetermine whether the paper explicitly states a **research hypothesis**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes a sentence that uses the word **\"hypothesis\"** in any of the following accepted forms: \"the hypothesis is...\", \"the hypothesis that...\", \"we hypothesize that...\", \"our hypothesis is...\", \"our hypothesis assumes...\", \"our guiding hypothesis is...\", \"the central hypothesis...\", \"this hypothesis suggests that...\", \"we test the hypothesis that...\", \"this paper tests the hypothesis...\", \"we formulate the hypothesis that...\", references to a \"Null Hypothesis\" or \"Alternative Hypothesis\"\n\nReturn **No** if:\n- There are statements that imply assumptions or beliefs unless the term **\"hypothesis\"** appears in the sentence\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly refer to a RESEARCH HYPOTHESIS (using the exact word \"hypothesis\" in formal research statements)?**\n Return 1 for yes or 0 for no and use hypothesis as the JSON key.\nDetermine whether the paper explicitly states a **predicted outcome**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that uses any of the following phrases: \"we predict that...\", \"the predicted outcome is...\", \"we expect that...\", \"our expectation is that...\", \"it is expected that...\"\n- Phrasings like \"the model is expected to...\" or \"our approach is predicted to...\"\n\nReturn **No** if:\n- There are vague goal statements like \"we aim to...\" or \"we intend to...\" unless they include the words **predict** or **expect**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include an EXPLICIT PREDICTED OUTCOME (using specific prediction language like \"we predict\", \"we expect\", or \"predicted outcome\")?**\n Return 1 for yes or 0 for no and use prediction as the JSON key.\nDetermine whether the paper explicitly states the **contributions** of the research, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that clearly lists or describes contributions using any of the following: \n  - \"The contributions of this paper are...\"\n  - \"Our contributions are...\"\n  - \"This paper contributes the following...\"\n  - \"This contributes to...\" (only if it refers to novel findings or technical contributions)\n- Phrases like: \"The main contribution is...\", \"A key contribution of this work is...\"\n\nReturn **No** if:\n- There are vague mentions of impact or relevance unless the word **\"contribution\"** is clearly tied to something new, original, or specific to this research\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly list or state the CONTRIBUTIONS using the accepted phrasing to describe novel findings or technical advances?**\n Return 1 for yes or 0 for no and use contribution as the JSON key.\nDetermine whether the paper contains **pseudocode** or a clearly labeled algorithm block.\n\nReturn **Yes** if:\n- The paper includes a figure, block, or section labeled \"Pseudocode\", \"Algorithm\", or \"Algorithm X\"\n- Structured steps for a method or procedure formatted like code or an algorithm (even if not explicitly called \"pseudocode\")\n\nReturn **No** if:\n- The paper only describes steps in regular paragraph text without structured formatting\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper contain STRUCTURED PSEUDOCODE OR ALGORITHM BLOCKS (clearly labeled algorithm sections or code-like formatted procedures)?**\n Return 1 for yes or 0 for no and use pseudocode as the JSON key.\nDetermine whether the paper provides **open-source code for the methodology it describes**.\n\nReturn **Yes** if:\n- The paper includes an unambiguous sentence where the authors state they are releasing the code **for the work described in this paper** (e.g., \"We release our code...\", \"The source code for our method is available at...\")\n- A direct link to a source-code repository (e.g., GitHub, GitLab, Bitbucket) that contains the code for the paper's methodology\n- A clear statement that code is provided in **supplementary material**, **appendices**, or via an **anonymous review link**\n\nReturn **No** if:\n- The code is promised for the future using phrases like \"we plan to release...\", \"code will be made available...\", or \"our tool will be publicly available...\"\n- The code is only available \"upon request\"\n- The text discusses the source code of a **third-party tool or platform that the authors used**, but does not provide their own implementation code\n- The link points to a resource that is explicitly a `dataset`, `benchmark`, `corpus`, `taxonomy`, or `data`, and does not also clearly host the source code\n- The URL provided is for a general domain, a personal homepage, **a project demonstration page, or a high-level project overview page** instead of a specific code repository\n- **The text is ambiguous or lacks a clear, affirmative statement of release**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CONCRETE ACCESS TO SOURCE CODE (specific repository link, explicit code release statement, or code in supplementary materials) for the methodology described in this paper?**\n Return 1 for yes or 0 for no and use open_source_code as the JSON key.\nDetermine whether the paper includes a link to the **actual code used to run the experiments** described in the paper.\n\nReturn **Yes** if:\n- The paper provides a link to a GitHub, GitLab, Bitbucket, or anonymous repository and does **not** specify that the code is unrelated to experiments\n- The text mentions that code, scripts, or software used to run the experiments is \"available at...\", \"shared in supplementary material\" or \"appendix\"\n- The linked repo is implied to contain code that produces the **results, tables, or figures** in the paper\n\nReturn **No** if:\n- The paper includes **no link**\n- The link is unrelated to this paper's experiments (e.g., a third-party baseline, pretrained model, or unrelated library)\n- The code is **only promised** or **available upon request**\n- The link is to a **dataset**, **benchmark**, or **corpus**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include CONCRETE ACCESS TO EXPERIMENT CODE (specific repository links or explicit statements about code availability) used to run its experiments?**\n Return 1 for yes or 0 for no and use open_experiment_code as the JSON key.\nDetermine whether the paper explicitly states that the **dataset** used in the experiments is **publicly available** or an **open** dataset.\n\nReturn **Yes** if:\n- The paper uses a well-known public dataset (e.g., \"CIFAR-10\", \"MNIST\", \"ImageNet\", \"COCO\", \"Penn Treebank\")\n- Provides a direct URL, DOI, or specific repository name (e.g., GitHub, Zenodo, Figshare) where the dataset can be accessed\n- Cites a published paper or resource that contains the dataset with proper bibliographic information **including author names and year in brackets or parentheses**\n- States the dataset is in supplementary material with specific file names or section references\n- **References standard academic datasets with citations** or **mentions datasets from well-known repositories or benchmarks with proper attribution**\n\nReturn **No** if:\n- The paper mentions the dataset but gives no indication of availability\n- The dataset is proprietary, private, or internal\n- The authors created their own dataset but do not provide public access (no link, DOI, repository, or citation)\n- The paper describes or mentions a dataset but does not provide any source, link, citation, or repository information for accessing it\n- The dataset is described as \"available upon request\" or \"available from authors\" without permanent public access\n- The paper only describes the dataset characteristics, collection process, or statistics without providing access information\n- The paper mentions using \"publicly available data\" but does not specify the exact source or provide access details\n- **The dataset name is mentioned but no citation, link, repository, or author attribution is provided**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CONCRETE ACCESS INFORMATION (specific link, DOI, repository name, formal citation with authors/year, or reference to established benchmark datasets) for a publicly available or open dataset?**\n Return 1 for yes or 0 for no and use train as the JSON key.\nDetermine whether the paper explicitly provides **training/test/validation dataset splits** needed to reproduce the experiment.\n\nReturn **Yes** if:\n- The paper specifies exact split percentages (e.g., \"80/10/10 split\", \"70% training, 15% validation, 15% test\")\n- Provides absolute sample counts for each split (e.g., \"40,000 training samples, 5,000 validation, 5,000 test\")\n- References predefined splits with citations (e.g., \"we use the standard train/test split from [Author et al., 2020]\")\n- Mentions specific file names or URLs for custom splits (e.g., \"train.txt, val.txt, test.txt available at...\")\n- Describes stratified or group-based splitting methodology (e.g., \"stratified by class\", \"split by subject ID\", \"temporal split\")\n- Provides random seed with splitting strategy (e.g., \"random split with seed 42\")\n- Specifies cross-validation setup (e.g., \"5-fold cross-validation\", \"leave-one-out cross-validation\")\n- Uses standard benchmark splits that are well-defined (e.g., \"CIFAR-10 standard split\", \"ImageNet validation set\")\n\nReturn **No** if:\n- References datasets without mentioning splits (e.g., \"we use the XYZ dataset\")\n- Splits are mentioned vaguely (e.g., \"we split the data appropriately\")\n- Only mentions total dataset size without split information\n- Defers split details to supplementary materials or other papers without providing access\n- Uses phrases like \"standard split\" or \"typical split\" without specification\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC DATASET SPLIT INFORMATION (exact percentages, sample counts, citations to predefined splits, or detailed splitting methodology) needed to reproduce the data partitioning?**\n Return 1 for yes or 0 for no and use validation as the JSON key.\nDetermine whether the paper explicitly states the **test data split** or **testing subset** used to evaluate the model's performance.\n\nReturn **Yes** if:\n- The paper explicitly mentions phrases like \"test set\", \"testing set\", \"test portion\", \"test split\", \"held-out test data\"\n- Mentions of dataset names used for testing (e.g., \"CIFAR-10 test set\", \"evaluated on the test set of ImageNet\")\n- Quantitative indicators such as \"10K examples for testing\", \"20% used as test data\"\n\nReturn **No** if:\n- There are vague mentions like \"test accuracy\" or \"we tested our model\" with no details about the test data\n- \"Test results\" or \"testing performance\" without indicating the data used\n- References to standard datasets (like \"we used MNIST\") without specifying the test subset or split\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper clearly describe the TEST DATA SPLIT (explicit mention of test set, split, or subset with specific details) used for evaluation?**\n Return 1 for yes or 0 for no and use test as the JSON key.\nDetermine whether the paper includes links to the **results of the experiment**.\n\nReturn **Yes** if:\n- The paper includes a URL (e.g., to GitHub, Google Drive, institutional repository, Zenodo, Dropbox, etc.) pointing to result files, visualizations, spreadsheets, or dashboards\n- It says results are in supplementary material, appendix, or provided anonymously for review\n- It includes phrases like \"Results available at...\", \"Our results can be found in...\", \"The experimental output is linked at...\"\n\nReturn **No** if:\n- Results are only shown in the paper's main text (figures or tables inside the PDF)\n- The paper mentions results will be released later or are available upon request\n- The link is only to datasets, tools, or pretrained models not tied to the paper's experimental output\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper link to or externally share CONCRETE ACCESS TO EXPERIMENTAL RESULTS (specific URLs, repositories, or supplementary materials containing result files)?**\n Return 1 for yes or 0 for no and use results as the JSON key.\nDetermine whether the paper **explicitly describes the hardware used** to run its experiments.\n\nReturn **Yes** if:\n- The paper mentions any specific hardware setup, including:\n  - **Specific GPU models** (e.g., \"NVIDIA A100\", \"RTX 2080 Ti\", \"Tesla V100\")\n  - **Specific CPU models or processors** (e.g., \"Intel Core i7-4770K\", \"Intel Xeon E5-2630\", \"AMD Ryzen 9 5950X\", \"Intel Core i5-3210M\", \"Intel i7-2600\")\n  - **TPU or other accelerator references** (e.g., \"TPU v2\", \"Google TPU\", \"Intel Neural Compute Stick\")\n  - **Cloud or cluster resources with specs** (e.g., \"AWS p3.8xlarge with V100 GPUs\", \"Google Cloud TPU v3\")\n  - **Computer specifications with processor details** (e.g., \"laptop with Intel Core i5\", \"workstation with Intel Xeon\", \"desktop PC with Intel Core i7\")\n- Direct statements about where experiments were run, such as:\n  - \"We trained our models using...\"\n  - \"Experiments were performed on...\"\n  - \"Hardware specifications include...\"\n  - \"All experiments ran on...\"\n  - \"Our machine has...\"\n  - \"Results are obtained on...\"\n\nReturn **No** if:\n- No hardware is mentioned\n- The paper only discusses software, datasets, or **vague terms like \"on a GPU\", \"using a High Performance Computing Resource\", or \"on a server\" without any specific model numbers, processor types, or memory details**\n- Any mention of hardware is disconnected from the experimental process\n- The hardware mentioned (like mobile phones, tablets, or IoT devices) is not used for training or inference in the experiments\n- **Only general computing environments are mentioned without any specific hardware details (e.g., \"on a cluster\", \"using cloud computing\" with no specifications)**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC HARDWARE DETAILS (exact GPU/CPU models, processor types with speeds, memory amounts, or detailed computer specifications) used for running its experiments?**\n Return 1 for yes or 0 for no and use hardware_specification as the JSON key.\nDetermine whether the paper provides a reproducible description of the ancillary software. A reproducible description **must include specific version numbers** for key software components.\n\nReturn **Yes** if the paper meets one of the following criteria:\n- It lists multiple key software components with their versions (e.g., \"Python 3.8, PyTorch 1.9, and CUDA 11.1\")\n- It names a self-contained solver, simulation environment, or specialized package with a specific version number (e.g., \"CPLEX 12.4\", \"Gecode 4.2.0\", \"Choco 2.1.5\")\n\nReturn **No** if the paper only mentions:\n- Software names without version numbers (e.g., \"using Caffe\", \"the scikit-learn package\")\n- A programming language, even with a version, without listing any versioned libraries or solvers (e.g., \"implemented in Java 7\" by itself is not enough)\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC ANCILLARY SOFTWARE DETAILS (e.g., library or solver names with version numbers like Python 3.8, CPLEX 12.4) needed to replicate the experiment?**\n Return 1 for yes or 0 for no and use software_dependencies as the JSON key.\nDetermine whether the paper explicitly provides details about the **experimental setup**, especially hyperparameters or system-level training settings.\n\nReturn **Yes** if:\n- The paper contains specific hyperparameter values (e.g., learning rate, batch size, number of epochs, optimizer settings)\n- Details on model initialization, dropout rate, or training schedules\n- A clearly labeled table or paragraph describing training settings\n- A section titled \"Experimental Setup\" or similar with configuration information\n\nReturn **No** if:\n- The paper only mentions that \"we trained a model\" or refers to \"standard settings\" without elaboration\n- The only details about training are deferred to supplemental materials, code, or prior work\n- There is no mention of hyperparameters, optimizer settings, or explicit configuration steps\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper contain SPECIFIC EXPERIMENTAL SETUP DETAILS (concrete hyperparameter values, training configurations, or system-level settings) in the main text?**\n Return 1 for yes or 0 for no and use experiment_setup as the JSON key.\n",
+    "temperature": -1,
+    "top_p": -1,
+    "evaluation_seconds": "194"
+}

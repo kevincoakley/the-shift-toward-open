@@ -1,0 +1,10 @@
+anthropic
+anthropic[bedrock]
+google-genai
+ollama
+openai
+nltk
+scikit-learn
+spacy
+tiktoken
+pyyaml

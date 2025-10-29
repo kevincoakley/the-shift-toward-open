@@ -1,0 +1,490 @@
+================
+open_source_code
+================
+
+False to True
+=============
+13: Both the SETMARGIN source code and the full experimental setup are available at https://github.com/stefanoteso/setmargin.
+
+31: Extensive experiments on real-world data show significant gains of these two alignments and their overall performance as compared to state-of-the-arts methods. The code has been released at: http://research.microsoft.com/apps/pubs/?id=264770.
+
+47: All planners run a maximum of 30 minutes on a cluster with AMD Opteron 6300@2.4Ghz nodes, and are allowed a maximum of 8GB of memory. The source code of ES plus all problem encodings are available on gfrances.github.io/pubs.
+
+78: We have attempted to use a comprehensive set of static features used in previous summarization systems. We omit details for space but source code is available at: https://github.com/kedz/ijcai2016
+
+107: The source code for MID is available at http://webdav.tuebingen.mpg.de/u/karsten/Forschung/MID
+
+400: CMP is implemented in C++. MINISAT (E´ en and S¨ orensson 2004) was selected as the CDCL SAT-solver. CMP and all experimentation data are available from www.cril.univ-artois.fr/documents/cmp/.
+
+True to False
+=============
+87: Benchmark files can be downloaded at es.fbk.eu/people/bittner/ijcai16.tar.gz <<Not experiment code>>
+186: <<I couldn't find any references to code>>
+328: <<I couldn't find any references to code>>
+290: There is a reference to an appendix (URL is dead by the way) but not to code.
+
+
+============================
+open_source_data (was train)
+============================
+
+Experimental & Not Scored to True
+=================================
+3: Experiments were carried out on the same datasets which were used in [Guns et al., 2013] and available from the UCI repository. Table 3 shows the characteristics of these datasets.
+
+14: Our experiments are run on the Dragon Age: Origins maps from the Moving AI repository [Sturtevant, 2012].
+
+19: To this end, 1,000 images are firstly randomly chosen from three publicly available datasets, including MSRA [Liu et al., 2011b], SED [Alpert et al., 2012], and iCoSeg [Batra et al., 2009].
+
+24: Currently, the best non-optimal method solves 86 [Takahashi, 2016] of the 90 standard test set instances [Myers, 2016].
+
+25: Two extensively used RDF datasets were tested. •SWDF2 (Semantic Web Dog Food) offers 200K entity-property-value triples describing 20K entities in the research domain (e.g., papers, researchers). •LinkedMDB3 offers 6M entity-property-value triples describing 0.6M movie-related entities (e.g., actors). 2http://data.semanticweb.org/ 3http://data.linkedmdb.org/
+
+27: Digit data set is a public data set hosted in UCI Machine Learning Repository 1, https://archive.ics.uci.edu/ml/datasets/Multiple+Features; HumanEva data set 2 contains 10000 samples from two
+subjects with 5000 samples per subject.2http://vision.cs.brown.edu/humaneva/index.html; YouTube data set 3 contains 11 human activities 3http://www.cs.ucf.edu/˜liujg/YouTube Action dataset.html; UCF data set 4 is an extension to the YouTube data sets. 4http://crcv.ucf.edu/data/UCF50.php; KTH data set 5 contains six type of human actions 5http://www.nada.kth.se/cvap/actions/
+
+53: Data used in our experiments are obtained from the CASAS project1 which are partially annotated. 1http://ailab.wsu.edu/casas/datasets.html
+
+68: Riverswim RiverSwim [Strehl and Littman, 2008] is a 6-state chain MDP previously used to showcase PSRL [Osband et al., 2013]. MarbleMaze MarbleMaze [Asmuth et al., 2009; Russell et al., 1994] is a 36-state gridworld MDP previously used to showcase the benefit of MCMC clustering in BOSS [Asmuth et al., 2009]. SixArms Six Arms [Strehl and Littman, 2008] is a 7-state MDP arranged in a spoke pattern, where each of the six outer states has very different dynamics/rewards, which presents a challenge for an approach based on clustering. 200-state environment Next we examined a larger 200-state gridworld featuring one-dimensional walls [Johns and Mahadevan, 2007], 
+
+74: All data supporting this study are openly available from the University of Southampton repository at http://dx.doi.org/10.5258/SOTON/391163.
+
+87:  In total we used 14 system models and 82 problem instances, with varying amounts of failure mode and discrepancy nodes2 2Benchmark files can be downloaded at es.fbk.eu/people/bittner/ijcai16.tar.gz
+
+91: Specifically, our proposed approach reduces the computational time by a factor of at least 5.4 for 24 GPS traces (1.18 million GPS points) in the T-drive data set [Yuan et al., 2010; 2011].
+
+98: Real-world datasets. We test the algorithms on several real-world datasets: The Facebook dataset, col- lected from survey participants of Facebook App, consists of friendship relation on Facebook [McAuley and Leskovec, 2012]
+
+103: We used the PATTY dataset [Nakashole et al., 2012] to create an entity-relation graph. 
+
+104: Table 1 shows average runtimes in seconds on 312 instances2 from six classes: ConformantPlanning [Tu et al., 2011], MaximalSatisfiableSet [Janota and Marques-Silva, 2011], MinimalDiagnosis [Gebser et al., 2011b], 2QBF [Peschiera et al., 2010], Repair [Gebser et al., 2010], and StrategicCompanies [Calimeri et al., 2013].
+
+105: To obtain our data, we process three available datasets, including FilmTrust (trust.mindswap.org/FilmTrust), Flixster.com and Epinions.com. Specifically, we use the original FilmTrust dataset, and randomly sample a small portion of original Flixster dataset. 
+
+124: We generated different graph streams starting from two graph datasets available from the PubChem website (http://pubchem.ncbi.nlm.nih.gov): AID:123 and AID:109.
+
+134: To obtain the distributional description of the words within the relational phrases we used Gigaword [Parker et al., 2011].
+
+135: We use 50 images from the Berkeley Segmentation Dataset [Martin et al., 2001].
+
+141: In this section, we evaluate the proposed Euler clustering method on five public datasets: Event [Li and Fei-Fei, 2007], 13 Natural Scene Categories [Fei-Fei and Perona, 2005], Cal-tech 101 [Fei-Fei et al., 2006], Imagenet [Deng et al., 2009], and Caltech 256 [Griffin et al., 2007], 
+
+145: We used a publicly available conservation planning benchmark which represents a geographical region on the coast of North Carolina [Ahmadizadeh et al., 2010].
+
+185: The Sushi data set [Kamishima et al., 2005] consists of 5000 complete user preference rankings over 10 varieties of sushi.
+
+188: we have examined the number of unique distributions σt(st,⃗ot) in a number of standard benchmark problems.2 2Available from http://www.masplan.org/.
+
+194: We applied our algorithms to two data sets taken from the 2002 Irish general election.2 2Data sets obtained from: www.dublincountyreturningofficer.com.
+
+202: Links to the datasets are given in footnote 1 (http://genomics.stanford.edu) and 2 (http://string-db.org/).
+
+214: multiple DUC datasets (2005, 2006, 2007) (Dang, 2005, 2006), TD-QFS is freely available at http://www.cs.bgu.ac.il/~talbau/TD-QFS/dataset.html
+
+239: that in real–world settings (Yahoo! Webscope A3 dataset, 10 available slots)
+
+271: The TSPTW dataset (http://iridia.ulb.ac.be/ manuel/tsptw-instances)
+
+288: we employed three standard CTBN datasets from prior literature,
+
+291: we apply our methods to the text corpus, 20 Newsgroups Dataset. (The version we used is from http://qwone.com/∼jason/20Newsgroups/ where cross-posts and some headers were re-moved.)
+
+299: We use 4 domains of plan recognition (Ramirez and Geffner 2009), namely GRID-NAVIGATION(GRID), IPC-GRID+(GRID+), BLOCK-WORDS(BLOCK), and LOGISTICS(LOG).
+
+313: Details listed in table 1, links given in descriptive text on page 2663.
+
+314: We tested both algorithms on datasets from the UCI Machine Learning Repository as well as several synthetic datasets.
+
+324: This dataset contains 2833 stocks over a trading period of 1038 days, crawled from the Yahoo Finance website. (http://finance.yahoo.com)
+
+326: we used the publicly available GSound system (Schissler and Manocha 2011).
+
+328: For this, we used UOBM and DBpedia, which come with large datasets. UOBM (Ma et al. 2006) is a standard benchmark for which synthetic data is available (Zhou et al. 2013). (http://dbpedia.org/About)
+
+329: All maps are available from Nathan Sturtevant’s repository at http://movingai.com/benchmarks/.
+
+330: We exploit the graph generator proposed in (Lancichinetti, Fortunato, and Radicchi 2008) to produce graphs with ground truth clustering structure. We also perform evaluations to a subset of the Facebook dataset (Traud, Mucha, and Porter 2011).
+
+339: We use 7 UCI1 benchmark datasets for evaluation. (http://archive.ics.uci.edu/ml/)
+
+352: on standard International Planning Competition benchmarks
+
+367: well-known FF benchmark domains (Hoffmann 2001).
+
+376: Finally, we experimentally assess our approach on possibilistic and probabilistic versions of the same benchmarks: PPUDD against SPUDD and APRICODD (St-aubin, Hoey, and Boutilier 2000)
+
+382: We leverage Yahoo! Webscope dataset (Yahoo! Webscope dataset ydata-flickr-ten-tag-images-v1 http://labs.yahoo.com/Academic Relations)
+
+385: we performed the comparison of the algorithms on the MovieLens dataset (Lam and Herlocker 2012) of the movie ratings.
+
+387: on the industrial benchmarks used in the 2013 MAXSAT Solver Evaluation.
+
+394: We use the Version 3 dataset of the Archiving, Validation, and Interpretation of Satellite Oceanographic (AVISO) (Available at http://www.aviso.oceanobs.com/es/data/products/
+sea-surface-height-products/)
+
+400: all experimentation data are available from www.cril.univ-artois.fr/documents/cmp/
+
+Experimental & Not Scored to False
+==================================
+
+15, 18, 33 ,34, 40, 42, 47, 48, 49, 51, 52, 54, 60, 62, 64, 73, 76, 79, 85, 88, 90, 94, 108, 110, 113, 114, 116, 117, 120, 122, 123, 127, 140, 143, 146, 167, 169, 172, 173, 174, 175, 176, 177, 178, 179, 180, 184, 187, 189, 190, 191, 192, 193, 195, 196, 197, 198, 199, 203, 207, 209, 211, 242, 244, 248, 249, 279, 292, 296, 303, 306, 327, 331, 334, 335, 353, 368, 369, 374, 375, 377, 381, 388, 396, 397: <<No open or public dataset found>>
+
+200, 225, 253, 336, 370, 371, 386: The authors present experimental results on synthetic/generated data but not the code used for generation (Or the generated datasets)
+
+False to True
+=============
+32: We employ four binary class UCI datasets [Blake et al., 1998], Gisette, Arcene, Dexter and Dorothea.
+
+39: Six image datasets are used in the experiments, including three face datasets (AT&T face databases, Extended Yale Database B [Lee et al., 2005] and CMU-PIE [He et al., 2005a]) and three handwritten character datasets (Binary Alphabet Dataset 2, MNIST handwritten digits Database, USPS Handwritten Digits Dataset3).
+
+41: We first perform the experiments to verify the effectiveness of PUFS on three semi-supervised learning benchmark datasets1 - USPS, COIL and G241[Chapelle et al., 2006]. 1. 
+
+57: This section describes the evaluation of hyperfeature construction and alignment of actions on two multimodal datasets with parallel video and text. The Wetlab dataset [Naim et al., 2014; 2015] has RGB and depth video with text in the form of lab protocols. Participants conduct a variety of biology lab experiments following the steps specified in the protocol. The TACoS corpus [Regneri et al., 2013] has RGB video with text in the form of multiple natural language descriptions collected via crowdsourcing on Amazon Mechanical Turk1. 
+
+89: In this paper, 12 image datasets are used in our empirical investigations. A subset of NUS [Chuaet al., 2009] contains 9,109 images of 10 categories, and 6 groups of features extracted. MSRA [Wang et al., 2009] subset contains 10,680 images of 9 categories, and 7 groups of features are extracted. Animal [Christoph et al., 2009] (represented as ANIM in short in the following content) subset contains 30475 images of 50 animals classes, and 6 pre-extracted feature representations are extracted for each image.
+
+107: Next, we evaluated MID using the cdc15 yeast (Saccharomyces cerevisiae) gene expression dataset from [Spellman et al., 1998], which was used in [Reshef et al., 2011] and contains 4381 genes5 - 5http://www.exploredata.net/Downloads/Gene-Expression-Data-Set
+
+125: We evaluate our AMAN algorithm in three planning domains blocks2, depots3 and driverlog2 which are IPC (International Planning Competition) benchmark domains. 2http://www.cs.toronto.edu/aips2000/aips-2000datafiles.tgz 3http://planning.cis.strath.ac.uk/competition/
+
+201: The transliteration training, development and test sets were taken from Wikipedia inter-language link titles4: the training data consisted of 59000 sequence pairs composed of 313378Japanese katakana characters and 445254English characters; the development and test data were manually cleaned and each of them consisted of 1000 sequence pairs. For grapheme-to-phoneme (GM-PM) conversion, the standard CMUdict5 data sets were used: the original training set was randomly split into our training set (about 110000 sequence pairs) and development set (2000pairs); the original test set consisting of about 12000 pairs was used for testing. 4www.dumps.wikimedia.org 5http://www.speech.cs.cmu.edu/cgi-bin/cmudict
+
+217: MovieLens rating data are collected from MovieLens website: https://movielens.org/. This data set are collected over various periods of time, depending on the size of the set. In the experiments, we use two data sets, MovieLens 100k and MovieLens 1M.
+
+222: For our corpus, we use English Language Wikipedia,4 breaking articles into paragraphs. 4http://en.wikipedia.org/, dump from Jan 2, 2014.
+
+261: Dataset: To evaluate the effectiveness of the proposed approach, we conduct extensive experiments on the following
+three large-scale event detection datasets: — TRECVID MEDTest 2014 dataset (TRECVID 2014): This dataset has been introduced by the NIST for all participants in the TRECVID competition and research community to perform experiments on. There are in total 20 events, whose description can be found in (TRECVID 2014). We use the official test split released by the NIST,
+and strictly follow its standard procedure (TRECVID 2014). To be more specific, we detect each event separately, treating each of them as a binary classification/ranking problem. — TRECVID MEDTest 2013 dataset (TRECVID 2013): The settings of MEDTest 2013 dataset is similar to MEDTest 2014, with 10 of their 20 events overlapping. — Columbia Consumer Video dataset (Jiang et al. 2011): The official Columbia Consumer Video dataset contains 9,317 videos in 20 different categories, including scenes like “beach”, objects like “cat”, and events like “basketball” and “parade”. Since the goal of this work is to search complex events, we only use the 15 event categories.
+
+273:  For topic classification, we use 4 multi-class datasets. “Ohscal” is a dataset of medical documents in
+WEKA1. “Reuters”(Rose, Stevenson, and Whitehead 2002) is a collection of news articles organized into topics, and we use the 8 most frequent topics here2. WebKB(Craven et al. 1998) consists of 4,199 university webpages of four types: course, faculty, project and student3. 20 Newsgroups(Lang 1995) is a set of 18,828 Usenet messages from 20 different online discussion groups 4. For sentiment classification, we use 4 domains from the Multi-Domain Sentiment Dataset5(Blitzer, Dredze, and Pereira 2007). Table 4 provides a brief description of each dataset. All datasets have been widely used in previous studies, and are publicly available. 1Available at http://www.cs.waikato.ac.nz/ml/weka/ 2Available at http://www.daviddlewis.com/resources/testcollections/reuters21578/ 3Available at http://www.cs.cmu.edu/ WebKB/ 4Available at http://qwone.com/ jason/20Newsgroups/ 5Available at http://www.cs.jhu.edu/ mdredze/datasets/sentiment/
+
+278: We took the “cat” and “dog” classes from the CIFAR-10 dataset (Krizhevsky and Hinton 2009), and represented each 32 × 32 image by a set of triples (x,y,v), where x and y are the position of each pixel in the image and v the pixel value after converting to grayscale. We consider the Scene-15 dataset (Lazebnik, Schmid, and Ponce 2006), which contains 4485 natural images in 15
+
+302: We perform experiments on the corpus for the Generation Challenges 2011 Surface Realisation Shared Task1, 1http://www.nltg.brighton.ac.uk/research/sr-task/
+
+312: Illicit cannabis web pages pose a negative influence on users, especially teenagers (Wang et al., 2011). The data set consisting of 4427 normal and cannabis web pages in (Wang et al., 2011) is used. The image data introduced in (Zuo et al., 2010) is applied.
+
+332: The proposed UMD2L approach is verified on the MultiPIE (Cai et al., 2006), AR (Martinez and Benavente 1998), COIL-20 (Murase and Nayar 1995) and MNIST (LeCun et al., 1998) datasets.
+
+354: Wine. This is a dataset from UCI Machine Learning Repository (Asuncion and Newman 2007), 20-Newsgroup. This dataset is a collection of about 20,000 newsgroup documents, This is an unweighted protein-protein interaction (PPI) network from the Database of Interacting Proteins (Salwinski et al. 2004). BioGrid. The last dataset is another PPI network obtained
+from the BioGrid Database (Stark et al. 2011). 
+
+361: ADNI dataset (Zhou et al. 2013) that is from the Alzheimer’s Disease Neuroimaging Initiative database. School data set (Gong, Ye, and Zhang 2012) that is from the Inner London Education Authority (ILEA).
+
+384: TAMU Social Honeypots Dataset (TwitterT):1 1http://infolab.tamu.edu/data/ Twitter Suspended Spammers Dataset (TwitterS): Following the data crawling process used in (Yang et al. 2011; Zhu et al. 2012) 2http://trec.nist.gov/data/tweets/
+ 
+
+390: We conduct experiments on two text corpora created from Wikipedia documents. The big one contains 1.6 billion words from all Wikipedia documents while the small one contains 42 million words from a random sample of
+Wikipedia documents. We use the test set proposed in (Mikolov et al. 2013a) to measure the quality of the learned representation vectors.
+
+395: ore specifically, our experiments are based on the dataset described in (Ni, Wang, and Moulin 2011). 
+
+=====================
+software_dependencies
+=====================
+
+
+False to True
+=============	
+
+3: <<Solver with version>> We used LCM to extract the set of all closed patterns and CPLEX v.12.4 to solve the different ILP models.
+
+34: <<Solvers with version>> The tested solvers are WASP, CLASP 3.1.3 [Gebser et al., 2015b], and GLUCOSE 4.0 [Audemard and Simon, 2009].
+
+48: <<Solvers with version>> We benched our propagator independently from the PCP, using Choco 3.3.3 [Prud’homme et al., 2014] on a I7-4720HQ linux laptop with 16GB of RAM.
+
+52: <<Solvers with version>> The numbers under “Q” refer to the average running times for computing an answer set of corresponding programs Q, using corresponding DLP solvers, i.e., clasp3 (version 3.1.4) and cmodels4 (version 3.8.5), and those under “Qn”
+
+167: <<Solvers with version>> All the compared algorithms were implemented in Java, using a single thread on a 2.8 GHz CPU and CPLEX v12.4 for solving LPs.
+
+225: In executing our experiment, we use MATLAB 2013a running on Intel Xeon CPU E5-1650, 16 GiB RAM and Ubuntu 14.04LTS operating system.
+
+
+
+True to False
+=============
+
+28: There are software packages specified, but not persay used (just discussed). No actual ancilliary software discussed (nor any version numbers given).
+
+50: "Also, we run the statistical tests using the following R package: Pairwise Multiple Comparison of Mean Ranks Package (PMCMR) [Pohlert, 2014]." but version is not specified.
+
+54: RMASBench used and frequently named but version never specified
+
+62: Dependencies mentioned, versions not given (' implemented in OCaml and uses Z3')
+
+63: SCIP engine is used and cited, but no versioning is specified
+
+87: Dependency xSAP is stated, cited and explained but no version is given. 
+
+96: 'Robot Operating System' and 'Festival Speech Synthesis System' used and linked but versions not specified
+
+224: 'activity recognition chain (ARC) system developed by (Bulling,Blanke, and Schiele 2014)' used, version not mentioned.
+
+232: 'The system is implemented in C++, with the Zero MQ package for communication' no versions or compilers mentioned.
+
+257: CRF++ mentioned and linked but no version given.
+
+272: 'Matlab’s Bioinformatics toolbox' mentioned but no versioning.
+
+357: Matlab and SparseLab used, no versions given (Link given for sparselab).
+
+
+============================
+data_splits (was validation)
+============================
+
+1: We apply 5-fold cross validation to evaluate our model on the formed dataset.
+
+4: Each dataset is split into a database and a query set. Statistics of datasets are given in table 1.*
+
+5: For Oxford5K and Paris6K, 10%, 20%, and 70% images are used as query images, training images, and database images, respectively. For Paris500K, the corresponding ratios are 10%, 10%, and 80%
+
+7: We use 10-fold stratified cross-validation to evaluate algorithm performance in terms of accuracy, with 5-fold inner cross-validation and random parameter search [Bergstra and Bengio, 2012] used to select parameters.
+
+8: In 5-fold cross validation, the performance of Decision tree is the best which accuD achieves 99.5%. Moreover, other methods also get more than 97.8% in accuD, which indicates that our framework has a steady performance.
+
+11: Table 1: Statistics of the four datasets used in this paper. For datasets without development set, we use 10-fold cross-validation (CV) instead.
+
+22: Table 2: Statistics of the two publicly available datasets used in the knowledge base completion experiments. Rel.: relations. En.: entities
+
+23:  We call these datasets JF17K. Their statistics, in the same order as FB15K, are given in Table 2
+
+28: a subset of MNIST dataset (10,000 for training, 3,000 for validation, and 3,000 for testing)
+
+29: We used the commonly used leave-one-out cross validation to evaluate the performance of each recommendation algorithm over five runs.
+
+30: We used the existing train/tune/test division of the data.
+
+35: Among these iambics, 15,001 are used for training and 688 are used for test. The second dataset involves two corpora used to train the word embedding model, including the Gigaword corpus (contains roughly 1.12 billion Chinese characters) and the Songci corpus (1.22 million Chinese characters roughly).*
+
+37: For simulation, we split the data into the training (10000 pairs) and testing set (1000 pairs), and trained Match-SRNN with regression loss.
+
+39: All experiments are performed with ten-fold cross validation strategy, i.e., all data sets are randomly splitted into ten equal subsets, iteratively pick one subset for testing and the remaining nine subsets for training, then the performances are averaged over the ten loops.
+
+41: is built using 5-fold cross-validation on the test data set with these feature subsets
+
+45: In the first experiment, MORPH dataset is randomly split into 10 chunks. Each time, 1 chunk is used as the testing set and the rest 9 chunks are used as the training set. This procedure is repeated 10 folds and the mean value and standard deviation of each evaluation measure is computed. In the second experiment, we use the images in training set provided by ChaLearn to train our model. And the validation set provided by ChaLearn is used as the test set in our experiment.
+
+50: Considering the random nature of the methods, for all the experiments, we employ a 10x10-10-fold cross-validation strategy, expect in the SVM case, where we employ a 1x10-10-fold.
+
+58: Here we mainly follow the leave-one-out protocol used by [He and McAuley, 2016b; Rendle et al., 2009], i.e., for each user u we randomly sample a positive item Vu 2I+ u for validation and another Tu 2I+ u for testing. The remaining data is then used for training.
+
+59: The labeled dataset was randomly split into training set (50%), validation set (20%) and test set (30%) and we maintain the proportion as shown in Table 1.
+
+63: The set is split into 108 development questions and 129 hidden test questions based on the year they appeared in (6 years each). 
+
+70: The aPascal dataset contains 6340 training images and 6355 testing images collected from Pascal VOC 2008 challenge. 
+
+72: In our experiments, we consider the POIs appearing in the first 9-month check-ins as labeled training data, and the new POIs in the last 9-month data (unseen in training data) as unlabeled testing data.*
+
+78: To evaluate our model, we randomly select five events to use as a development set and then perform a leave-one-out style evaluation on the remaining 39 events.
+
+83: In our experiment, we randomly split each dataset into training and test matrices for five times and report the average test results in terms of these two evaluation metrics.
+
+84: For evaluation, we randomly sample a portion of labeled vertices and take their representations as features for training, and the rest are used for testing. We increase the training ratio from 10% to 90%, and employ multi-class SVM [Crammer and Singer, 2002] to build classifiers.*
+
+86: We train the linear map model over about 95% of the brain imaging data and test the model over the remaining 5%. We apply 20-folds cross-validation in order to get the average performance of the model.
+
+89: For all datasets, 66% instances are randomly picked up for training, and the remains are used as test set.*
+
+92: We used three image datasets: 1) ImageNet challenge (ILSVRC 2012 & 2015), 2) Abnormal Object Dataset [Saleh et al., 2013], 3) PASCAL VOC 2011 train and validation set.
+
+96: We divided our 32-object dataset into 4 folds. For each fold, at least 10 human participants played “I Spy” with both the vision only and multi-modal systems (12 participants in the final fold). 
+
+97: For the PKU and MSR datasets, last 10% of the training data are used as development data as [Pei et al., 2014] does. For CTB6 data, recommended data split is used. 
+
+99: We hold out 10% of the events in each dataset for model tuning, and the rest of the events are split with a ratio of 3:1 for training and test. 
+
+101: The set is then split into two sets with 60% of all the preferences kept for inference and the rest for testing.*
+
+106: For fair comparison, we use the same train/test splits as in [Shotton et al., 2008].
+
+107: For each dataset, we generated training and test sets by 10-fold cross validation and performed feature selection using only the training set.
+
+112: This set is split sequentially into 3 data sets with the following lengths: 48, 20, and 41 days. The three periods are utilized as the training set, calibration set, and test set, respectively
+
+118: We use the 10-fold cross-validation with K = 4.
+
+119: We use 80% of the data as the database and the remaining 20% to form the query set.
+
+128: We performed 10-fold cross validation, where one-tenth of the normal samples are used for training split, and the rest is split evenly between validation and test splits, repeating 10 times. 
+
+130: The Wall Street Journal data from PTB3 were split into training, development test and final test sets, shown in Table 2. 
+
+131: The average classification accuracy and standard deviation based on 5-fold cross validation are reported. In the following, we show the experimental results in detail.
+
+138: In the following experiments, we will use five fold cross validation for the training and testing.
+
+147: We divide the PIE subset into training set and test set and perform 10-fold cross validation with respect to subjects.
+
+148: For each data set, 1,000 samples are used for training, 1,000 for validation, and another 10,000 samples for testing.
+
+201: the standard CMUdict5 data sets were used: the original training set was randomly split into our training set (about 110000 sequence pairs) and development set (2000pairs); the original test set consisting of about 12000 pairs was used for testing. 
+
+202: For each dataset, we perform 10-fold cross-validation by separating the dataset into 10 subsets and each time we draw 1 subset out as test samples and then average the performance.
+
+204: We adopt a 3-fold cross validation by randomly partitioning the ground truth into three similarly sized groups.
+
+206: For each dataset we performed the prediction task using a 10-fold cross validation approach. Hence, we first split a dataset into a training and test set. The train set is then split further into train and validation splits using a ratio of 75%/25%. 
+
+212: The reported results of various algorithms on all the datasets are produced by 5-fold cross validation.
+
+215: In all experiments, half image pairs are randomly selected for training and the remaining are employed for test.
+
+216: The ground truth masks of training data were provided while those of testing data with 30 slices were held out by the organizers for evaluation. We evaluated the performance of our method by submitting results to the online testing system.
+
+217: Every time, we hold 75% of rated entries as observed training data, and the other 25% data as testing data.
+
+218: Hence, in each experiment, for each round of the 10-fold cross validation, 90% of the samples were used for training the model with 9-fold cross validation, and the remaining 10% were reserved for testing.
+
+219: This dataset provides a standard source/target split where 40 classes with 24,295 samples are in source domain and 10 classes with 6,180 samples are in target domain.
+
+220: We randomly select 10% of the documents in the corpus to use as a test set and 10% to use as a development set, the latter being used to compare architectures and optimize hyperparameters prior to evaluation.
+
+221: We use a random forest classifier trained on the WordNet validation set using five-fold cross-validation
+
+222: For our corpus, we use English Language Wikipedia, breaking articles into paragraphs. Our training set was approximately 8.9 million event sequences, our validation set was approximately 89,000 event sequences, and our test set was 2,000 events from 411 sequences, such that no test-set article is in the training or validation set.
+
+223:  We make a training and testing split: 20 pairs for training and five for testing. 
+
+224: Table 3 shows the averaged accuracy results over 5-fold cross-validations. 
+
+226: The regularization parameters of SPH, λ1 and λ2, were selected by another 10CV on the training data.
+
+228: The dataset consists of 9927 sentence pairs in a 4500/500/4927 train/dev/test split. 
+
+230: We split the dataset by year so that the training set includes all papers by 2004 and the rest of papers published between 2005 and 2015 belongs to the test set. 
+
+231: In all experiments, 5-fold cross-validation is used to evaluate the performance of the learned classifier specified in the previous subsection. 
+
+236: We utilize the action bank features (Sadanand and Corso 2012) and five-fold data splitting to evaluate our method, where four folds are used for training and the remaining one fold for testing.
+
+241: we followed the evaluation of Li, Ji, and Huang (2013): randomly selected 30 articles from different genres as the development set, and we subsequently conducted a blind test on a separate set of 40 ACE 2005 newswire documents. We used the remaining 529 articles as our training data set. 
+
+243: In particular, 80% of the training data were used for construct a pattern library and the remaining 20% of the time series data was used for prediction performance testing. 
+
+245:  We compare our visual semantic model (Vector) with a binary relevance model (Binary) using 10-fold cross validation. The results can be seen in Table 1.
+
+247: We used TREC data to train the classifier with the average accuracy of∼91% in five-fold cross-validation.
+
+250: For our experiments, we divided the data set (17,000 question-passage pairs) into training, development, and test data. For our training data, we first selected 7,000 question-passage pairs for 350 questions, which we used only as training data in our previous works (Oh et al. 2012; 2013) and randomly chose 8,000 question-passage pairs for 400 questions from the remainders of the first selection.
+
+255: We summarize the results in terms of the average recognition accuracy (5-fold cross validation) in Table 1.
+
+257:  Result on the corpus of 188 dialogues is shown in Table 3 using leave-one-out cross-validation.
+
+258: We randomly split the dataset into 80% training and 20% test. We further split 20% training data for validation for M3F, iPM3F, SoftImpute, SoftImpute-ALS and HASI to tune their hyperparameters.
+
+260: On both datasets, 70% elements of the behavioral history of each user are selected for training, then 20% for testing and the remaining 10% data as the validation set. 
+
+261: We use the official test split released by the NIST, and strictly follow its standard procedure (TRECVID 2014).
+
+265: We used a randomly selected 22 years’ data for obtaining the dominant features. Further, we conducted leave-one-out cross-validation on the remaining 10 years’ data to test the predictive performance of the dominant predictors.
+
+267: We summarize the statistics of datasets in Table 1
+
+268: All 10 methods were allowed to “spin up” from 14 November 2014 – 31 January 2015, and then evaluated for 1 February – 11 October 2015
+
+272: In this section, we present experimental results on four realworld mixed-attribute datasets from the UCI machine learning repository (Lichman 2013), which are “Adult”, “Credit”, “Statlog-Australian” and “Statlog-German”. The “Adult” dataset has already been split into train/test in approximately 2/3, 1/3 proportions. As for the “Credit”, “Statlog-Australian” and “Statlog-German” datasets, we simply select the first 2/3 proportion of all the instances as the training set and the remaining as the testing set.
+
+273: For each data set and each size, we repeat experiments 50 times, and each time randomly sample labeled data for training and testing. Each time, we ensure that there is at least one document for each class.
+
+274:  The training data set consists of 40,449 advertisements, and the testing data set consists of 4,211 advertisements (9.4% of the sample).
+
+276: We randomly select 10%, 20% and 30% of the samples from each task as the training set and the rest as the test set;
+
+277: It contains 1707 videos belonging to 12 actions, splitting into a training set (823 videos) and a test set (884 videos).
+
+278: Throughout these experiments we use M = 5, |V| = 10ℓ (selected as rules of thumb; larger values did not improve performance), and use a validation set (10% of the training set) to choose bandwidths for KDE and the RBF kernel as well as model regularization parameters
+
+281: In training, we use 10 samples, two budget sizes and various numbers of o/d pairs. For 10% budget, “Greedy” performs slightly better, but the value of our algorithm is within 1.3 times the value of “Greedy”. For 20% budget, both algorithms perform the same in most cases. In terms of runtime, shown in Fig. 7, our algorithm is significantly faster. In testing, we use 100 testing samples and evaluate the policies produced by different number of training samples.
+
+282: Data from the second season was used in training and data from the first season was used in testing for all the experiments reported below.
+
+283: The dataset is split into subsets of 2000 and 3000 images for training and test. Each image is associated with lexicons of 50 (IIIT5k-50) and 1k words (IIIT5k-1k) for test.
+
+285: For each dataset, we split training data with ground truth into two sets for training and validation (about 1/7 of total training data), respectively.
+
+287: The data were captured over 11 sessions, and are roughly divided in half for training and testing. 
+
+288: We ran 5-fold cross validation to generate the learning curve of the loglikelihood and AUC-ROC on the test set.
+
+289: For the real-world data sets, we chose 80% of instances randomly every time unit to create different training sets (five sets) and evaluated the average AUC by using these sets.
+
+290: We test on MNIST dataset, consisting of 28×28 images from 10 classes with 60,000 training and 10,000 test samples.
+
+294: Since our main goal is to conduct implicit discourse relation classification (the main task), Table 2 summarizes the statistics of the four top-level implicit discourse relations in PDTB.
+
+297: We use cross-validation to estimate the performance of different methods. On the Bibtex and Enron data sets, we follow the experimental setup used in Mulan2. Since there is no fixed split in the Bookmarks data set in Mulan, we use a fixed training set of 80% of the data, and evaluate the performance of our predictions on the fixed test set of 20% of the data.
+
+298: 2/3 instances are used as training examples while remains are used for testing. Experiments on each dataset are performed 30 times with random splits.
+
+301: For each dataset in Table 1, data instances from each class were split into training set (70%) and test set (30%).
+
+302: We obtain our training set from the official training data of this shared task, using this training set to train the morphological generation, syntactic linearization and joint systems.
+
+308: Training and testing sets were formed by 80/20 cross validation. Averaging the results for the cross validation over all runs provided our results.
+
+309: We use the standard 5-fold cross-validation for learning and testing, where for each dataset, 80% of the data is randomly selected as the training set and the rest as the testing set.
+
+311: As mentioned earlier, around 10% of the users are used for testing and the rest are used for training.
+
+312: The corresponding data sub-set for each cluster is random split into two equal parts. One part is used for training and the other is used for testing. The random split is repeated 10 times.
+
+315: This dataset has been partitioned into a training set and an evaluation set. The training set contains 145,069 ratings given by those 602 members, and 114,783 movie choice records from the view of 290 groups. That is, only 1.26 members give rating to a watched movie. The evaluation set contains 286 groups with 2,139 group-based choices. Some statistical information is provided in Table 1
+
+316: Each digit has roughly 6,000 training examples and 1,000 testing examples.
+
+319: All methods are evaluated based on average of ten randomly sampled trials.
+
+320: That is, we trained a separate classifier for each of the twelve labels (one-vs-all) and used 10-fold cross validation to predict the probability that each (held out) document was labeled with each keyword.
+
+321: In this experiment, 100 samples per class (numeral) are randomly chosen as the training set, while the remaining samples are regarded as the testing set
+
+323: Following the partition of the dataset, 4,500 images are used for training and the rest are used for test. 
+
+332: And we randomly select 8 samples per class for training, use the remainder for testing, and run all compared methods 20 times.
+
+333: Training samples are randomly selected in all experiments. Five-fold cross validation strategy is applied in the training data to automatically determining the parameter λ in (4) in the candidate set of {λ= m×10k : k ∈ {−2,−1,0},m ∈{1,2,5,8}}. Different numbers of training samples are tested.
+
+337: We conduct 30 times evaluation for ImageCLEF, each time we use 1000 examples for training and 1000 examples for testing; 10-fold cross-validation is conducted for the other datasets. 
+
+338: To have results comparable to the previous studies, we follow the experimental setup used by Saenko et al. (2010), Gong et al. (2012), and Hoffman et al. (2013), and perform experiments for 20 random train/test splits provided by Hoffman et al. (2013).
+
+340: We randomly select 80% tweets as the training set while the remaining 20% as testing set.
+
+341: We divide the training data into k folds and learn k different heuristics, where each heuristic function Hi is learned using the data from all the folds excluding the ith fold
+
+344: In each dataset, we randomly pick 80% instances for training and use the rest 20% for testing.
+
+346: For evaluation, we create 10 different 80/20 splits of the 1 162 training items into training and validation set. 
+
+347: In particular, we collect half a month logs from November 9th to November 22nd in 2013 as our experimental dataset. And, we randomly sample a set of search engine users (fully anonymized) and collect their corresponding events from the original whole traffic. Finally, we collect over 7 million ad impressions in this period of time. After that, we use the first week’s data to train click prediction models, and apply those models to the second week’s data for testing. Detailed statistics of the dataset can be found in Table 1.
+
+351: Batch training is used with 70% training points, 15% testing points, and 15% validation points, selected over the past interval. 
+
+356: Figure 5 shows the receiver operating characteristics (ROC) graphs of two-fold cross-validation results, for each subset of the gesture performances.
+
+357: We randomly select 32 images for training with the re maining images for testing. Each experiment is repeated 10 times and the average precision is reported.
+
+358: We use 1% of the data for training, 80% for testing, and the rest for validation. 
+
+360: In all of these experiments, the stepwise backward elimination process removed one feature during each iteration based on cross-validated AUC results for each step. The reported AUCs are averaged across 50 trials that randomly divided data into 50% training and 50% test sets.
+
+361: For both of these two sensitive datasets, we randomly sample 70% of the records as training data to generate the masked data for training regression models. We treat the remaining 30% of records as testing data for evaluating the regression performance. 
+
+372: On this problem, 272 observations were available and halved to make the training and test sets, both containing 136 samples. The second dataset, Iris, contains 4 physical measurements from different types of iris plants (Fisher 1936). From the 150 observations available, 75 were used for training and 75 for testing. 
+
+384: In the experiments, five-fold cross-validation is used for all the methods. To study the effects brought by different sizes of training data, we varies the training data from 10% to 100%. n particular, for each round of the experiment, 20% of the dataset is held for testing and 10% to 100% of the original training data is sampled for training.
+
+391: The data was divided into 5 splits for cross validation.
+
+392: Besides, we randomly subdivide each dataset into the training and testing sets, where 80% of each dataset is used for training, and the rest is for testing (see Table 1). 
+
+393: The training period is 10 years and we predict the citation counts for each paper from the 1st to 20th year after the training period.
+
+395: We use cross-validation in the following fashion: in each cycle, we use 15 randomly selected video sequences to perform training, and keep the rest 20 for testing. We run the experiment 50 times to account for the effect of random selection of samples, and provide average performance measurements, and error bars.
+
+

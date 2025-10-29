@@ -1,0 +1,14 @@
+---
+llm: vertex-maas
+structured_output: True
+
+# Prices: Input / Output per 1M tokens
+
+# Latest models:
+model:
+  name: zai-org/glm-4.7-maas
+  input_cost: 0.60
+  output_cost: 2.20
+
+project_id: XXX
+region: global

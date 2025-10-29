@@ -1,0 +1,10 @@
+python -m ai_paper_downloader --conference IJCAI --year 2015 --seconds-between-downloads 0
+python -m ai_paper_downloader --conference IJCAI --year 2016 --seconds-between-downloads 0
+python -m ai_paper_downloader --conference IJCAI --year 2017 --seconds-between-downloads 0
+python -m ai_paper_downloader --conference IJCAI --year 2018 --seconds-between-downloads 0
+python -m ai_paper_downloader --conference IJCAI --year 2019 --seconds-between-downloads 0
+python -m ai_paper_downloader --conference IJCAI --year 2020 --seconds-between-downloads 0
+python -m ai_paper_downloader --conference IJCAI --year 2021 --seconds-between-downloads 0
+python -m ai_paper_downloader --conference IJCAI --year 2022 --seconds-between-downloads 0
+python -m ai_paper_downloader --conference IJCAI --year 2023 --seconds-between-downloads 0
+python -m ai_paper_downloader --conference IJCAI --year 2024 --seconds-between-downloads 0

@@ -1,0 +1,8 @@
+---
+llm: ollama
+structured_output: True
+model:
+  name: gemma2:27b
+  input_cost: 0
+  output_cost: 0
+host: http://127.0.0.1:11434

@@ -1,0 +1,19 @@
+# pyproject.toml
+[project]
+name = "ai_paper_downloader"
+version = "0.1.0"
+description = "A tool to download AI research papers from various AI conferences."
+authors = [{ name = "Kevin Coakley", email = "kcoakley@sdsc.edu" }]
+dependencies = [
+    "beautifulsoup4",
+    "pyyaml",
+    "requests",
+    "openreview-py",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["ai_paper_downloader"]

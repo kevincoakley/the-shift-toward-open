@@ -1,0 +1,8 @@
+---
+llm: gemini-multimodal
+structured_output: True
+model:
+  name: gemini-2.5-flash-lite-preview-06-17 
+  input_cost: 0.10 
+  output_cost: 0.40
+api_key: XXX

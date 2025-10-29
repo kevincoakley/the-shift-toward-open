@@ -1,0 +1,269 @@
+{
+    "respect_the_model_finegrained_and_robust_explanation_with_sharing_ratio_decomposition__c0358371": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "In this section, we conducted a comprehensive comparative analysis involving our proposed method, SRD, and several state-of-the-art methods: Saliency (Simonyan et al., 2014), Guided Backprop (Springenberg et al., 2015), Grad Input (Ancona et al., 2018), Inte Grad (Sundararajan et al., 2017), LRPz+ (Montavon et al., 2017), Smoothgrad (Smilkov et al., 2017), Fullgrad (Srinivas & Fleuret, 2019), Grad CAM (Selvaraju et al., 2017), Grad CAM++ (Chattopadhay et al., 2018), Score CAM (Wang et al., 2020), Ablation CAM (Ramaswamy et al., 2020), XGrad CAM (Fu et al., 2020), and Layer CAM (Jiang et al., 2021)."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "To address this, we propose a novel e Xplainable AI (XAI) method called SRD (Sharing Ratio Decomposition), which sincerely reflects the model s inference process, resulting in significantly enhanced robustness in our explanations."
+        },
+        "affiliation": {
+            "result": 0,
+            "paper_text": "Sangyu Han , Yearim Kim , Nojun Kwak Seoul National University Seoul, 08826, Korea {acoexist96,yerim1656,nojunk}@snu.ac.kr"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "The truthfulness of existing explanation methods in authentically elucidating the underlying model s decision-making process has been questioned. Existing methods have deviated from faithfully representing the model, thus susceptible to adversarial attacks. To address this, we propose a novel e Xplainable AI (XAI) method called SRD (Sharing Ratio Decomposition), which sincerely reflects the model s inference process, resulting in significantly enhanced robustness in our explanations."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state a research goal or objective using the exact words \"goal\" or \"objective\"."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly use the phrase \"methodology\" or \"research method\" in formal statements."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "The paper does not clearly present formal research questions labeled as \"RQ\", \"Research Question\", or structured question statements."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly refer to a research hypothesis using the exact word \"hypothesis\" in formal research statements."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper does not include an explicit predicted outcome using specific prediction language like \"we predict\", \"we expect\", or \"predicted outcome\"."
+        },
+        "contribution": {
+            "result": 0,
+            "paper_text": "The paper describes its novel method and its benefits but does not explicitly list or state contributions using the accepted phrasing such as \"Our contributions are...\" or \"This paper contributes...\"."
+        },
+        "pseudocode": {
+            "result": 1,
+            "paper_text": "Algorithm 1 APOP process in Py Torch pseudocode"
+        },
+        "open_source_code": {
+            "result": 0,
+            "paper_text": "The paper does not provide concrete access to source code (specific repository link, explicit code release statement, or code in supplementary materials) for the methodology described in this paper."
+        },
+        "open_experiment_code": {
+            "result": 0,
+            "paper_text": "The paper does not include concrete access to experiment code (specific repository links or explicit statements about code availability) used to run its experiments."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "All evaluations were carried out on the Image Net-S50 dataset (Gao et al., 2022), which contains 752 samples along with object segmentation masks."
+        },
+        "validation": {
+            "result": 1,
+            "paper_text": "All of our APOP experiments were conducted on the Image Net validation dataset."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "All evaluations were carried out on the Image Net-S50 dataset (Gao et al., 2022), which contains 752 samples along with object segmentation masks."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents results within tables and figures in the main text but does not provide external links or explicit statements about external availability of experimental results."
+        },
+        "hardware_specification": {
+            "result": 0,
+            "paper_text": "The paper does not provide specific hardware details (exact GPU/CPU models, processor types with speeds, memory amounts, or detailed computer specifications) used for running its experiments."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "The paper does not provide specific ancillary software details (e.g., library or solver names with version numbers like Python 3.8, CPLEX 12.4) needed to replicate the experiment."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "The dimensions of the resulting saliency maps were as follows: (7, 7) for low-resolution, (28, 28) for high-resolution, and (224, 224) for input-scale."
+        },
+        "input_tokens": 21616,
+        "thoughts_tokens": 4371,
+        "output_tokens": 1411,
+        "cost": 0.02094
+    },
+    "is_imagenet_worth_1_video_learning_strong_image_encoders_from_1_long_unlabelled_video__01970444": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "We perform self-supervised pretraining on a single WT tour video in Venice (referred to as WTVenice) or all 10 WT videos (referred to as WTall) and compare with other image and video datasets. To evaluate the quality of the learned representations, we use frozen features for classification, unsupervised object discovery and video object segmentation. We fine-tune for semantic segmentation, object detection and object tracking. We compare DORA with So TA SSL methods (da Costa et al., 2022) using our settings. We provide more details in individual sections per task. Implementation details and hyperparameters are given in Appendix B."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "Surprisingly, contrary to previous works, we find that our novel method obtains Image Net-level performances by training on a single WT video, as evidenced by performances on segmentation and object detection downstream tasks. Using our novel approach, a single Walking Tours video remarkably becomes a strong competitor to Image Net for several image and video downstream tasks. DORA outperforms DINO by 3% m Io U, and 1.8% Accm. DORA outperforms DINO by 2.4% m AP and 2.6% m Io U. DORA outperforms DINO by a large margin, e.g. 11.6% LP and 3.9% k-NN on classification, when trained on a single WT video."
+        },
+        "affiliation": {
+            "result": 1,
+            "paper_text": "Shashanka Venkataramanan Inria, Univ Rennes, CNRS, IRISA Mamshad Nayeem Rizve University of Central Florida Jo ao Carreira Google Deep Mind Yuki M. Asano University of Amsterdam Yannis Avrithis Institute of Advanced Research on Artificial Intelligence (IARAI)"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "But are we making the best use of data? How more economical can we be? In this work, we attempt to answer this question by making two contributions."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "In this work, we attempt to answer this question by making two contributions. First, we investigate first-person videos and introduce a Walking Tours dataset. These videos are high-resolution, hours-long, captured in a single uninterrupted take, depicting a large number of objects and actions with natural scene transitions. They are unlabeled and uncurated, thus realistic for self-supervision and comparable with human learning. Second, we introduce a novel self-supervised image pretraining method tailored for learning from continuous videos. Existing methods typically adapt image-based pretraining approaches to incorporate more frames. Instead, we advocate a tracking to learn to recognize approach. Our method called DORA, leads to attention maps that Discover and t RAck objects over time in an end-to-end manner, using transformer cross-attention. We derive multiple views from the tracks and use them in a classical self-supervised distillation loss. Using our novel approach, a single Walking Tours video remarkably becomes a strong competitor to Image Net for several image and video downstream tasks. Dataset and code can be found at https://shashankvkt.github.io/dora. Our goal is to build robust representations by leveraging the rich information in video frames."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "Second, we introduce a novel self-supervised image pretraining method tailored for learning from continuous videos. Existing methods typically adapt image-based pretraining approaches to incorporate more frames. Instead, we advocate a tracking to learn to recognize approach. Our method called DORA, leads to attention maps that Discover and t RAck objects over time in an end-to-end manner, using transformer cross-attention. Our approach is inspired by observing toddlers first learn to track objects and animals, then to recognize and differentiate them (Bomba & Siqueland, 1983; Quinn et al., 1993; Spelke & Kinzler, 2007). Our method, called DORA, is an end-to-end training approach that tracks to learn to recognize : given a video clip, objects in an initial frame are implicitly Discovered and t RAcked across time."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "But are we making the best use of data? How more economical can we be? In this work, we attempt to answer this question by making two contributions."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "We hypothesize that this is a compromise between the number of objects that can be tracked and the multi-object loss (8) attempting to match small objects with the global crop."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper does not contain explicit predictive statements using terms like \"predict\" or \"expect\" regarding the outcome of its research."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "To summarize, our key contributions in this work are as follows: 1. We introduce a new dataset of 10 WT videos, with single-video and mixed-video splits. The latter is conveniently equal in size to Image Net. We analyze their usefulness compared to existing video and image datasets. 2. We propose a new end-to-end self-supervised visual pretraining method called DORA. It builds upon DINO but is tailored to promote tracking of multiple objects across frames. We use it to learn strong image encoders and trace the source of its improvements through extensive ablations. 3. We obtain strong performance on ADE20k segmentation and MS COCO detection, outperforming Image Net-pretrained DINO, while instead pretraining on a single long video."
+        },
+        "pseudocode": {
+            "result": 0,
+            "paper_text": "The paper describes its method using mathematical formulas and text, but does not present a clearly labeled \"Pseudocode\" or \"Algorithm\" block."
+        },
+        "open_source_code": {
+            "result": 1,
+            "paper_text": "Dataset and code can be found at https://shashankvkt.github.io/dora."
+        },
+        "open_experiment_code": {
+            "result": 1,
+            "paper_text": "Dataset and code can be found at https://shashankvkt.github.io/dora."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "First, we investigate first-person videos and introduce a Walking Tours dataset. These videos are high-resolution, hours-long, captured in a single uninterrupted take, depicting a large number of objects and actions with natural scene transitions. They are unlabeled and uncurated, thus realistic for self-supervision and comparable with human learning. Second, we introduce a novel self-supervised image pretraining method tailored for learning from continuous videos. Existing methods typically adapt image-based pretraining approaches to incorporate more frames. Instead, we advocate a tracking to learn to recognize approach. Our method called DORA, leads to attention maps that Discover and t RAck objects over time in an end-to-end manner, using transformer cross-attention. We derive multiple views from the tracks and use them in a classical self-supervised distillation loss. Using our novel approach, a single Walking Tours video remarkably becomes a strong competitor to Image Net for several image and video downstream tasks. Dataset and code can be found at https://shashankvkt.github.io/dora. We collect from You Tube a new dataset of urban scenes called Walking Tours (WTours, or WT) comprising 10 egocentric videos of a person walking in different cities in Europe and Asia. The cities include Amsterdam, Bangkok, Chiang Mai, Istanbul, Kuala Lampur, Singapore, Stockholm, Venice, and Zurich. We also include a video from a Wildlife safari. Examples are shown in Figure 1. These videos are captured in 4K resolution (3840 2160 pixels) at 60 frames-per-second and are under Creative Commons License (CC-BY). Image Net-1k (Deng et al., 2009) ADE20k (Zhou et al., 2017) MS-COCO (Lin et al., 2014) DAVIS-2017 (Pont-Tuset et al., 2017) GOT-10k (Huang et al., 2021) Pascal-VOC 2012 (Everingham et al.)"
+        },
+        "validation": {
+            "result": 1,
+            "paper_text": "LP: top-1 accuracy (%) of linear probing on the validation set of Image Net-1k. Cor Loc: correct localization on validation set of Pascal-VOC 2012. We use the validation set of Pascal VOC 2012 (Everingham et al.), which comprises a total of 1449 images. The dataset includes 20,000 images in the training set and 2,000 images in the validation set. For linear probing, we follow (Caron et al., 2021) and use the frozen features of the transformer backbone to train a linear classifier in a supervised setting. We use global batch size of 1024 on the training set and evaluate on the validation set of Image Net-1k."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "We perform self-supervised pretraining on a single WT tour video in Venice (referred to as WTVenice) or all 10 WT videos (referred to as WTall) and compare with other image and video datasets. To evaluate the quality of the learned representations, we use frozen features for classification, unsupervised object discovery and video object segmentation. We fine-tune for semantic segmentation, object detection and object tracking. The training set contains around 10,000 videos and the test set contains 180 videos. Another challenging aspect of this dataset is that the object classes in the training and test set are non-overlapping. MS-COCO: Object detection We evaluate DORA for object detection and instance segmentation on MS-COCO."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper presents all experimental results directly within its tables (e.g., Table 2, Table 3, Table 4, Table 5) and figures, with no external links to raw result files or supplementary result data."
+        },
+        "hardware_specification": {
+            "result": 1,
+            "paper_text": "We use 8 A100 GPUs with a global batch size of 16 8 = 128."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "We use Vi T-S/16 (Dosovitskiy et al., 2020) as the backbone in all our experiments. Following DINO (Caron et al., 2021), there is a student network with parameters θ and a teacher network with identical architecture and parameters θ obtained as the exponential moving average (EMA) of θ according to θ αθ + (1 α)θ. We use Uper Net (Xiao et al., 2018) as the segmentation model and use DORA pretrained on WT to initialize the backbone. Following the experimental settings in i BOT (Zhou et al., 2022a), we use Adam W (Loshchilov & Hutter, 2019) with an initial learning rate of 6 10 5, weight decay of 1 10 2, and linear warmup of 1,500 iterations. We use Cascade Mask R-CNN (Cai & Vasconcelos, 2019), which produces bounding boxes and instance masks simultaneously on the COCO dataset. We use the Seq Track (Chen et al., 2023) codebase to evaluate the performance of different methods on this dataset."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "We train for 100 epochs by default. We use two global and six local crops for each clip and train on 8 A100 GPUs with a global batch size of 16 8 = 128. We use LARS with a learning rate of 5 10 4, minimum learning rate of 1 10 6, global crop scale of [0.4, 1.0] and local crop scale [0.05, 0.4]. We use Adam W (Loshchilov & Hutter, 2019) with an initial learning rate of 6 10 5, weight decay of 1 10 2, and linear warmup of 1,500 iterations. We fine-tune for 160,000 iterations with a batch size of 4. The learning rate is 1 10 4 and the weight decay is 0.05. During training, we fine-tune the entire network using a 1 schedule, which involves 12 epochs with learning rate reductions by a factor of 10 at epochs 9 and 11."
+        },
+        "input_tokens": 27036,
+        "thoughts_tokens": 5648,
+        "output_tokens": 2993,
+        "cost": 0.029713
+    },
+    "symmetric_basis_convolutions_for_learning_lagrangian_fluid_mechanics__1753de65": {
+        "research_type": {
+            "result": 0,
+            "paper_text": "We propose a general formulation for continuous convolutions using separable basis functions as a superset of existing methods and evaluate a large set of basis functions in the context of (a) a compressible 1D SPH simulation, (b) a weakly compressible 2D SPH simulation, and (c) an incompressible 2D SPH Simulation. We demonstrate that even and odd symmetries included in the basis functions are key aspects of stability and accuracy. Our broad evaluation shows that Fourier-based continuous convolutions outperform all other architectures regarding accuracy and generalization."
+        },
+        "result_outcome": {
+            "result": 1,
+            "paper_text": "Our broad evaluation shows that Fourier-based continuous convolutions outperform all other architectures regarding accuracy and generalization. Finally, using these Fourier-based networks, we show that prior inductive biases, such as window functions, are no longer necessary."
+        },
+        "affiliation": {
+            "result": 0,
+            "paper_text": "Rene Winchenbach & Nils Thuerey Physics-based Simulation Group Technical University Munich {rene.winchenbach,nils.thuerey}@tum.de"
+        },
+        "problem_description": {
+            "result": 1,
+            "paper_text": "Classic numerical solvers have traditionally been computationally expensive and challenging to use in inverse problems, whereas Neural solvers aim to address both concerns through machine learning."
+        },
+        "goal_objective": {
+            "result": 0,
+            "paper_text": "The paper describes what it proposes and evaluates, but does not use the specific terms 'goal' or 'objective' to state its research aim."
+        },
+        "research_method": {
+            "result": 0,
+            "paper_text": "The paper describes its 'approach' and 'formulation' but does not explicitly use the terms 'methodology' or 'research method'."
+        },
+        "research_question": {
+            "result": 0,
+            "paper_text": "The paper does not explicitly state any formal research questions using phrases like 'research questions are' or 'we seek to answer'."
+        },
+        "hypothesis": {
+            "result": 0,
+            "paper_text": "The paper discusses expected outcomes and observed behaviors but does not explicitly state a formal research hypothesis using the term 'hypothesis'."
+        },
+        "prediction": {
+            "result": 0,
+            "paper_text": "The paper uses 'prediction' to refer to the model's output or what it is capable of doing, but not as an explicit statement about the predicted outcome of the research itself using phrases like 'we predict' or 'we expect'."
+        },
+        "contribution": {
+            "result": 1,
+            "paper_text": "In this context, we propose (a) a generalized formulation of CConvs using separable basis functions, (b) a Fourier-based architecture with even and odd symmetry for improved inference accuracy and (c) a novel dataset consisting of four test cases designed to be challenging while exhibiting quantifiable physical behavior."
+        },
+        "pseudocode": {
+            "result": 0,
+            "paper_text": "The paper does not contain any clearly labeled pseudocode or algorithm blocks."
+        },
+        "open_source_code": {
+            "result": 1,
+            "paper_text": "An implementation of our approach, as well as complete datasets and solver implementations, is available at https://github.com/tum-pbs/SFBC."
+        },
+        "open_experiment_code": {
+            "result": 1,
+            "paper_text": "we have made the dataset with the solver and neural network implementation available as open source code at https://github.com/tum-pbs/SFBC. The open-source code also includes implementations of baselines with configurations for the respective hyperparameters used in our paper."
+        },
+        "train": {
+            "result": 1,
+            "paper_text": "An implementation of our approach, as well as complete datasets and solver implementations, is available at https://github.com/tum-pbs/SFBC."
+        },
+        "validation": {
+            "result": 1,
+            "paper_text": "Out of these, we use 32 (chosen randomly) as the training set, see Fig. 13, and the remaining 4 as the testing set, see Fig. 12. Overall, we generate 32 training samples, see Fig. 14, and 4 testing samples, see Fig. 15. We start the training with an initial rollout length of 1, which is increased every second epoch by 1, up to a maximum unroll length during training of 10. During training, we compute the L2 difference between ground truth and network prediction for a batch size of 4 without temporal unrolling, where each batch is the result of picking 4 random samples across the entire training dataset where each training timestep is used at-most-once. Our training consists of 5 epochs, each consisting of 1000 weight updates, with an initial learning rate of 10-3 that is halved after every epoch."
+        },
+        "test": {
+            "result": 1,
+            "paper_text": "Out of these, we use 32 (chosen randomly) as the training set, see Fig. 13, and the remaining 4 as the testing set, see Fig. 12."
+        },
+        "results": {
+            "result": 0,
+            "paper_text": "The paper states that datasets, solvers, and neural network implementations are available as open source code, but does not explicitly mention external availability of the experimental results themselves."
+        },
+        "hardware_specification": {
+            "result": 1,
+            "paper_text": "All measurements were done on a system with an Nvidia RTX A5000 GPU with 24 GiB of VRAM and an Intel Xeon 6242R CPU with 754 GiB of RAM."
+        },
+        "software_dependencies": {
+            "result": 0,
+            "paper_text": "We built all of our code, including the SPH simulations, using Py Torch and Py Torch Geometric for graph processing, e.g., neighborhood searches. PyTorch (Paszke et al., 2019) (and related frameworks) or a more direct implementation such as Nvidia’s Cutlass library (Thakkar et al., 2023)."
+        },
+        "experiment_setup": {
+            "result": 1,
+            "paper_text": "For the width of the base functions, we chose n = 6, based on the results from the toy problems and a hidden architecture for the MLP-based approaches of 2 deep and 128 wide, in line with Sanchez-Gonzalez et al. (2020). Our training consists of 5 epochs, each consisting of 1000 weight updates, with an initial learning rate of 10-3 that is halved after every epoch. We utilize 36 random initial conditions to generate our dataset and evaluate 2048 timesteps each. Out of these, we use 32 (chosen randomly) as the training set, see Fig. 13, and the remaining 4 as the testing set, see Fig. 12."
+        },
+        "input_tokens": 52746,
+        "thoughts_tokens": 4690,
+        "output_tokens": 1657,
+        "cost": 0.031691
+    },
+    "filter_stopwords": false,
+    "lemmatize": false,
+    "model": "gemini-2.5-flash",
+    "permute": "none",
+    "prompt": "You will be provided with a research paper, and your task is to answer questions about the contents of the research paper.\n\nNow, please analyze the following research paper:\n",
+    "questions": "## Questions for Paper Analysis\n\nReturn the results of your analysis as a valid JSON object with the following structure. Each JSON key must contain two sub-elements:\n\n### Output Format Requirements\n\nReturn your analysis as a valid JSON object with the following structure. Each field must contain two sub-elements:\n- **result**: An Int with the specific value as defined for each question (varies by question - see below)\n- **paper_text**: A string containing the relevant text excerpt from the paper that supports your answer, or a brief explanation if not found\n\nThe questions and JSON keys are as follows:\n\n\nDetermine whether the paper is based on **experimental research** or **theoretical research**.\n\nReturn **Experimental** (0) if:\n- It conducts empirical studies, including running experiments, analyzing data, reporting metrics, or validating hypotheses\n- Indicators include evaluation on datasets, comparisons to baselines, test/train/validation splits, ablation studies, and performance tables or graphs\n\nReturn **Theoretical** (1) if:\n- It focuses only on conceptual or mathematical contributions without empirical validation\n- Examples include algorithm design, proofs, lemmas, or symbolic derivations\n- These papers may include pseudocode but do not analyze results from actual experiments\n\nIf the paper includes both theoretical and empirical components, classify it as **Experimental**.\n\nQuote the text from the paper that supports your decision.\n\n**Does the paper conduct EMPIRICAL STUDIES WITH DATA ANALYSIS (experiments, dataset evaluation, performance metrics, or hypothesis validation) rather than purely theoretical work?**\n Return 0 for experimental research or 1 for theoretical framework and use research_type as the JSON key.\nDetermine whether the paper reports a **positive** or **negative** outcome based on its main findings.\n\nReturn **Yes** (positive outcome) if:\n- The authors explicitly state that their method improves upon prior work, achieves higher accuracy or F1 scores, or reaches state-of-the-art (SOTA) results\n- Key indicators include phrases like \"Our method significantly outperforms...\", \"We achieve better results than...\", \"These results confirm the effectiveness...\"\n\nReturn **No** (negative outcome) if:\n- The method fails to outperform baselines, results are marginal or inconclusive, or the hypothesis is not supported\n- Typical phrases include \"No significant improvement was observed...\", \"Comparable to existing methods...\", \"Results were not conclusive...\"\n- Only classify as positive if the paper clearly claims at least one success\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper report CLEAR SUCCESS CLAIMS (explicit statements of outperformance, higher accuracy, or confirmed effectiveness) in its main findings?**\n Return 1 for positive or 0 for negative and use result_outcome as the JSON key.\nDetermine whether the paper's authors have **industry**, **academic**, or **collaborative** affiliations.\n\nThe authors' affiliations and email addresses are usually listed in the first few paragraphs of the paper. Use this information to classify the affiliation type:\n\nReturn **2** (classify as Industry) if:\n- All authors are affiliated with corporations or private-sector labs\n- Email addresses end in domains like `.com`, `.ai`, `.tech`, or have company names like \"IBM,\" \"Google,\" \"DeepMind,\" etc.\n\nReturn **0** (classify as Academia) if:\n- All authors are from universities or public research institutions\n- Email domains include `.edu`, `.ac.uk`, `.edu.cn`, or subdomains like `cs.cmu.edu`, `eecs.mit.edu`, etc.\n\nReturn **1** (classify as Collaboration) if:\n- There is a mix of academic and industry affiliations based on the institutional names or email domains\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CLEAR INSTITUTIONAL AFFILIATIONS (university names, company names, or email domains) that allow classification of author affiliation types?**\n Return 0 for academia only, 1 for collaboration of both academia and industry, or 2 for industry only and use affiliation as the JSON key.\nDetermine whether the paper includes an **explicit statement of the research problem**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes a sentence that uses one of the following patterns: \"the problem [is|we address|this paper addresses]...\", \"to solve [this problem|the problem of]...\"\n- Statements that clearly describe what the research aims to solve if they are framed like a problem, such as \"the challenge we tackle is...\", \"the main issue is...\"\n\nReturn **No** if:\n- There are vague uses of the word \"problem\" or general task descriptions like \"we study...\" or \"our method is designed to...\" unless they directly align with the problem framing above\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include an EXPLICIT RESEARCH PROBLEM STATEMENT (using phrases like \"the problem is\", \"to solve the problem of\", or \"the challenge we tackle\")?**\n Return 1 for yes or 0 for no and use problem_description as the JSON key.\nDetermine whether the paper includes an **explicit statement of the research objective or goal**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence with one of these forms: \"the objective [of this paper|is|was]...\", \"our objective [is|was]...\", \"the goal [of this research|is|was]...\", \"our goal [is|was]...\"\n- Clear variations such as \"a key objective of this study is...\", \"one objective of this work is...\", \"the main goal of this approach is...\", \"this study has the objective/goal of...\", \"the research objective is defined as...\", \"an explicit goal is to...\"\n\nReturn **No** if:\n- There are vague motivation or general intent phrases (e.g., \"we aim to...\", \"we explore...\", \"our focus is...\") unless they use the words **goal** or **objective** in the sentence\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly state a RESEARCH GOAL OR OBJECTIVE (using the exact words \"goal\" or \"objective\" in formal research statements)?**\n Return 1 for yes or 0 for no and use goal_objective as the JSON key.\nDetermine whether the paper explicitly states the **research methodology**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that includes any of the following exact or near-exact expressions: \"the methodology...\", \"our methodology...\", \"the research methodology...\", \"the research method...\", \"our research method...\"\n- Variants like \"this paper uses the methodology...\", \"we follow the research method of...\" are also acceptable, but only if they use the key phrases **\"methodology\"** or **\"research method\"** directly\n\nReturn **No** if:\n- There are phrases like \"our approach...\" or \"we propose a method...\" unless they use one of the key phrases above\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly use the phrase METHODOLOGY OR RESEARCH METHOD (exact terminology \"methodology\" or \"research method\" in formal statements)?**\n Return 1 for yes or 0 for no and use research_method as the JSON key.\nDetermine whether the paper explicitly states one or more **research questions**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes phrases like \"the research questions are...\", \"this research seeks to answer...\", \"we pose the following research questions...\"\n- Lists labeled as \"RQ\", \"RQ1\", \"RQ2\", or \"Research Question 1\", etc.\n- A clearly structured sentence like \"we aim to answer the following question(s)...\", followed by one or more question-like statements\n\nReturn **No** if:\n- There are vague intent statements like \"we explore...\" or \"we investigate...\" unless they are tied to a numbered or explicitly labeled research question\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper clearly present FORMAL RESEARCH QUESTIONS (explicitly labeled as \"RQ\", \"Research Question\", or structured question statements)?**\n Return 1 for yes or 0 for no and use research_question as the JSON key.\nDetermine whether the paper explicitly states a **research hypothesis**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes a sentence that uses the word **\"hypothesis\"** in any of the following accepted forms: \"the hypothesis is...\", \"the hypothesis that...\", \"we hypothesize that...\", \"our hypothesis is...\", \"our hypothesis assumes...\", \"our guiding hypothesis is...\", \"the central hypothesis...\", \"this hypothesis suggests that...\", \"we test the hypothesis that...\", \"this paper tests the hypothesis...\", \"we formulate the hypothesis that...\", references to a \"Null Hypothesis\" or \"Alternative Hypothesis\"\n\nReturn **No** if:\n- There are statements that imply assumptions or beliefs unless the term **\"hypothesis\"** appears in the sentence\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly refer to a RESEARCH HYPOTHESIS (using the exact word \"hypothesis\" in formal research statements)?**\n Return 1 for yes or 0 for no and use hypothesis as the JSON key.\nDetermine whether the paper explicitly states a **predicted outcome**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that uses any of the following phrases: \"we predict that...\", \"the predicted outcome is...\", \"we expect that...\", \"our expectation is that...\", \"it is expected that...\"\n- Phrasings like \"the model is expected to...\" or \"our approach is predicted to...\"\n\nReturn **No** if:\n- There are vague goal statements like \"we aim to...\" or \"we intend to...\" unless they include the words **predict** or **expect**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include an EXPLICIT PREDICTED OUTCOME (using specific prediction language like \"we predict\", \"we expect\", or \"predicted outcome\")?**\n Return 1 for yes or 0 for no and use prediction as the JSON key.\nDetermine whether the paper explicitly states the **contributions** of the research, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that clearly lists or describes contributions using any of the following: \n  - \"The contributions of this paper are...\"\n  - \"Our contributions are...\"\n  - \"This paper contributes the following...\"\n  - \"This contributes to...\" (only if it refers to novel findings or technical contributions)\n- Phrases like: \"The main contribution is...\", \"A key contribution of this work is...\"\n\nReturn **No** if:\n- There are vague mentions of impact or relevance unless the word **\"contribution\"** is clearly tied to something new, original, or specific to this research\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly list or state the CONTRIBUTIONS using the accepted phrasing to describe novel findings or technical advances?**\n Return 1 for yes or 0 for no and use contribution as the JSON key.\nDetermine whether the paper contains **pseudocode** or a clearly labeled algorithm block.\n\nReturn **Yes** if:\n- The paper includes a figure, block, or section labeled \"Pseudocode\", \"Algorithm\", or \"Algorithm X\"\n- Structured steps for a method or procedure formatted like code or an algorithm (even if not explicitly called \"pseudocode\")\n\nReturn **No** if:\n- The paper only describes steps in regular paragraph text without structured formatting\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper contain STRUCTURED PSEUDOCODE OR ALGORITHM BLOCKS (clearly labeled algorithm sections or code-like formatted procedures)?**\n Return 1 for yes or 0 for no and use pseudocode as the JSON key.\nDetermine whether the paper provides **open-source code for the methodology it describes**.\n\nReturn **Yes** if:\n- The paper includes an unambiguous sentence where the authors state they are releasing the code **for the work described in this paper** (e.g., \"We release our code...\", \"The source code for our method is available at...\")\n- A direct link to a source-code repository (e.g., GitHub, GitLab, Bitbucket) that contains the code for the paper's methodology\n- A clear statement that code is provided in **supplementary material**, **appendices**, or via an **anonymous review link**\n\nReturn **No** if:\n- The code is promised for the future using phrases like \"we plan to release...\", \"code will be made available...\", or \"our tool will be publicly available...\"\n- The code is only available \"upon request\"\n- The text discusses the source code of a **third-party tool or platform that the authors used**, but does not provide their own implementation code\n- The link points to a resource that is explicitly a `dataset`, `benchmark`, `corpus`, `taxonomy`, or `data`, and does not also clearly host the source code\n- The URL provided is for a general domain, a personal homepage, **a project demonstration page, or a high-level project overview page** instead of a specific code repository\n- **The text is ambiguous or lacks a clear, affirmative statement of release**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CONCRETE ACCESS TO SOURCE CODE (specific repository link, explicit code release statement, or code in supplementary materials) for the methodology described in this paper?**\n Return 1 for yes or 0 for no and use open_source_code as the JSON key.\nDetermine whether the paper includes a link to the **actual code used to run the experiments** described in the paper.\n\nReturn **Yes** if:\n- The paper provides a link to a GitHub, GitLab, Bitbucket, or anonymous repository and does **not** specify that the code is unrelated to experiments\n- The text mentions that code, scripts, or software used to run the experiments is \"available at...\", \"shared in supplementary material\" or \"appendix\"\n- The linked repo is implied to contain code that produces the **results, tables, or figures** in the paper\n\nReturn **No** if:\n- The paper includes **no link**\n- The link is unrelated to this paper's experiments (e.g., a third-party baseline, pretrained model, or unrelated library)\n- The code is **only promised** or **available upon request**\n- The link is to a **dataset**, **benchmark**, or **corpus**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include CONCRETE ACCESS TO EXPERIMENT CODE (specific repository links or explicit statements about code availability) used to run its experiments?**\n Return 1 for yes or 0 for no and use open_experiment_code as the JSON key.\nDetermine whether the paper explicitly states that the **dataset** used in the experiments is **publicly available** or an **open** dataset.\n\nReturn **Yes** if:\n- The paper uses a well-known public dataset (e.g., \"CIFAR-10\", \"MNIST\", \"ImageNet\", \"COCO\", \"Penn Treebank\")\n- Provides a direct URL, DOI, or specific repository name (e.g., GitHub, Zenodo, Figshare) where the dataset can be accessed\n- Cites a published paper or resource that contains the dataset with proper bibliographic information **including author names and year in brackets or parentheses**\n- States the dataset is in supplementary material with specific file names or section references\n- **References standard academic datasets with citations** or **mentions datasets from well-known repositories or benchmarks with proper attribution**\n\nReturn **No** if:\n- The paper mentions the dataset but gives no indication of availability\n- The dataset is proprietary, private, or internal\n- The authors created their own dataset but do not provide public access (no link, DOI, repository, or citation)\n- The paper describes or mentions a dataset but does not provide any source, link, citation, or repository information for accessing it\n- The dataset is described as \"available upon request\" or \"available from authors\" without permanent public access\n- The paper only describes the dataset characteristics, collection process, or statistics without providing access information\n- The paper mentions using \"publicly available data\" but does not specify the exact source or provide access details\n- **The dataset name is mentioned but no citation, link, repository, or author attribution is provided**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CONCRETE ACCESS INFORMATION (specific link, DOI, repository name, formal citation with authors/year, or reference to established benchmark datasets) for a publicly available or open dataset?**\n Return 1 for yes or 0 for no and use train as the JSON key.\nDetermine whether the paper explicitly provides **training/test/validation dataset splits** needed to reproduce the experiment.\n\nReturn **Yes** if:\n- The paper specifies exact split percentages (e.g., \"80/10/10 split\", \"70% training, 15% validation, 15% test\")\n- Provides absolute sample counts for each split (e.g., \"40,000 training samples, 5,000 validation, 5,000 test\")\n- References predefined splits with citations (e.g., \"we use the standard train/test split from [Author et al., 2020]\")\n- Mentions specific file names or URLs for custom splits (e.g., \"train.txt, val.txt, test.txt available at...\")\n- Describes stratified or group-based splitting methodology (e.g., \"stratified by class\", \"split by subject ID\", \"temporal split\")\n- Provides random seed with splitting strategy (e.g., \"random split with seed 42\")\n- Specifies cross-validation setup (e.g., \"5-fold cross-validation\", \"leave-one-out cross-validation\")\n- Uses standard benchmark splits that are well-defined (e.g., \"CIFAR-10 standard split\", \"ImageNet validation set\")\n\nReturn **No** if:\n- References datasets without mentioning splits (e.g., \"we use the XYZ dataset\")\n- Splits are mentioned vaguely (e.g., \"we split the data appropriately\")\n- Only mentions total dataset size without split information\n- Defers split details to supplementary materials or other papers without providing access\n- Uses phrases like \"standard split\" or \"typical split\" without specification\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC DATASET SPLIT INFORMATION (exact percentages, sample counts, citations to predefined splits, or detailed splitting methodology) needed to reproduce the data partitioning?**\n Return 1 for yes or 0 for no and use validation as the JSON key.\nDetermine whether the paper explicitly states the **test data split** or **testing subset** used to evaluate the model's performance.\n\nReturn **Yes** if:\n- The paper explicitly mentions phrases like \"test set\", \"testing set\", \"test portion\", \"test split\", \"held-out test data\"\n- Mentions of dataset names used for testing (e.g., \"CIFAR-10 test set\", \"evaluated on the test set of ImageNet\")\n- Quantitative indicators such as \"10K examples for testing\", \"20% used as test data\"\n\nReturn **No** if:\n- There are vague mentions like \"test accuracy\" or \"we tested our model\" with no details about the test data\n- \"Test results\" or \"testing performance\" without indicating the data used\n- References to standard datasets (like \"we used MNIST\") without specifying the test subset or split\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper clearly describe the TEST DATA SPLIT (explicit mention of test set, split, or subset with specific details) used for evaluation?**\n Return 1 for yes or 0 for no and use test as the JSON key.\nDetermine whether the paper includes links to the **results of the experiment**.\n\nReturn **Yes** if:\n- The paper includes a URL (e.g., to GitHub, Google Drive, institutional repository, Zenodo, Dropbox, etc.) pointing to result files, visualizations, spreadsheets, or dashboards\n- It says results are in supplementary material, appendix, or provided anonymously for review\n- It includes phrases like \"Results available at...\", \"Our results can be found in...\", \"The experimental output is linked at...\"\n\nReturn **No** if:\n- Results are only shown in the paper's main text (figures or tables inside the PDF)\n- The paper mentions results will be released later or are available upon request\n- The link is only to datasets, tools, or pretrained models not tied to the paper's experimental output\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper link to or externally share CONCRETE ACCESS TO EXPERIMENTAL RESULTS (specific URLs, repositories, or supplementary materials containing result files)?**\n Return 1 for yes or 0 for no and use results as the JSON key.\nDetermine whether the paper **explicitly describes the hardware used** to run its experiments.\n\nReturn **Yes** if:\n- The paper mentions any specific hardware setup, including:\n  - **Specific GPU models** (e.g., \"NVIDIA A100\", \"RTX 2080 Ti\", \"Tesla V100\")\n  - **Specific CPU models or processors** (e.g., \"Intel Core i7-4770K\", \"Intel Xeon E5-2630\", \"AMD Ryzen 9 5950X\", \"Intel Core i5-3210M\", \"Intel i7-2600\")\n  - **TPU or other accelerator references** (e.g., \"TPU v2\", \"Google TPU\", \"Intel Neural Compute Stick\")\n  - **Cloud or cluster resources with specs** (e.g., \"AWS p3.8xlarge with V100 GPUs\", \"Google Cloud TPU v3\")\n  - **Computer specifications with processor details** (e.g., \"laptop with Intel Core i5\", \"workstation with Intel Xeon\", \"desktop PC with Intel Core i7\")\n- Direct statements about where experiments were run, such as:\n  - \"We trained our models using...\"\n  - \"Experiments were performed on...\"\n  - \"Hardware specifications include...\"\n  - \"All experiments ran on...\"\n  - \"Our machine has...\"\n  - \"Results are obtained on...\"\n\nReturn **No** if:\n- No hardware is mentioned\n- The paper only discusses software, datasets, or **vague terms like \"on a GPU\", \"using a High Performance Computing Resource\", or \"on a server\" without any specific model numbers, processor types, or memory details**\n- Any mention of hardware is disconnected from the experimental process\n- The hardware mentioned (like mobile phones, tablets, or IoT devices) is not used for training or inference in the experiments\n- **Only general computing environments are mentioned without any specific hardware details (e.g., \"on a cluster\", \"using cloud computing\" with no specifications)**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC HARDWARE DETAILS (exact GPU/CPU models, processor types with speeds, memory amounts, or detailed computer specifications) used for running its experiments?**\n Return 1 for yes or 0 for no and use hardware_specification as the JSON key.\nDetermine whether the paper provides a reproducible description of the ancillary software. A reproducible description **must include specific version numbers** for key software components.\n\nReturn **Yes** if the paper meets one of the following criteria:\n- It lists multiple key software components with their versions (e.g., \"Python 3.8, PyTorch 1.9, and CUDA 11.1\")\n- It names a self-contained solver, simulation environment, or specialized package with a specific version number (e.g., \"CPLEX 12.4\", \"Gecode 4.2.0\", \"Choco 2.1.5\")\n\nReturn **No** if the paper only mentions:\n- Software names without version numbers (e.g., \"using Caffe\", \"the scikit-learn package\")\n- A programming language, even with a version, without listing any versioned libraries or solvers (e.g., \"implemented in Java 7\" by itself is not enough)\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC ANCILLARY SOFTWARE DETAILS (e.g., library or solver names with version numbers like Python 3.8, CPLEX 12.4) needed to replicate the experiment?**\n Return 1 for yes or 0 for no and use software_dependencies as the JSON key.\nDetermine whether the paper explicitly provides details about the **experimental setup**, especially hyperparameters or system-level training settings.\n\nReturn **Yes** if:\n- The paper contains specific hyperparameter values (e.g., learning rate, batch size, number of epochs, optimizer settings)\n- Details on model initialization, dropout rate, or training schedules\n- A clearly labeled table or paragraph describing training settings\n- A section titled \"Experimental Setup\" or similar with configuration information\n\nReturn **No** if:\n- The paper only mentions that \"we trained a model\" or refers to \"standard settings\" without elaboration\n- The only details about training are deferred to supplemental materials, code, or prior work\n- There is no mention of hyperparameters, optimizer settings, or explicit configuration steps\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper contain SPECIFIC EXPERIMENTAL SETUP DETAILS (concrete hyperparameter values, training configurations, or system-level settings) in the main text?**\n Return 1 for yes or 0 for no and use experiment_setup as the JSON key.\n",
+    "temperature": -1,
+    "top_p": -1,
+    "evaluation_seconds": "114"
+}

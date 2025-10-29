@@ -1,0 +1,13 @@
+---
+llm: chatgpt-compatible-service
+structured_output: True
+# Prices: Input / Output per 1M tokens
+
+# Latest models:
+model:
+  name: glm-4.7
+  input_cost: 0
+  output_cost: 0
+
+api_key: XXX
+base_url: https://XXX/v1

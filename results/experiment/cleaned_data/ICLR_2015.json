@@ -1,0 +1,1278 @@
+{
+  "techniques_for_learning_binary_stochastic_feedforward_neural_networks__f2ac6b20": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "Our experiments conﬁrm that training stochastic networks is difﬁcult and show that the proposed two estimators perform favorably among all the ﬁve known estimators. We propose two experiments as benchmarks for stochastic feedforward networks based on the MNIST handwritten digit dataset (Le Cun et al., 1998) and the Toronto Face Database (Susskind et al., 2010)."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Tapani Raiko & Mathias Berglund Department of Information and Computer Science Aalto University Espoo, Finland {tapani.raiko,mathias.berglund}@aalto.fi Guillaume Alain & Laurent Dinh Department of Computer Science and Operations Research Universit e de Montr eal Montr eal, Canada guillaume.alain.umontreal@gmail.com, dinhlaur@iro.umontreal.ca"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper describes estimators and mathematical formulations but does not include any clearly labeled pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not provide any explicit statement about releasing source code for its methodology, nor does it include a link to a code repository."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We propose two experiments as benchmarks for stochastic feedforward networks based on the MNIST handwritten digit dataset (Le Cun et al., 1998) and the Toronto Face Database (Susskind et al., 2010)."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "In the MNIST experiments we used a separate validation set to select the learning rate."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide any specific details about the hardware (e.g., CPU, GPU models, memory) used to run the experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper acknowledges the use of Theano ('Theano (Bastien et al., 2012; Bergstra et al., 2010)') but does not specify its version number or any other software dependencies with their versions, which are required for reproducibility."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "In all of the experiments, we used stochastic gradient descent with a mini-batch size of 100 and momentum of 0.9. We used a learning rate schedule where the learning rate increases linearly from zero to maximum during the ﬁrst ﬁve epochs and back to zero during the remaining epochs. The maximum learning rate was chosen among {0.0001, 0.0003, 0.001, . . . , 1}. The models were trained with M {1, 20}, and during test time we always used M = 100. We used a network structure of 392-200-200-392 and 2304-200-200-2304 in the ﬁrst and second problem, respectively."
+    },
+    "title": "Techniques for Learning Binary Stochastic Feedforward Neural Networks",
+    "authors": "Tapani Raiko, Mathias Berglund, Guillaume Alain, and Laurent Dinh",
+    "pdf_url": "https://arxiv.org/pdf/1406.2989.pdf"
+  },
+  "automatic_discovery_and_optimization_of_parts_for_image_classification__a36c0779": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We present experiments with both HOG (Dalal & Triggs (2005)) and CNN (Krizhevsky et al. (2012)) features and improve the state-of-the-art results on the MIT-indoor dataset (Quattoni & Torralba (2009)) using CNN features."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Brown University University of Oxford Brown University"
+    },
+    "pseudocode": {
+      "result": 1,
+      "paper_text": "Algorithm 1 Joint training of model parameters by optimizing O(u, w) in Equation 6. Algorithm 2 Fast optimization of the convex bound Bu(w, wold) using hard example mining. Algorithm 3 Fast QP solver for optimizing BC."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper mentions using a third-party tool, Caffe, but it does not provide an explicit statement about releasing its own source code for the described methodology, nor does it provide a link to a code repository."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We evaluate our methods on the MIT-indoor dataset (Quattoni & Torralba (2009)). The hybrid network is pre-trained on images from Image Net (Deng et al. (2009)) and PLACES (Zhou et al. (2014)) datasets."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper states: \"The dataset has 67 indoor scene classes. There are about 80 training and 20 test images per class.\" While it mentions training and test sets, it does not specify a separate validation split or explicit percentages/counts for data partitioning, nor does it refer to predefined splits with citations."
+    },
+    "hardware_specification": {
+      "result": 1,
+      "paper_text": "In our current implementation it takes 5 days to do joint training with 120 shared parts on the full MIT-indoor dataset on a 16-core machine using HOG features. It takes 2.5 days to do joint training with 372 parts on the full dataset on a 8 core machine using 60-dimensional PCA-reduced CNN features."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper states: \"We extract CNN features using Caffe (Jia et al. (2014)).\" It mentions Caffe, but does not provide a specific version number for this or any other software dependency."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "HOG features: We resize images (maintaining aspect ratio) to have about 2.5M pixels. We extract 32-dimensional HOG features... at multiple scales. Our HOG pyramid has 3 scales per octave... Each part ﬁlter wj models a 6 6 grid of HOG features... CNN features: We extract CNN features at multiple scales from overlapping patches of ﬁxed size 256 256 and with stride value 256/3 = 85. We resize images (maintaining aspect ratio) to have about 5M pixels in the largest scale. We use a scale pyramid with 2 scales per octave."
+    },
+    "title": "Automatic Discovery and Optimization of Parts for Image Classification",
+    "authors": "Sobhan Naderi Parizi, Andrea Vedaldi, Andrew Zisserman, and Pedro Felzenszwalb",
+    "pdf_url": "https://arxiv.org/pdf/1412.6598.pdf"
+  },
+  "semantic_image_segmentation_with_deep_convolutional_nets_and_fully_connected_crfs__948b0f0b": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "Quantitatively, our method sets the new state-of-art at the PASCAL VOC-2012 semantic image segmentation task, reaching 71.6% IOU accuracy in the test set. We test our Deep Lab model on the PASCAL VOC 2012 segmentation benchmark (Everingham et al., 2014), consisting of 20 foreground object classes and one background class."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "Liang-Chieh Chen Univ. of California, Los Angeles lcchen@cs.ucla.edu George Papandreou Google Inc. gpapan@google.com Iasonas Kokkinos Centrale Sup elec and INRIA iasonas.kokkinos@ecp.fr Kevin Murphy Google Inc. kpmurphy@google.com Alan L. Yuille Univ. of California, Los Angeles yuille@stat.ucla.edu"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "No structured pseudocode or algorithm blocks were found in the paper."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "We share our source code, conﬁguration ﬁles, and trained models that allow reproducing the results in this paper at a companion web site https://bitbucket.org/deeplab/deeplab-public."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We test our Deep Lab model on the PASCAL VOC 2012 segmentation benchmark (Everingham et al., 2014), consisting of 20 foreground object classes and one background class. The original dataset contains 1, 464, 1, 449, and 1, 456 images for training, validation, and testing, respectively. The dataset is augmented by the extra annotations provided by Hariharan et al. (2011), resulting in 10, 582 training images."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "The original dataset contains 1, 464, 1, 449, and 1, 456 images for training, validation, and testing, respectively. and We conduct the majority of our evaluations on the PASCAL val set, training our model on the augmented PASCAL train set."
+    },
+    "hardware_specification": {
+      "result": 1,
+      "paper_text": "Using our Caffe-based implementation and a Titan GPU, the resulting VGG-derived network is very efﬁcient: Given a 306 306 input image, it produces 39 39 dense raw feature scores at the top of the network at a rate of about 8 frames/sec during testing."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions 'Caffe framework (Jia et al., 2014)' but does not specify a version number for Caffe or any other software dependencies."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "We use a mini-batch of 20 images and initial learning rate of 0.001 (0.01 for the ﬁnal classiﬁer layer), multiplying the learning rate by 0.1 at every 2000 iterations. We use momentum of 0.9 and a weight decay of 0.0005. and We ﬁx the number of mean ﬁeld iterations to 10 for all reported experiments. and We use the default values of w2 = 3 and σγ = 3 and we search for the best values of w1, σα, and σβ by cross-validation on a small subset of the validation set (we use 100 images)."
+    },
+    "title": "Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs",
+    "authors": "Liang-Chieh Chen, George Papandreou, Iasonas Kokkinos, Kevin Murphy, and Alan Yuille",
+    "pdf_url": "https://arxiv.org/pdf/1412.7062.pdf"
+  },
+  "qualitatively_characterizing_neural_network_optimization_problems__c5831765": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We introduce a simple analysis technique to look for evidence that such networks are overcoming local optima. We ﬁnd that, in fact, on a straight path from initialization to solution, a variety of state of the art neural networks never encounter any signiﬁcant obstacles.In this paper, we present a variety of simple experiments designed to roughly characterize the objective functions involved in neural network training."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "Google Inc., Mountain View, CA Department of Electrical Engineering, Stanford University, Stanford, CA {goodfellow,vinyals}@google.com, asaxe@stanford.edu"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper does not contain any pseudocode or clearly labeled algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "Maxout network: This model was retrained using the publicly available implementation used by Goodfellow et al. (2013c). The code is available at: https://github.com/lisa-lab/pylearn2/blob/master/pylearn2/scripts/ papers/maxout/mnist_pi.yaml"
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "For these experiments we use the MNIST dataset (Le Cun et al., 1998). The linear interpolation experiment for a convolutional maxout network on the CIFAR-10 dataset (Krizhevsky & Hinton, 2009). LSTM regularized with dropout (Hochreiter & Schmidhuber, 1997; Zaremba et al., 2014) on the Penn Treebank dataset (Marcus et al., 1993)."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper mentions the use of a \"validation set\" in figures (e.g., \"J(θ) validation\" in Figure 1) and in the text (e.g., \"early stopping on a validation set criterion\"). However, it does not provide specific details on the split percentages or sizes of the validation set for reproduction."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide any specific details about the hardware (e.g., CPU, GPU models, memory, number of machines) used to run the experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper acknowledges the developers of \"Theano(Bergstra et al., 2010; Bastien et al., 2012) and Pylearn2(Goodfellow et al., 2013b)\" but does not specify version numbers for these or any other software dependencies."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "A EXPERIMENT DETAILS All of our experiments except for the sigmoid network were using hyperparameters taken directly from the literature. We fully specify each of them here. Adversarially trained maxout network: This model is the one used by Goodfellow et al. (2014). There is no public conﬁguration for it, but the paper describes how to modify the previous best maxout network to obtain it. Re LU network without dropout: We simply removed the dropout from the preceding conﬁguration ﬁle."
+    },
+    "title": "Qualitatively characterizing neural network optimization problems",
+    "authors": "Ian Goodfellow and Oriol Vinyals",
+    "pdf_url": "https://arxiv.org/pdf/1412.6544.pdf"
+  },
+  "scheduled_denoising_autoencoders__d5e5c7a6": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "Experimentally, we find on both image and text data that scheduled denoising autoencoders learn better representations than standard denoising autoencoders, as measured by the features performance on a supervised task. On both classification tasks, the representation from Sche DA yields lower test error than that from a denoising autoencoder trained at the best single noise level."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Krzysztof J. Geras School of Informatics University of Edinburgh k.j.geras@sms.ed.ac.uk Charles Sutton School of Informatics University of Edinburgh csutton@inf.ed.ac.uk"
+    },
+    "pseudocode": {
+      "result": 1,
+      "paper_text": "while θ not converged do Take a stochastic gradient step on (1), using noise level ν0. end while for t in 1, . . . , T do νt := νt 1 ν for K steps do Take a stochastic gradient step on (1), using noise level νt. end for end for"
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper mentions implementing experiments using 'Theano library (Bergstra et al., 2010)' and 'LIBLINEAR (Fan et al., 2008)', but does not provide a link or an explicit statement about releasing its own open-source code for the methodology described."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We use the CIFAR-10 (Krizhevsky, 2009) data set for experiments with vision data. ... We also evaluate our idea on a data set of product reviews from Amazon (Blitzer et al., 2007)..."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "There are 50000 training and validation images and 10000 test images. ... We divide the training and validation set into 45000 training instances and 5000 validation instances."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide specific details about the hardware used for running experiments, such as GPU or CPU models. It only mentions 'Theano: a CPU and GPU math expression compiler' when referring to the software library used."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions using 'Theano library (Bergstra et al., 2010)' and 'L2-regularised logistic regression implemented in LIBLINEAR (Fan et al., 2008)', but does not provide specific version numbers for these software dependencies."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "We try all combinations of the following values of the parameters: noise level {0.7, 0.6, 0.5, 0.4, 0.3, 0.2, 0.1, 0.05}, learning rate {0.002, 0.01, 0.05}, number of training epochs {100, 200, . . . , 2000}. ... We use the learning rate of 0.01 for this stage..."
+    },
+    "title": "Scheduled denoising autoencoders",
+    "authors": "Krzysztof Geras and Charles Sutton",
+    "pdf_url": "https://arxiv.org/pdf/1406.3269.pdf"
+  },
+  "multiple_object_recognition_with_visual_attention__e61427d7": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We evaluate the model on the challenging task of transcribing house number sequences from Google Street View images and show that it is both more accurate than the state-of-the-art convolutional networks and uses fewer parameters and less computation."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "Jimmy Lei Ba University of Toronto jimmy@psi.utoronto.ca Volodymyr Mnih Google Deep Mind vmnih@google.com Koray Kavukcuoglu Google Deep Mind korayk@google.com"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper describes the model and learning process using mathematical equations and textual descriptions, but it does not provide formal pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not provide an explicit statement or a direct link to the open-source code for the described methodology."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "The publicly available multi-digit street view house number (SVHN) dataset Netzer et al. (2011) consists of images of digits taken from pictures of house fronts. ... The models are trained using the remaining 200,000 training images."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "Following Goodfellow et al. (2013), we formed a validation set of 5000 images by randomly sampling images from the training set and the extra set, and these were used for selecting the learning rate and sampling variance for the stochastic glimpse policy."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper mentions training on 'a GPU' but does not provide specific hardware details such as GPU model, CPU type, or memory specifications."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper does not list specific software dependencies with version numbers (e.g., library names like TensorFlow or PyTorch with their respective versions)."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "We optimized the model parameters using stochastic gradient descent with the Nesterov momentum technique. A mini-batch size of 128 was used to estimate the gradient direction. The momentum coefﬁcient was set to 0.9 throughout the training. The learning rate η scheduling was applied in training to improve the convergence of the learning process. η starts at 0.01 in the ﬁrst epoch and was exponentially reduced by a factor of 0.97 after each epoch."
+    },
+    "title": "Multiple Object Recognition with Visual Attention",
+    "authors": "Jimmy Ba, Volodymyr Mnih, and Koray Kavukcuoglu",
+    "pdf_url": "https://arxiv.org/pdf/1412.7755.pdf"
+  },
+  "deep_captioning_with_multimodal_recurrent_neural_networks_mrnn__1a64645d": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "The effectiveness of our model is validated on four benchmark datasets (IAPR TC-12, Flickr 8K, Flickr 30K and MS COCO). Our model outperforms the state-of-the-art methods."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "Junhua Mao University of California, Los Angeles; Baidu Research mjhustc@ucla.edu Wei Xu & Yi Yang & Jiang Wang & Zhiheng Huang Baidu Research {wei.xu,yangyi05,wangjiang03,huangzhiheng}@baidu.com Alan Yuille University of California, Los Angeles yuille@stat.ucla.edu"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper describes the model architecture with equations and diagrams (Figure 2), but does not include any pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "The code and related data (e.g. reﬁned image features and hypotheses sentences generated by the m-RNN model) are available at https://github.com/mjhucla/m RNN-CR."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We test our method on four benchmark datasets with sentence level annotations: IAPR TC-12 (Grubinger et al. (2006)), Flickr 8K (Rashtchian et al. (2010)), Flickr 30K (Young et al. (2014)) and MS COCO (Lin et al. (2014)). The dataset partition of MS COCO and Flickr30K is available in the project page 4. www.stat.ucla.edu/ junhua.mao/m-RNN.html."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "We adopt the standard separation of training and testing set as previous works (Guillaumin et al. (2010); Kiros et al. (2014b)) with 17,665 images for training and 1962 images for testing. There are 6,000 images for training, 1,000 images for validation and 1,000 images for testing. We randomly sampled 4,000 images for validation and 1,000 images for testing from their currently released validation set."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The m-RNN model is trained using Baidu s internal deep learning platform PADDLE, which allows us to explore many different model architectures in a short period. It takes 25 ms on average to generate a sentence (excluding image feature extraction stage) on a single core CPU."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The m-RNN model is trained using Baidu s internal deep learning platform PADDLE, which allows us to explore many different model architectures in a short period."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "The hyperparameters, such as layer dimensions and the choice of the non-linear activation functions, are tuned via cross-validation on Flickr8K dataset and are then ﬁxed across all the experiments. After the recurrent layer, we set up a 512 dimensional multimodal layer that connects the language model part and the vision part of the m-RNN model (see Figure 2(b))."
+    },
+    "title": "Deep Captioning with Multimodal Recurrent Neural Networks (m-RNN)",
+    "authors": "Junhua Mao, Wei Xu, Yi Yang, Jiang Wang, and Alan Yuille",
+    "pdf_url": "https://arxiv.org/pdf/1412.6632.pdf"
+  },
+  "word_representations_via_gaussian_embedding__2de51712": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We compare performance on various word embedding benchmarks, investigate the ability of these embeddings to model entailment and other asymmetric relationships, and explore novel properties of the representation."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Luke Vilnis, Andrew Mc Callum School of Computer Science University of Massachusetts Amherst Amherst, MA 01003 luke@cs.umass.edu, mccallum@cs.umass.edu"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper provides mathematical formulations and derivations but does not include pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not contain any explicit statements or links indicating that the source code for the described methodology is publicly available."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "Unsupervised embeddings are learned on the concatenated uk Wa C and Wa Ckypedia corpora (Baroni et al., 2009), consisting of about 3 billion tokens."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper mentions training and testing, and evaluation on benchmarks, but does not specify a separate validation dataset or explicit train/validation/test splits with percentages or sample counts. While it mentions "
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide specific details about the hardware used for running the experiments, such as GPU models, CPU types, or memory specifications."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions using "
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "All Gaussian experiments are conducted with 50-dimensional vectors, with diagonal variances except where noted otherwise. We train both models with one pass over the data, using separate embeddings for the input and output contexts, 1 negative sample per positive example, and the same subsampling procedure as in the word2vec paper (Mikolov et al., 2013). The only other difference between the two training regimes is that we use a smaller ℓ2 regularization constraint when using the word2vec loss function."
+    },
+    "title": "Word Representations via Gaussian Embedding",
+    "authors": "Luke Vilnis and Andrew McCallum",
+    "pdf_url": "https://arxiv.org/pdf/1412.6623.pdf"
+  },
+  "deep_narrow_boltzmann_machines_are_universal_approximators__8f66ee82": {
+    "research_type": {
+      "result": 1,
+      "paper_text": "In this paper we prove that deep narrow Boltzmann machines are universal approximators, provided they have sufﬁciently many hidden layers, each containing the same number of units as the visible layer."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Guido Mont ufar Max Planck Institute for Mathematics in the Sciences Inselstrasse 22, 04103 Leipzig, Germany montufar@mis.mpg.de"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper focuses on theoretical proofs and mathematical derivations. It does not contain any pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not provide any statements about releasing open-source code for the methodology described."
+    },
+    "open_datasets": {
+      "result": 0,
+      "paper_text": "The paper is theoretical and does not involve training models or using datasets."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper is theoretical and does not involve experimental validation or dataset splits."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "This is a theoretical paper and does not describe any hardware used for experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "This is a theoretical paper and does not mention any software dependencies with specific version numbers."
+    },
+    "experiment_setup": {
+      "result": 0,
+      "paper_text": "This is a theoretical paper and does not describe any experimental setup details such as hyperparameters or training settings."
+    },
+    "title": "Deep Narrow Boltzmann Machines are Universal Approximators",
+    "authors": "Guido Montufar",
+    "pdf_url": "https://arxiv.org/pdf/1411.3784.pdf"
+  },
+  "very_deep_convolutional_networks_for_largescale_image_recognition__fd68db5d": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "In this work we investigate the effect of the convolutional network depth on its accuracy in the large-scale image recognition setting. Our main contribution is a thorough evaluation of networks of increasing depth using an architecture with very small (3 3) convolution ﬁlters, which shows that a signiﬁcant improvement on the prior-art conﬁgurations can be achieved by pushing the depth to 16 19 weight layers. These ﬁndings were the basis of our Image Net Challenge 2014 submission, where our team secured the ﬁrst and the second places in the localisation and classiﬁcation tracks respectively."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "Karen Simonyan & Andrew Zisserman+ Visual Geometry Group, Department of Engineering Science, University of Oxford {karen,az}@robots.ox.ac.uk current afﬁliation: Google Deep Mind +current afﬁliation: University of Oxford and Google Deep Mind"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper does not contain structured pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "We have made our two best-performing Conv Net models publicly available to facilitate further research on the use of deep visual representations in computer vision. 1http://www.robots.ox.ac.uk/~vgg/research/very_deep/"
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "The dataset includes images of 1000 classes, and is split into three sets: training (1.3M images), validation (50K images), and testing (100K images with held-out class labels)."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "The dataset includes images of 1000 classes, and is split into three sets: training (1.3M images), validation (50K images), and testing (100K images with held-out class labels)."
+    },
+    "hardware_specification": {
+      "result": 1,
+      "paper_text": "On a system equipped with four NVIDIA Titan Black GPUs, training a single net took 2 3 weeks depending on the architecture."
+    },
+    "software_dependencies": {
+      "result": 1,
+      "paper_text": "Our implementation is derived from the publicly available C++ Caffe toolbox (Jia, 2013) (branched out in December 2013)"
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "The batch size was set to 256, momentum to 0.9. The training was regularised by weight decay (the L2 penalty multiplier set to 5 10 4) and dropout regularisation for the ﬁrst two fully-connected layers (dropout ratio set to 0.5). The learning rate was initially set to 10 2, and then decreased by a factor of 10 when the validation set accuracy stopped improving. In total, the learning rate was decreased 3 times, and the learning was stopped after 370K iterations (74 epochs). ... We consider two approaches for setting the training scale S. The ﬁrst is to ﬁx S, which corresponds to single-scale training... In our experiments, we evaluated models trained at two ﬁxed scales: S = 256... and S = 384."
+    },
+    "title": "Very Deep Convolutional Networks for Large-Scale Image Recognition",
+    "authors": "Karen Simonyan and Andrew Zisserman",
+    "pdf_url": "https://arxiv.org/pdf/1409.1556.pdf"
+  },
+  "modeling_compositionality_with_multiplicative_recurrent_neural_networks__51966dd9": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "Our experiments show that multiplicative RNNs provide comparable or better performance than conventional additive recurrent nets and matrix-space models in terms of ﬁne-grained sentiment detection accuracy. Furthermore, although the absence of parse tree information puts an additional learning burden on multiplicative RNNs, we ﬁnd that they can reach comparable performance to the recursive neural network variants that require parse tree annotations for each sentence."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Ozan Irsoy & Claire Cardie Department of Computer Science Cornell University Ithaca, NY {oirsoy,cardie}@cs.cornell.edu"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper does not contain any structured pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not provide any concrete access to source code, such as a repository link or an explicit statement about code release."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "For experimental evaluation of the models, we use the manually annotated MPQA corpus (Wiebe et al., 2005) ... Additionally, we use the recently published Stanford Sentiment Treebank (SST) (Socher et al., 2013)... For pretrained word vectors, we use publicly available 300 dimensional word vectors by Mikolov et al. (2013b), trained on part of Google News dataset (∼100B words)."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "We use the training-validation-test set partitions provided by the authors to apply 10-fold CV and report average performance over ten folds.\" (MPQA) and \"We use the single training-validation-test set partition provided by the authors.\" (SST)"
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide any specific hardware details such as GPU/CPU models, processor types, or memory used for running the experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper does not specify version numbers for any software, libraries, or frameworks used in the experiments."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "For experiments on the MPQA corpus, we employ an ordinal regression setting. For experiments on SST, we employ a simple multiclass classiﬁcation setting...output nonlinearity g is the softmax function, and the output y is a vector valued response with the class probabilities. Ordinal regression setting is as described in Section 4.2... We experiment with both randomly initialized word vectors (RAND) and pretrained word vector representations (VEC). For pretrained word vectors, we use publicly available 300 dimensional word vectors by Mikolov et al. (2013b)...To test the effect of different nonlinearities, we experiment with the identity, rectiﬁer and tanh functions with m RNNs."
+    },
+    "title": "Modeling Compositionality with Multiplicative Recurrent Neural Networks",
+    "authors": "Ozan Irsoy and Claire Cardie",
+    "pdf_url": "https://arxiv.org/pdf/1412.6577.pdf"
+  },
+  "neural_machine_translation_by_jointly_learning_to_align_and_translate__10a6617f": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We evaluate the proposed approach on the task of English-to-French translation. We use the bilingual, parallel corpora provided by ACL WMT 14. As a comparison, we also report the performance of an RNN Encoder Decoder which was proposed recently by Cho et al. (2014a)."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Dzmitry Bahdanau Jacobs University Bremen, Germany Kyung Hyun Cho Yoshua Bengio Universit e de Montr eal"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper describes the model architecture and training procedure using mathematical equations and descriptive text, but no explicit 'Pseudocode' or 'Algorithm' block is provided."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "Implementations are available at https://github.com/lisa-groundhog/Ground Hog."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We use the bilingual, parallel corpora provided by ACL WMT 14.3 http://www.statmt.org/wmt14/translation-task.html"
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "We concatenate news-test-2012 and news-test-2013 to make a development (validation) set, and evaluate the models on the test set (news-test-2014) from WMT 14, which consists of 3003 sentences not present in the training data."
+    },
+    "hardware_specification": {
+      "result": 1,
+      "paper_text": "TITAN BLACK, Quadro K-6000 (from Table 2)"
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions software like Theano, Adadelta, and Moses for tokenization, but specific version numbers for these dependencies are not provided."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "The encoder and decoder of the RNNencdec have 1000 hidden units each. ... We use a minibatch stochastic gradient descent (SGD) algorithm together with Adadelta (Zeiler, 2012) to train each model. Each SGD update direction is computed using a minibatch of 80 sentences. (Further details in Appendix A.2.3 and B.2 regarding hidden units (1000), embedding dimensionality (620), maxout layer size (500), Adadelta parameters (ϵ = 10^-6 and ρ = 0.95), and gradient normalization threshold (1))."
+    },
+    "title": "Neural Machine Translation by Jointly Learning to Align and Translate",
+    "authors": "Dzmitry Bahdanau, Kyunghyun Cho, and Yoshua Bengio",
+    "pdf_url": "https://arxiv.org/pdf/1409.0473.pdf"
+  },
+  "fast_convolutional_nets_with_fbfft_a_gpu_performance_evaluation__dc46fd0e": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We examine the performance proﬁle of Convolutional Neural Network (CNN) training on the current generation of NVIDIA Graphics Processing Units (GPUs). We introduce two new Fast Fourier Transform convolution implementations: one based on NVIDIA s cu FFT library, and another based on a Facebook authored FFT implementation, fbfft, that provides signiﬁcant speedups over cu FFT (over 1.5 ) for whole CNNs. Both of these convolution implementations are available in open source, and are faster than NVIDIA s cu DNN implementation for many common convolutional layers (up to 23.5 for a synthetic kernel conﬁguration). We discuss different performance regimes of convolutions, comparing areas where straightforward time domain convolutions outperform Fourier frequency domain convolutions. We evaluate our relative performance to NVIDIA s cu DNN library (Chetlur et al. (2014)) on over 8, 000 different conﬁgurations (Section 4). Figures 1-6 are performance summaries of cu FFT convolution versus cu DNN on a NVIDIA Tesla K40m, averaged across all three passes."
+    },
+    "affiliation": {
+      "result": 2,
+      "paper_text": "Nicolas Vasilache, Jeff Johnson, Michael Mathieu, Soumith Chintala, Serkan Piantino & Yann Le Cun Facebook AI Research 770 Broadway, New York, NY 10003, USA {ntv,jhj,myrhev,soumith,spiantino,yann}@fb.com"
+    },
+    "pseudocode": {
+      "result": 1,
+      "paper_text": "Table 1 describes the in-order operations for FFT computation of the forward pass, using the FFT 2D and IFFT 2D operators and Cgemm matrix multiplication."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "Both of these convolution implementations are available in open source, and are faster than NVIDIA s cu DNN implementation for many common convolutional layers (up to 23.5 for a synthetic kernel conﬁguration). Our implementation is released as part of the fbcuda and fbcunn opensource libraries at http://github.com/facebook."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "In table 3, we show performance for real CNNs, Alex Net (Krizhevsky et al. (2012)) and Over Feat fast (Sermanet et al. (2014)), comparing against cu DNN and cuda-convnet2 (ccn2) kernels in Torch."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper discusses evaluating performance on Alex Net and Over Feat fast but does not specify the dataset splits (training, validation, test) used for these experiments within its text."
+    },
+    "hardware_specification": {
+      "result": 1,
+      "paper_text": "Figures 1-6 are performance summaries of cu FFT convolution versus cu DNN on a NVIDIA Tesla K40m, averaged across all three passes. Table 3: Alex Net and Over Feat fast performance (K40, ms). Table 4: Representative layer performance (S = 128, K40m)."
+    },
+    "software_dependencies": {
+      "result": 1,
+      "paper_text": "We compare our cu FFT convolution results against NVIDIA s cu DNN 1.0 library (Chetlur et al. (2014)). This number represents the throughput a time-domain kernel needs to achieve in order to match our implementation; it is computed as (Sff khkw(h kh + 1)(w kw + 1))/time. This is a metric to compare relative efﬁciency across problem and padding sizes. In the cases L2, L3 and L4, a time domain convolution would need to exceed the K40m peak of 4.29 Tﬂop/sec in order to match our throughput. (K40m on CUDA 6.5)"
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "Thus, we restrict ourselves to a 5-D problem domain {S, f, f , n(= h = w), k(= kh = kw)}. Much of this space is not used in practice. Some areas are perhaps over-emphasized (large S, small k) due to current engineering concerns. We evaluate cu DNN vs cu FFT-based convolution for Table 2 s 8, 232 conﬁgurations. Table 2: Conﬁguration elements evaluated DIMENSION SIZES EVALUATED Minibatch size (S) 1, 16, 64, 128 Input ﬁlters (f) 1, 4, 16, 64, 96, 128, 256 Output ﬁlters (f ) 1, 4, 16, 64, 96, 128, 256 Kernel h/w (k = kh = kw) 3, 5, 7, 9, 11, 13 Output h/w (y = h kh + 1 = w kw + 1) 1, 2, 4, 8, 16, 32, 64"
+    },
+    "title": "Fast Convolutional Nets With fbfft: A GPU Performance Evaluation",
+    "authors": "Nicolas Vasilache, Jeff Johnson, Michael Mathieu, Soumith Chintala, Serkan Piantino, and Yann LeCun",
+    "pdf_url": "https://arxiv.org/pdf/1412.7580.pdf"
+  },
+  "zerobias_autoencoders_and_the_benefits_of_coadapting_features__3f225b92": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "This work is motivated by the empirical observation that across a wide range of applications, hidden biases, bk, tend to take on large negative values when training an autoencoder with one of the mentioned regularization schemes. In Figure 1 we conﬁrm this ﬁnding, and we show that it is still true when features represent whole CIFAR-10 images (rather than a bag of features). The ﬁgure shows the classiﬁcation performance of a standard contractive autoencoder with sigmoid hidden units trained on the permutation-invariant CIFAR-10 training dataset (ie. using the whole images not patches for training), using a linear classiﬁer applied to the hidden activations."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Kishore Konda Goethe University Frankfurt Germany konda.kishorereddy@gmail.com Roland Memisevic University of Montreal Canada roland.memisevic@umontreal.ca David Krueger University of Montreal Canada david.krueger@umontreal.ca"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper describes algorithms and mathematical formulations but does not include any clearly labeled pseudocode blocks or algorithm listings."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "An example implementation of the zero-bias autoencoder in python is available at http://www.iro. umontreal.ca/ memisevr/code/zae/."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We chose the CIFAR-10 dataset (Krizhevsky & Hinton (2009)). It contains color images of size 32 × 32 pixels that are assigned to 10 different classes. The number of samples for training is 50, 000 and for testing is 10, 000. We used the recognition pipeline proposed in Le et al. (2011); Konda et al. (2014) and evaluated it on the Hollywood2 dataset Marszałek et al. (2009)."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "The number of samples for training is 50, 000 and for testing is 10, 000. We classify the resulting representation using logistic regression with weight decay for classiﬁcation, with weight cost parameter estimated using cross-validation on a subset of the training samples of size 10000."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide specific hardware details (e.g., GPU/CPU models, memory specifications) used for running its experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions that an implementation is available in Python but does not specify version numbers for Python or any other software libraries or frameworks used in the experiments."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "For all the experiments in this section we chose a learning rate of 0.0001 for a few (e.g. 3) initial training epochs, and then increased it to 0.001. This is to ensure that scaling issues in the initializing are dealt with at the outset, and to help avoid any blow-ups during training. Each model is trained for 1000 epochs in total with a ﬁxed momentum of 0.9. The threshold parameter θ is ﬁxed to 1.0 for both the TRec and TLin autoencoder."
+    },
+    "title": "Zero-bias autoencoders and the benefits of co-adapting features",
+    "authors": "Kishore Konda, Roland Memisevic, and David Krueger",
+    "pdf_url": "https://arxiv.org/pdf/1402.3337.pdf"
+  },
+  "transformation_properties_of_learned_visual_representations__5a046538": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We trained the model on the NORB dataset (Le Cun & Bottou, 2004). This dataset consists of objects in 5 generic categories: four-legged animals, human figures, airplanes, trucks, and cars. Each category contains 10 instances, of which we used the last 5 for training. Each instance is imaged at 9 camera elevations (30 to 70 degrees from horizontal, in 5 degree increments) and 18 azimuths (0 to 340 degrees in 20 degree increments). Finally, there are 6 lighting conditions for each instance, yielding a total of 5 5 6 9 18 = 24300 images."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Taco S. Cohen & Max Welling Machine Learning Group Department of Computer Science University of Amsterdam {t.s.cohen, m.welling}@uva.nl"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper describes the "
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not provide any statement or link indicating that the source code for the described methodology is publicly available."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We trained the model on the NORB dataset (Le Cun & Bottou, 2004)."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper describes how the NORB dataset was used for training and testing interpolation/extrapolation. However, it does not provide specific, explicit dataset splits (e.g., exact percentages, sample counts, or formal predefined splits for training, validation, and testing) that would allow for direct reproduction of data partitioning in a standard machine learning sense."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide specific details about the hardware used to run the experiments (e.g., specific GPU/CPU models, memory, or cloud instance types)."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions \"Theano (Bergstra et al., 2010)\" as a tool used, and \"adagrad for all optimization (Duchi et al., 2011)\", but does not provide specific version numbers for these or other software components necessary for replication."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "We used a neural network fθ with one hidden layer containing 550 hidden units. The group representation ˆT is determined by a choice of li; i = 1, . . . , L which we chose to be: [0] 20 + [1] 15 + [2] 10 + [3] 10 + [4] 10 + [5] 9 + [6] 8 + [7] 7 + [8] 6 + [7] 7 + [8] 6 + [9] 5, where the number in brackets represents li and the multiplier denotes its multiplicity. The regularization parameters were set to β = 0.1, α = 0.1. We use adagrad for all optimization (Duchi et al., 2011)."
+    },
+    "title": "Transformation Properties of Learned Visual Representations",
+    "authors": "Taco Cohen and Max Welling",
+    "pdf_url": "https://arxiv.org/pdf/1412.7659.pdf"
+  },
+  "adam_a_method_for_stochastic_optimization__d46dfa55": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "Empirical results demonstrate that Adam works well in practice and compares favorably to other stochastic optimization methods. and To empirically evaluate the proposed method, we investigated different popular machine learning models, including logistic regression, multilayer fully connected neural networks and deep convolutional neural networks."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "Diederik P. Kingma* University of Amsterdam, Open AI dpkingma@openai.com Jimmy Lei Ba University of Toronto jimmy@psi.utoronto.ca"
+    },
+    "pseudocode": {
+      "result": 1,
+      "paper_text": "Algorithm 1: Adam, our proposed algorithm for stochastic optimization."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not contain an explicit statement about releasing source code or a link to a code repository for the methodology described."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We evaluate our proposed method on L2-regularized multi-class logistic regression using the MNIST dataset. and We examine the sparse feature problem using IMDB movie review dataset from (Maas et al., 2011). and Our CNN architecture... CIFAR-10 with c64-c64-c128-1000 architecture. and We vary the β1 and β2 when training a variational autoencoder (VAE) with the same architecture as in (Kingma & Welling, 2013)."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper mentions searching hyperparameters over a dense grid, which implies a validation process, but it does not provide specific dataset split percentages, sample counts, or explicit methodology for creating training/validation/test splits."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper mentions that 'Experiments in this work were partly carried out on the Dutch national e-infrastructure with the support of SURF Foundation' but does not provide specific hardware details such as GPU or CPU models, processor types, or memory specifications used for the experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper does not provide specific software dependencies with version numbers (e.g., library names like PyTorch, TensorFlow, or scikit-learn with their versions) that would be needed to replicate the experiments."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "Good default settings for the tested machine learning problems are α = 0.001, β1 = 0.9, β2 = 0.999 and ϵ = 10 8. and minibatch size of 128. and The hyper-parameters, such as learning rate and momentum, are searched over a dense grid and the results are reported using the best hyper-parameter setting."
+    },
+    "title": "Adam: A Method for Stochastic Optimization",
+    "authors": "Jimmy Ba and Diederik Kingma",
+    "pdf_url": "https://arxiv.org/pdf/1412.6980.pdf"
+  },
+  "memory_networks__ddd3d3dc": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "5 EXPERIMENTS We perform experiments on the QA dataset introduced in Fader et al. (2013). It consists of 14M statements, stored as (subject, relation, object) triples, which are stored as memories in the Mem NN model. ... Results are given in Table 1."
+    },
+    "affiliation": {
+      "result": 2,
+      "paper_text": "Jason Weston, Sumit Chopra & Antoine Bordes Facebook AI Research 770 Broadway New York, USA {jase,spchopra,abordes}@fb.com"
+    },
+    "pseudocode": {
+      "result": 1,
+      "paper_text": "Algorithm 1 Ot replacement to arg max when using write time features"
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not provide an unambiguous statement about releasing its source code, nor does it include a direct link to a code repository for the described methodology."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We perform experiments on the QA dataset introduced in Fader et al. (2013). ... training combines pseudo-labeled QA pairs... and 35M pairs of paraphrased questions from Wiki Answers"
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper mentions '7k statements and 3k questions from the simulator for training, and an identical number for testing' but does not explicitly describe a validation set or a three-way train/validation/test split for its main experiments."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide specific details about the hardware used to run the experiments, such as GPU models, CPU types, or memory specifications."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper does not specify software dependencies with version numbers (e.g., Python version, specific library versions like PyTorch or TensorFlow, or solver versions) that would be needed to replicate the experiments."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "For Mem NNs we ﬁxed the embedding dimension to 100, learning rate to 0.01 and margin γ to 0.1 and 10 epochs of training in all experiments."
+    },
+    "title": "Memory Networks",
+    "authors": "Jason Weston, Sumit Chopra, and Antoine Bordes",
+    "pdf_url": "https://arxiv.org/pdf/1410.3916.pdf"
+  },
+  "joint_rnnbased_greedy_parsing_and_word_composition__4c10fe00": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "An empirical evaluation of our models as well as our compositional vectors is given in Section 4. 4 EXPERIMENTS Experiments were conducted using the standard English Penn Treebank data set (Marcus et al., 1993). We adopted the classical setup, with sections 02-21 for train, section 22 for validation, and section 23 for test. The validation corpus was used to select our hyper-parameters and best models. F1 performance scores are reported in Table 1."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "Jo el Legrand Idiap Research Institute, Martigny, Switzerland Ecole Polytechnique F ed erale de Lausanne (EPFL), Lausanne Switzerland joel.legrand@idiap.ch Ronan Collobert Facebook AI Research, Menlo Park, CA, USA Idiap Research Institute, Martigny, Switzerland ronan@collobert.com"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper includes a description of the greedy parsing algorithm in text and Figure 1, but it is not formatted as pseudocode or a distinct algorithm block."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "We provide a fully functional implementation of the method described in this paper. 1The parser can be downloaded at joel-legrand.fr/parser."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "Experiments were conducted using the standard English Penn Treebank data set (Marcus et al., 1993)."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "We adopted the classical setup, with sections 02-21 for train, section 22 for validation, and section 23 for test."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide specific hardware details (e.g., GPU/CPU models, memory) used for running the experiments. It only generally states 'Our systems were trained'."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The part-of-speech tags were obtained using the freely available software SENNA4. http://ml.nec-labs.com/senna. Scores were obtained using the Evalb implementation5. http://nlp.cs.nyu.edu/evalb. The paper mentions software by name (SENNA, Evalb) but does not provide specific version numbers for them or any other software dependencies."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "Lookup-table sizes for the words and tags (part-of-speech and parsing) are 200 and 20, respectively. The window size for the tagger is K = 7 (3 neighbours from each side). The size of the tagger s hidden layer is H = 500. We ﬁxed the learning rate to λ = 0.15 during the stochastic gradient procedure. In our case, during the training phase, a dropout mask is applied to the output of the lookup-tables: each element of the output is set to 0 with a probability 0.25."
+    },
+    "title": "Joint RNN-Based Greedy Parsing and Word Composition",
+    "authors": "Joël Legrand and Ronan Collobert",
+    "pdf_url": "https://arxiv.org/pdf/1412.7028.pdf"
+  },
+  "leveraging_monolingual_data_for_crosslingual_compositional_word_representations__70d0ee41": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We evaluate our method on a well-established crosslingual document classiﬁcation task and achieve results that are either comparable, or greatly improve upon previous state-of-the-art methods. Concretely, our method reaches a level of 92.7% and 84.4% accuracy for the English to German and German to English sub-tasks respectively."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Hubert Soyer National Institute of Informatics, Tokyo, Japan soyer@nii.ac.jp Pontus Stenetorp University of Tokyo, Tokyo, Japan pontus@stenetorp.se Akiko Aizawa National Institute of Informatics, Tokyo, Japan aizawa@nii.ac.jp"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper does not contain any pseudocode or clearly labeled algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "Our implementation is available at https://github.com/ogh/binclusion"
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "Like Klementiev et al. (2012) we choose Euro Parl v7 (Koehn, 2005) as our bilingual corpus and leverage the English and German parts of the RCV1 and RCV2 corpora as monolingual resources."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper mentions tuning hyperparameters on \"held out documents\" but does not provide specific details on the size or percentages of a validation split. It states the test set size, but not a validation set."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper mentions training on a \"single-core desktop computer\" but does not provide specific hardware details such as CPU model, GPU model, or memory specifications."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions software like \"NLTK\" and \"cdec decoder\" and the programming language \"Julia\" but does not specify version numbers for any of these components."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "We tuned all hyperparameters of our model and explored learning rates around 0.2, mini-batch sizes around 40,000, hinge loss margins around 40 (since our vector dimensionality is 40) and λ (regularization) around 1.0."
+    },
+    "title": "Leveraging Monolingual Data for Crosslingual Compositional Word Representations",
+    "authors": "Hubert Soyer, Pontus Stenetorp, and Akiko Aizawa",
+    "pdf_url": "https://arxiv.org/pdf/1412.6334.pdf"
+  },
+  "deep_structured_output_learning_for_unconstrained_text_recognition__5dc2cbd6": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "The resulting model is a more accurate system on standard real-world text recognition benchmarks than character prediction alone, setting a benchmark for systems that have not been trained on a particular lexicon. In addition, our model achieves state-of-the-art accuracy in lexicon-constrained scenarios, without being speciﬁcally modelled for constrained recognition. To test the generalisation of our model, we also perform experiments with random alpha-numeric strings to evaluate the method when no visual language model is applicable."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "Max Jaderberg , Karen Simonyan*, Andrea Vedaldi & Andrew Zisserman+ Visual Geometry Group, Department of Engineering Science, University of Oxford {max,karen,vedaldi,az}@robots.ox.ac.uk Current afﬁliation Google Deep Mind. +Current afﬁliation University of Oxford and Google Deep Mind."
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper does not contain any structured pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not provide any explicit statement or link for open-source code for the described methodology."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We evaluate our models on a number of standard datasets ICDAR 2003, ICDAR 2013, Street View Text, and IIIT5k, whereas for training, as well as testing across a larger vocabulary, we turn to the synthetic Synth90k and Synth Rand datasets. (followed by citations like 'Lucas et al. (2003)', 'Karatzas et al. (2013)', 'Wang et al. (2011)', 'Mishra et al. (2012)', 'Jaderberg et al. (2014a;b)')"
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper describes training and test splits for datasets like Synth90k ('approximately 8 million training images and 900k test images') and Synth Rand ('8 million training images and the test set of 900k images'), but does not explicitly state a separate validation dataset split with specific percentages or counts."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The acknowledgments section mentions 'NVIDIA Corporation with the donation of the GPUs used for this research' but does not specify any particular GPU models or other hardware components used for running experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper describes the training algorithms and loss functions (e.g., 'multinomial logistic regression loss', 'stochastic gradient descent'), but does not specify any software dependencies or libraries with version numbers."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "The paper provides details such as input image size (32x100), CNN architecture (number of layers, filter sizes, stride, pooling), activation functions (Rectified linear units), output layer configurations (Nmax=23, 10k N-grams), optimization method (SGD with dropout), beam search widths (5 during training, 10 during testing), and initialization strategy (pre-trained weights for JOINT model)."
+    },
+    "title": "Deep Structured Output Learning for Unconstrained Text Recognition",
+    "authors": "Max Jaderberg, Karen Simonyan, Andrea Vedaldi, and Andrew Zisserman",
+    "pdf_url": "https://arxiv.org/pdf/1412.5903.pdf"
+  },
+  "a_unified_perspective_on_multidomain_and_multitask_learning__0154fba5": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "Experiments across this range of problems demonstrate that our framework outperforms a variety of alternatives. (Abstract) and We demonstrate our framework on ﬁve experimental settings: MDL, ZSDA, MTL, ZSL and MDMT. (Section 4)"
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Yongxin Yang & Timothy M. Hospedales Electronic Engineering and Computer Science Queen Mary, University of London {yongxin.yang, t.hospedales}@qmul.ac.uk"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper describes the model and framework but does not contain any structured pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not provide a specific link or explicit statement about the availability of the source code for the methodology described."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "This classic dataset3 collects exam grades of 15,362 students from 139 schools. 3Available at http://multilevel.ioe.ac.uk/intro/datasets.html (Section 4.1) and Animal with Attributes (Lampert et al., 2009) (Section 4.3) and The restaurant & Consumer Dataset, introduced by Vargas-Govea et al. (2011) (Section 4.4)."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper specifies training/test splits (e.g., 'In each case the training/test split is 50%/50%') but does not explicitly mention a separate validation set or split ratio for validation data."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper mentions 'NVIDIA Corporation for the donation of the GPUs used for this research' in the acknowledgements, but does not specify exact GPU models or any other hardware details (CPU, memory, specific cloud instances)."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions using 'Caffe framework (Jia et al., 2014)' but does not provide specific version numbers for Caffe or any other software dependencies."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "Preliminary experiments show K = D log(D) leads to satisfactory solutions for all datasets. Though we don t place regularisation terms on P or Q, a non-linear function σ(x) = max(0, x) (i.e., Re LU activation function) is placed to encourage sparse models g Q(z(i)) = σ(z(i)Q). The choice of loss function for regression and classiﬁcation is Euclidean loss and Hinge loss respectively. (Section 4)"
+    },
+    "title": "A Unified Perspective on Multi-Domain and Multi-Task Learning",
+    "authors": "Yongxin Yang and Timothy Hospedales",
+    "pdf_url": "https://arxiv.org/pdf/1412.7489.pdf"
+  },
+  "speedingup_convolutional_neural_networks_using_finetuned_cpdecomposition__5bb65aba": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We evaluate this approach on two CNNs and show that it is competitive with previous approaches, leading to higher obtained CPU speedups at the cost of lower accuracy drops for the smaller of the two networks."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "1Skolkovo Institute of Science and Technology (Skoltech), Moscow, Russia 2Yandex, Moscow, Russia 3Moscow Institute of Physics and Technology, Moscow Region, Russia 4Institute of Numerical Mathematics RAS, Moscow, Russia"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper describes the methods using mathematical equations and textual explanations, but no explicit pseudocode or algorithm blocks are provided."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper mentions using the Caffe package and Tensorlab, but does not provide a statement or link for the open-source code of the methodology described in this paper."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We use use CNN described in (Jaderberg et al., 2014b) for our experiments. The network has four convolutional layers with maxout nonlinearities between them and a softmax output. It was trained to classify 24x24 image patches into one of 36 classes (10 digits plus 26 characters). Our Caffe port of the publicly available pre-trained model (refered below as Char Net) achieves 91.2% accuracy on test set (very similar to the original). Following Denton et al. (2014) we also consider the second convolutional layer of Alex Net Krizhevsky et al. (2012)."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper mentions training data and a test set but does not explicitly provide details about a validation dataset split or percentages."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper states \"all timings are based on Caffe code run in the CPU mode on image batches of size 64\" but does not provide specific CPU models, GPU models, or other detailed hardware specifications."
+    },
+    "software_dependencies": {
+      "result": 1,
+      "paper_text": "As a software package to calculate the CP-decomposition we used Tensorlab (Sorber et al., 2014). (Reference lists \"Tensorlab v2.0\")"
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "All results are reported for a number of ranks R. We have applied our methods to two layers of the network using the following procedure. Firstly, layer 2 was approximated with rank 64. After that, the drop in accuracy was made small by ﬁne-tuning of all layers but the new ones. Finally, layer 3 was approximated with rank 64."
+    },
+    "title": "Speeding-up Convolutional Neural Networks Using Fine-tuned CP-Decomposition",
+    "authors": "Vadim Lebedev, Yaroslav Ganin, Victor Lempitsky, Maksim Rakhuba, and Ivan Oseledets",
+    "pdf_url": "https://arxiv.org/pdf/1412.6553.pdf"
+  },
+  "object_detectors_emerge_in_deep_scene_cnns__b809033f": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "Current deep neural networks achieve remarkable performance at a number of vision tasks surpassing techniques based on hand-crafted features. However, while the structure of the representation in hand-crafted features is often clear and interpretable, in the case of deep networks it remains unclear what the nature of the learned representation is and why it works so well. A convolutional neural network (CNN) trained on Image Net (Deng et al., 2009) signiﬁcantly outperforms the best hand crafted features on the Image Net challenge (Russakovsky et al., 2014)."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Bolei Zhou, Aditya Khosla, Agata Lapedriza, Aude Oliva, Antonio Torralba Computer Science and Artiﬁcial Intelligence Laboratory, MIT {bolei,khosla,agata,oliva,torralba}@mit.edu"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper describes procedures and uses diagrams (e.g., Fig. 3 for the RF estimation pipeline) but does not include any explicitly labeled pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper mentions \"Caffe: An open source convolutional architecture for fast feature embedding, 2013.\" by Jia (2013), which is a tool used, not the authors' own implementation code. It also states \"Scene recognition demo of Places-CNN is available at http://places.csail.mit.edu/demo. html.\", which refers to a live demo, not the source code for the methodology described in the paper."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "The Image Net-CNN from Jia (2013) is trained on 1.3 million images from 1000 object categories of Image Net (ILSVRC 2012) and achieves a top-1 accuracy of 57.4%. [...] With the same network architecture, Places-CNN is trained on 2.4 million images from 205 scene categories of Places Database (Zhou et al., 2014), and achieves a top-1 accuracy of 50.0%. [...] The SUN database contains 8220 fully annotated images from the same 205 place categories used to train Places-CNN."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper mentions using ImageNet, Places Database, and SUN dataset, which are standard, but it does not explicitly state the specific train/validation/test splits used for their experiments (e.g., 80/10/10 split, or specific sample counts for each split)."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The acknowledgments section mentions \"a hardware donation from NVIDIA Corporation\" but does not specify any particular GPU model (e.g., RTX 3090, A100) or other specific hardware components (CPU model, RAM, etc.) used for running the experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions using \"Caffe\" and implies the use of Python for analysis (given the demo link), but it does not provide specific version numbers for any software libraries, frameworks, or solvers used in their experiments."
+    },
+    "experiment_setup": {
+      "result": 0,
+      "paper_text": "The paper specifies the network architecture in Table 1 and states that networks were \"trained from scratch using only the speciﬁed dataset.\" However, it does not provide explicit details on hyperparameters such as learning rate, batch size, number of epochs, or the specific optimizer used (e.g., SGD with momentum, Adam settings)."
+    },
+    "title": "Object detectors emerge in Deep Scene CNNs",
+    "authors": "Bolei Zhou, Aditya Khosla, Agata Lapedriza, Aude Oliva, and Antonio Torralba",
+    "pdf_url": "https://arxiv.org/pdf/1412.6856.pdf"
+  },
+  "explaining_and_harnessing_adversarial_examples__c50926c3": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "Using this approach to provide examples for adversarial training, we reduce the test set error of a maxout network on the MNIST dataset."
+    },
+    "affiliation": {
+      "result": 2,
+      "paper_text": "Ian J. Goodfellow, Jonathon Shlens & Christian Szegedy Google Inc., Mountain View, CA {goodfellow,shlens,szegedy}@google.com"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper does not contain any structured pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper includes a link to 'preprocessing code' for Pylearn2 but not to the source code for the main methodology (e.g., the fast gradient sign method or adversarial training implementation itself). '2 See https://github.com/lisa-lab/pylearn2/tree/master/pylearn2/scripts/ papers/maxout. for the preprocessing code, which yields a standard deviation of roughly 0.5.'"
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "reduce the test set error of a maxout network on the MNIST dataset. ... on Image Net (Deng et al., 2009). ... CIFAR-10 (Krizhevsky & Hinton, 2009)."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "The original maxout result uses early stopping, and terminates learning after the validation set error rate has not decreased for 100 epochs. ... We found that the validation set error leveled off over time, and made very slow progress. ... We therefore used early stopping on the adversarial validation set error."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "No specific hardware details (e.g., GPU model, CPU type, memory) used for running experiments are mentioned."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions 'Theano', 'Pylearn2', and 'Dist Belief' as software used, but does not provide specific version numbers for these dependencies."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "Let θ be the parameters of a model, x the input to the model, y the targets associated with x (for machine learning tasks that have targets) and J(θ, x, y) be the cost used to train the neural network. We can linearize the cost function around the current value of θ, obtaining an optimal max-norm constrained pertubation of η = ϵsign ( x J(θ, x, y)) . ... In all of our experiments, we used α = 0.5. ... Using this approach to train a maxout network that was also regularized with dropout... ... using 1600 units per layer rather than the 240 used by the original maxout network for this problem. ... We therefore used early stopping on the adversarial validation set error. ... Five different training runs using different seeds for the random number generators used to select minibatches of training examples, initialize model weights, and generate dropout masks."
+    },
+    "title": "Explaining and Harnessing Adversarial Examples",
+    "authors": "Ian Goodfellow, Jon Shlens, and Christian Szegedy",
+    "pdf_url": "https://arxiv.org/pdf/1412.6572.pdf"
+  },
+  "the_local_lowdimensionality_of_natural_images__a63527df": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We show that images can be reconstructed nearly perfectly from estimates of the local filter response covariance alone, and with minimal degradation (either visual or MSE) from low-rank approximations of these covariances. As such, this representation holds much promise for use in applications such as denoising, compression, and texture representation, and may form a useful substrate for hierarchical decompositions."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Howard Hughes Medical Institute, and Center for Neural Science New York University New York, NY 10003, USA"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper does not contain any pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not mention providing open-source code for its described methodology, nor does it provide any links to a code repository."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We trained the model described above on the van Hateren dataset (van Hateren & van der Schaaf, 1998) using the Torch machine learning library (Collobert et al., 2011)."
+    },
+    "dataset_splits": {
+      "result": 0,
+      "paper_text": "The paper mentions using the van Hateren dataset for training and optimizing the filter bank, but it does not specify how the data was split into training, validation, or test sets, nor does it refer to predefined splits for reproduction."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide specific details about the hardware used to run the experiments, such as GPU models, CPU types, or memory specifications."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions 'Torch machine learning library (Collobert et al., 2011)' but does not provide specific version numbers for Torch or any other ancillary software dependencies required for replication."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "We used 20x20 pixel filter kernels, varying in number from 4 to 12, and estimated local dimensionality over neighborhoods of size 16x16 pixels, weighted by a Gaussian window with a standard deviation of 3 pixels. We fixed the blurring window h to be Gaussian with a standard deviation of 3 pixels... In the experiments below they were set to 3500 and 100 respectively. We optimized our filter bank using stochastic gradient descent with a fixed learning rate, chosen as high as possible without causing any instability."
+    },
+    "title": "The local low-dimensionality of natural images",
+    "authors": "Olivier Henaff, Johannes Balle, Neil Rabinowitz, and Eero Simoncelli",
+    "pdf_url": "https://arxiv.org/pdf/1412.6626.pdf"
+  },
+  "generative_modeling_of_convolutional_neural_networks__48f47d41": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "4 EXPERIMENTS, Table 1: Error rates on the MNIST test set of different training approaches utilizing the Le Net network (Le Cun et al., 1998)., Table 2: Top-1 classiﬁcation error rates on the Image Net ILSVRC-2012 val set of different training approaches."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "Jifeng Dai Microsoft Research jifdai@microsoft.com, Yang Lu and Ying Nian Wu University of California, Los Angeles {yanglv, ywu}@stat.ucla.edu"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper does not contain any structured pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "The code can be downloaded at http://www.stat.ucla.edu/ yang.lu/ Project/generative CNN/main.html"
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "Experiments are performed on two commonly used image classiﬁcation benchmarks: MNIST (Le Cun et al., 1998) handwritten digit recognition and Image Net ILSVRC-2012 (Deng et al., 2009) natural image classiﬁcation."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "Network training and testing are performed on the train and val sets respectively."
+    },
+    "hardware_specification": {
+      "result": 1,
+      "paper_text": "On a desktop with GTX Titian, it takes about 0.4 minute to draw a sample for nodes at the ﬁnal fully-connected layer of Le Net."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "We build algorithms on the code of Caffe (Jia et al., 2014) but no version number for Caffe or other software dependencies is specified."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "For all the three training approaches, stochastic gradient descent is performed in training with a batch size of 64, a base learning rate of 0.01, a weight decay term of 0.0005, a momentum term of 0.9, and a max epoch number of 25. For GG+DG, the pre-training stage stops after 16 epochs and the discriminative gradient tuning stage starts with a base learning rate of 0.003."
+    },
+    "title": "Generative Modeling of Convolutional Neural Networks",
+    "authors": "Jifeng Dai, Yang Lu, and Ying-Nian Wu",
+    "pdf_url": "https://arxiv.org/pdf/1412.6296.pdf"
+  },
+  "move_evaluation_in_go_using_deep_convolutional_neural_networks__54b97992": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We train a large 12-layer convolutional neural network by supervised learning from a database of human professional games. The network correctly predicts the expert move in 55% of positions, equalling the accuracy of a 6 dan human player. When the trained convolutional network was used directly to play games of Go, without any search, it beat the traditional-search program Gnu Go in 97% of games, and matched the performance of a state-of-the-art Monte-Carlo tree search that simulates two million positions per move."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "Chris J. Maddison University of Toronto cmaddis@cs.toronto.edu Aja Huang1, Ilya Sutskever2, David Silver1 Google Deep Mind1, Google Brain2 {ajahuang,ilyasu,davidsilver}@google.com"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "The paper describes its methods in prose, but does not include any structured pseudocode or algorithm blocks."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not provide any concrete access information (e.g., specific repository link, explicit code release statement, or code in supplementary materials) for the methodology described."
+    },
+    "open_datasets": {
+      "result": 0,
+      "paper_text": "The dataset used in this work comes from the KGS Go Server. It consists of sequences of board positions st for complete games played between humans of varying rank. We collected 29.4 million board-state next-move pairs (st, at) corresponding to 160,000 games. While the source is named, no specific link, DOI, formal citation with authors/year, or repository for the collected dataset is provided for public access."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "The dataset was split into a training set of 27.4 million board-state next-move pairs and a test set of 2 million. This split was done before shufﬂing, so this corresponds to a test set with distinct games."
+    },
+    "hardware_specification": {
+      "result": 1,
+      "paper_text": "Using a single machine with Intel Xeon CPU E5-2643 v2 @ 3.50GHz and Ge Force GTX Titan Black GPU, we are able to maintain a MCTS search at approximately 47,000 rollouts per second, without dropping CNN evaluations."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions methods like 'asynchronous stochastic gradient descent (Dean et al., 2012)' but does not provide specific software names with version numbers (e.g., 'PyTorch 1.9', 'CUDA 11.1') for libraries or frameworks used in the implementation."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "We used a deep convolutional neural network with 12 weight matrices for each of 12 layers and rectiﬁed linear non-linearities. The ﬁrst hidden layer s ﬁlters were of size 5 5 and the remainder were of size 3 3, with a stride of 1. ... For training the network, we used asynchronous stochastic gradient descent (Dean et al., 2012) with 50 replicas each on its own GPU. All parameters were initialized randomly from a uniform[-0.05, 0.05]. Each replica was trained for 25 epochs with a batchsize of 128, a ﬁxed learning rate of 0.128 normalized by batchsize, and no momentum."
+    },
+    "title": "Move Evaluation in Go Using Deep Convolutional Neural Networks",
+    "authors": "Chris Maddison, Aja Huang, Ilya Sutskever, and David Silver",
+    "pdf_url": "https://arxiv.org/pdf/1412.6564.pdf"
+  },
+  "reweighted_wakesleep__29af8a12": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "This interpretation is conﬁrmed experimentally, showing that better likelihood can be achieved with this reweighted wake-sleep procedure. Our experiments show that using a more powerful layer model, such as NADE, yields substantially better generative models."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "J org Bornschein and Yoshua Bengio Department of Computer Science and Operations Research University of Montreal Montreal, Quebec, Canada"
+    },
+    "pseudocode": {
+      "result": 1,
+      "paper_text": "Algorithm 1 Reweighted Wake-Sleep training procedure and likelihood estimator."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "Our implementation is available at https://github.com/jbornschein/reweighted-ws/."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "We use the MNIST dataset that was binarized according to Murray and Salakhutdinov (2009) and downloaded in binarized form from (Larochelle, 2011)."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "From these three we always report the experiment with the highest validation log-likelihood."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper mentions 'Compute Canada, and Calcul Qu ebec for providing computational resources' but does not specify particular hardware models (e.g., GPU or CPU types, memory) used for the experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper acknowledges 'the developers of Theano (Bergstra et al., 2010; Bastien et al., 2012) for their powerful software', but it does not specify a version number for Theano or any other software dependencies."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "For training we use stochastic gradient decent with momentum (β=0.95) and set mini-batch size to 25. The experiments in this paragraph were run with learning rates of {0.0003, 0.001, and 0.003}. From these three we always report the experiment with the highest validation log-likelihood. In the majority of our experiments a learning rate of 0.001 gave the best results, even across different layer models (SBN, AR-SBN and NADE). If not noted otherwise, we use K = 5 samples during training and K = 100, 000 samples to estimate the ﬁnal log-likelihood on the test set."
+    },
+    "title": "Reweighted Wake-Sleep",
+    "authors": "Jorg Bornschein and Yoshua Bengio",
+    "pdf_url": "https://arxiv.org/pdf/1406.2751.pdf"
+  },
+  "fitnets_hints_for_thin_deep_nets__8be75bbc": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "We validate the proposed method on MNIST, CIFAR-10, CIFAR-100, SVHN and AFLW benchmark datasets and provide evidence that our method matches or outperforms the teacher s performance, while requiring notably fewer parameters and multiplications."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Adriana Romero1, Nicolas Ballas2, Samira Ebrahimi Kahou3, Antoine Chassang2, Carlo Gatta4 & Yoshua Bengio2 1Universitat de Barcelona, Barcelona, Spain. 2Universit e de Montr eal, Montr eal, Qu ebec, Canada. CIFAR Senior Fellow. 3 Ecole Polytechnique de Montr eal, Montr eal, Qu ebec, Canada. 4Centre de Visi o per Computador, Bellaterra, Spain."
+    },
+    "pseudocode": {
+      "result": 1,
+      "paper_text": "Algorithm 1 Fit Net Stage-Wise Training."
+    },
+    "open_source_code": {
+      "result": 1,
+      "paper_text": "Code to reproduce the experiments publicly available: https://github.com/adri-romsor/FitNets"
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "The CIFAR-10 and CIFAR-100 datasets (Krizhevsky & Hinton, 2009)... The SVHN dataset (Netzer et al., 2011)... MNIST dataset (Le Cun et al., 1998)... AFLW (Koestinger et al., 2011)"
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "On CIFAR-10, we divided the training set into 40K training examples and 10K validation examples."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper states 'on a GPU' but does not provide specific hardware details like GPU model numbers, CPU types, or memory amounts used for experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper mentions software like Theano and Pylearn2, but does not provide specific version numbers for these or other software dependencies."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "All Fit Net parameters were initialized randomly in U(-0.005,0.005). We used stochastic gradient descent with RMSProp (Tieleman & Hinton, 2012) to train the Fit Nets, with an initial learning rate 0.005 and a mini-batch size of 128. Parameter λ in Eq. (2) was initialized to 4 and decayed linearly during 500 epochs reaching λ = 1. The relaxation term τ was set to 3."
+    },
+    "title": "FitNets: Hints for Thin Deep Nets",
+    "authors": "Adriana Romero, Nicolas Ballas, Samira Ebrahimi Kahou, Antoine Chassang, Carlo Gatta, and Yoshua Bengio",
+    "pdf_url": "https://arxiv.org/pdf/1412.6550.pdf"
+  },
+  "understanding_locally_competitive_networks__f43b31f5": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "Experiments on MNIST, CIFAR-10, CIFAR-100 and the Image Net dataset show that promising results are obtained for datasets of varying size and complexity. All experiments in this section are performed on the MNIST (Le Cun et al., 1998) dataset."
+    },
+    "affiliation": {
+      "result": 0,
+      "paper_text": "Rupesh Kumar Srivastava, Jonathan Masci, Faustino Gomez & J urgen Schmidhuber Istituto Dalle Molle di studi sull Intelligenza Artiﬁciale (IDSIA) Scuola universitaria professionale della Svizzera italiana (SUPSI) Universit a della Svizzera italiana (USI) Lugano, Switzerland {rupesh, jonathan, tino, juergen}@idsia.ch"
+    },
+    "pseudocode": {
+      "result": 0,
+      "paper_text": "No pseudocode or algorithm blocks are explicitly presented in the paper. The methods are described in narrative text."
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "An implementation of the network in Krizhevsky et al. (2012), with some minor differences (Donahue et al., 2013), is available publicly. For the experiments in this section, the penultimate-layer activations obtained using this model were downloaded from Cloud CV Batra et al. (2013). (Footnote 2: https://github.com/torontodeeplearning/convnet/)"
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "All experiments in this section are performed on the MNIST (Le Cun et al., 1998) dataset. CIFAR-10 is a dataset of 32 32 color images of 10 classes split into a training set of size 50,000 and testing set of size 10,000 (6000 images per class) (Krizhevsky & Hinton, 2009). The utility of the submasks obtained for a large convolutional network trained on the Image Net Large Scale Visual Recognition Challenge 2012 (ILSVRC-2012) (Deng et al., 2012) dataset is evaluated."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "The submasks for the entire test set (10K examples) were then extracted and visualized using t-SNE. CIFAR-10 is a dataset of 32 32 color images of 10 classes split into a training set of size 50,000 and testing set of size 10,000 (6000 images per class) (Krizhevsky & Hinton, 2009). The best value of k is obtained using a validation set, though we found that k = 5 with distance weighting usually worked well."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "The paper does not provide specific hardware details such as exact GPU/CPU models, processor types, or memory amounts used for running the experiments."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "For the CIFAR experiments, we used the models described in Goodfellow et al. (2013a) since they use locally competitive activations (maxout), are trained with dropout, and good hyperparameter settings for them are available (Goodfellow et al., 2013b)."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "The batch size for this experiment was 100, which means that each pass over the training set consists of 500 weight updates. minibatch gradient descent with momentum was used for training the networks. The best value of k is obtained using a validation set, though we found that k = 5 with distance weighting usually worked well."
+    },
+    "title": "Understanding Locally Competitive Networks",
+    "authors": "Rupesh Srivastava, Jonathan Masci, Faustino Gomez, and Juergen Schmidhuber",
+    "pdf_url": "https://arxiv.org/pdf/1410.1165.pdf"
+  },
+  "embedding_entities_and_relations_for_learning_and_inference_in_knowledge_bases__f3e381fa": {
+    "research_type": {
+      "result": 0,
+      "paper_text": "Under this framework, we compare a variety of embedding models on the link prediction task. We show that a simple bilinear formulation achieves new state-of-the-art results for the task (achieving a top-10 accuracy of 73.2% vs. 54.7% by Trans E on Freebase)."
+    },
+    "affiliation": {
+      "result": 1,
+      "paper_text": "1Department of Computer Science, Cornell University, Ithaca, NY, 14850, USA bishan@cs.cornell.edu 2Microsoft Research, Redmond, WA 98052, USA {scottyih,xiaohe,jfgao,deng}@microsoft.com"
+    },
+    "pseudocode": {
+      "result": 1,
+      "paper_text": "Algorithm 1 EMBEDRULE"
+    },
+    "open_source_code": {
+      "result": 0,
+      "paper_text": "The paper does not provide any explicit statement about making its source code available or a link to a code repository for the methodology described."
+    },
+    "open_datasets": {
+      "result": 1,
+      "paper_text": "Datasets We used the Word Net (WN) and Freebase (FB15k) datasets introduced in (Bordes et al., 2013b)."
+    },
+    "dataset_splits": {
+      "result": 1,
+      "paper_text": "We use the same training/validation/test split as in (Bordes et al., 2013b)."
+    },
+    "hardware_specification": {
+      "result": 0,
+      "paper_text": "All the models were implemented in C# and using GPU. All methods are evaluated on a machine with a 64-bit processor, 2 CPUs and 8GB memory. This mentions general hardware types but lacks specific model numbers or detailed specifications like GPU model or exact CPU type."
+    },
+    "software_dependencies": {
+      "result": 0,
+      "paper_text": "The paper states 'All the models were implemented in C#' and refers to 'Ada Grad (Duchi et al., 2011)' for training, but does not provide specific version numbers for any software dependencies or libraries used."
+    },
+    "experiment_setup": {
+      "result": 1,
+      "paper_text": "For all models, we set the number of mini-batches to 10, the dimensionality of the entity vector d 100, the regularization parameter 0.0001, and the number of training epochs T 100 on FB15k and FB15k-401 and T 300 on WN (T was determined based on the learning curves where the performance of all models plateaued.) The learning rate was initially set to 0.1 and then adapted during training by Ada Grad."
+    },
+    "title": "Embedding Entities and Relations for Learning and Inference in Knowledge Bases",
+    "authors": "Bishan Yang, Scott Yih, Xiaodong He, Jianfeng Gao, and Li Deng",
+    "pdf_url": "https://arxiv.org/pdf/1412.6575.pdf"
+  },
+  "model": "gemini-2.5-flash",
+  "prompt": "You will be provided with a research paper, and your task is to answer questions about the contents of the research paper.\n\nNow, please analyze the following research paper:\n",
+  "questions": "## Questions for Paper Analysis\n\nReturn the results of your analysis as a valid JSON object with the following structure. Each JSON key must contain two sub-elements:\n\n### Output Format Requirements\n\nReturn your analysis as a valid JSON object with the following structure. Each field must contain two sub-elements:\n- **result**: An Int with the specific value as defined for each question (varies by question - see below)\n- **paper_text**: A string containing the relevant text excerpt from the paper that supports your answer, or a brief explanation if not found\n\nThe questions and JSON keys are as follows:\n\n\nDetermine whether the paper is based on **experimental research** or **theoretical research**.\n\nReturn **Experimental** (0) if:\n- It conducts empirical studies, including running experiments, analyzing data, reporting metrics, or validating hypotheses\n- Indicators include evaluation on datasets, comparisons to baselines, test/train/validation splits, ablation studies, and performance tables or graphs\n\nReturn **Theoretical** (1) if:\n- It focuses only on conceptual or mathematical contributions without empirical validation\n- Examples include algorithm design, proofs, lemmas, or symbolic derivations\n- These papers may include pseudocode but do not analyze results from actual experiments\n\nIf the paper includes both theoretical and empirical components, classify it as **Experimental**.\n\nQuote the text from the paper that supports your decision.\n\n**Does the paper conduct EMPIRICAL STUDIES WITH DATA ANALYSIS (experiments, dataset evaluation, performance metrics, or hypothesis validation) rather than purely theoretical work?**\n Return 0 for experimental research or 1 for theoretical framework and use research_type as the JSON key.\nDetermine whether the paper reports a **positive** or **negative** outcome based on its main findings.\n\nReturn **Yes** (positive outcome) if:\n- The authors explicitly state that their method improves upon prior work, achieves higher accuracy or F1 scores, or reaches state-of-the-art (SOTA) results\n- Key indicators include phrases like \"Our method significantly outperforms...\", \"We achieve better results than...\", \"These results confirm the effectiveness...\"\n\nReturn **No** (negative outcome) if:\n- The method fails to outperform baselines, results are marginal or inconclusive, or the hypothesis is not supported\n- Typical phrases include \"No significant improvement was observed...\", \"Comparable to existing methods...\", \"Results were not conclusive...\"\n- Only classify as positive if the paper clearly claims at least one success\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper report CLEAR SUCCESS CLAIMS (explicit statements of outperformance, higher accuracy, or confirmed effectiveness) in its main findings?**\n Return 1 for positive or 0 for negative and use result_outcome as the JSON key.\nDetermine whether the paper's authors have **industry**, **academic**, or **collaborative** affiliations.\n\nThe authors' affiliations and email addresses are usually listed in the first few paragraphs of the paper. Use this information to classify the affiliation type:\n\nReturn **2** (classify as Industry) if:\n- All authors are affiliated with corporations or private-sector labs\n- Email addresses end in domains like `.com`, `.ai`, `.tech`, or have company names like \"IBM,\" \"Google,\" \"DeepMind,\" etc.\n\nReturn **0** (classify as Academia) if:\n- All authors are from universities or public research institutions\n- Email domains include `.edu`, `.ac.uk`, `.edu.cn`, or subdomains like `cs.cmu.edu`, `eecs.mit.edu`, etc.\n\nReturn **1** (classify as Collaboration) if:\n- There is a mix of academic and industry affiliations based on the institutional names or email domains\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CLEAR INSTITUTIONAL AFFILIATIONS (university names, company names, or email domains) that allow classification of author affiliation types?**\n Return 0 for academia only, 1 for collaboration of both academia and industry, or 2 for industry only and use affiliation as the JSON key.\nDetermine whether the paper includes an **explicit statement of the research problem**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes a sentence that uses one of the following patterns: \"the problem [is|we address|this paper addresses]...\", \"to solve [this problem|the problem of]...\"\n- Statements that clearly describe what the research aims to solve if they are framed like a problem, such as \"the challenge we tackle is...\", \"the main issue is...\"\n\nReturn **No** if:\n- There are vague uses of the word \"problem\" or general task descriptions like \"we study...\" or \"our method is designed to...\" unless they directly align with the problem framing above\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include an EXPLICIT RESEARCH PROBLEM STATEMENT (using phrases like \"the problem is\", \"to solve the problem of\", or \"the challenge we tackle\")?**\n Return 1 for yes or 0 for no and use problem_description as the JSON key.\nDetermine whether the paper includes an **explicit statement of the research objective or goal**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence with one of these forms: \"the objective [of this paper|is|was]...\", \"our objective [is|was]...\", \"the goal [of this research|is|was]...\", \"our goal [is|was]...\"\n- Clear variations such as \"a key objective of this study is...\", \"one objective of this work is...\", \"the main goal of this approach is...\", \"this study has the objective/goal of...\", \"the research objective is defined as...\", \"an explicit goal is to...\"\n\nReturn **No** if:\n- There are vague motivation or general intent phrases (e.g., \"we aim to...\", \"we explore...\", \"our focus is...\") unless they use the words **goal** or **objective** in the sentence\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly state a RESEARCH GOAL OR OBJECTIVE (using the exact words \"goal\" or \"objective\" in formal research statements)?**\n Return 1 for yes or 0 for no and use goal_objective as the JSON key.\nDetermine whether the paper explicitly states the **research methodology**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that includes any of the following exact or near-exact expressions: \"the methodology...\", \"our methodology...\", \"the research methodology...\", \"the research method...\", \"our research method...\"\n- Variants like \"this paper uses the methodology...\", \"we follow the research method of...\" are also acceptable, but only if they use the key phrases **\"methodology\"** or **\"research method\"** directly\n\nReturn **No** if:\n- There are phrases like \"our approach...\" or \"we propose a method...\" unless they use one of the key phrases above\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly use the phrase METHODOLOGY OR RESEARCH METHOD (exact terminology \"methodology\" or \"research method\" in formal statements)?**\n Return 1 for yes or 0 for no and use research_method as the JSON key.\nDetermine whether the paper explicitly states one or more **research questions**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes phrases like \"the research questions are...\", \"this research seeks to answer...\", \"we pose the following research questions...\"\n- Lists labeled as \"RQ\", \"RQ1\", \"RQ2\", or \"Research Question 1\", etc.\n- A clearly structured sentence like \"we aim to answer the following question(s)...\", followed by one or more question-like statements\n\nReturn **No** if:\n- There are vague intent statements like \"we explore...\" or \"we investigate...\" unless they are tied to a numbered or explicitly labeled research question\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper clearly present FORMAL RESEARCH QUESTIONS (explicitly labeled as \"RQ\", \"Research Question\", or structured question statements)?**\n Return 1 for yes or 0 for no and use research_question as the JSON key.\nDetermine whether the paper explicitly states a **research hypothesis**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper includes a sentence that uses the word **\"hypothesis\"** in any of the following accepted forms: \"the hypothesis is...\", \"the hypothesis that...\", \"we hypothesize that...\", \"our hypothesis is...\", \"our hypothesis assumes...\", \"our guiding hypothesis is...\", \"the central hypothesis...\", \"this hypothesis suggests that...\", \"we test the hypothesis that...\", \"this paper tests the hypothesis...\", \"we formulate the hypothesis that...\", references to a \"Null Hypothesis\" or \"Alternative Hypothesis\"\n\nReturn **No** if:\n- There are statements that imply assumptions or beliefs unless the term **\"hypothesis\"** appears in the sentence\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly refer to a RESEARCH HYPOTHESIS (using the exact word \"hypothesis\" in formal research statements)?**\n Return 1 for yes or 0 for no and use hypothesis as the JSON key.\nDetermine whether the paper explicitly states a **predicted outcome**, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that uses any of the following phrases: \"we predict that...\", \"the predicted outcome is...\", \"we expect that...\", \"our expectation is that...\", \"it is expected that...\"\n- Phrasings like \"the model is expected to...\" or \"our approach is predicted to...\"\n\nReturn **No** if:\n- There are vague goal statements like \"we aim to...\" or \"we intend to...\" unless they include the words **predict** or **expect**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include an EXPLICIT PREDICTED OUTCOME (using specific prediction language like \"we predict\", \"we expect\", or \"predicted outcome\")?**\n Return 1 for yes or 0 for no and use prediction as the JSON key.\nDetermine whether the paper explicitly states the **contributions** of the research, using exact phrasing or close lexical variants.\n\nReturn **Yes** if:\n- The paper contains a sentence that clearly lists or describes contributions using any of the following: \n  - \"The contributions of this paper are...\"\n  - \"Our contributions are...\"\n  - \"This paper contributes the following...\"\n  - \"This contributes to...\" (only if it refers to novel findings or technical contributions)\n- Phrases like: \"The main contribution is...\", \"A key contribution of this work is...\"\n\nReturn **No** if:\n- There are vague mentions of impact or relevance unless the word **\"contribution\"** is clearly tied to something new, original, or specific to this research\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper explicitly list or state the CONTRIBUTIONS using the accepted phrasing to describe novel findings or technical advances?**\n Return 1 for yes or 0 for no and use contribution as the JSON key.\nDetermine whether the paper contains **pseudocode** or a clearly labeled algorithm block.\n\nReturn **Yes** if:\n- The paper includes a figure, block, or section labeled \"Pseudocode\", \"Algorithm\", or \"Algorithm X\"\n- Structured steps for a method or procedure formatted like code or an algorithm (even if not explicitly called \"pseudocode\")\n\nReturn **No** if:\n- The paper only describes steps in regular paragraph text without structured formatting\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper contain STRUCTURED PSEUDOCODE OR ALGORITHM BLOCKS (clearly labeled algorithm sections or code-like formatted procedures)?**\n Return 1 for yes or 0 for no and use pseudocode as the JSON key.\nDetermine whether the paper provides **open-source code for the methodology it describes**.\n\nReturn **Yes** if:\n- The paper includes an unambiguous sentence where the authors state they are releasing the code **for the work described in this paper** (e.g., \"We release our code...\", \"The source code for our method is available at...\")\n- A direct link to a source-code repository (e.g., GitHub, GitLab, Bitbucket) that contains the code for the paper's methodology\n- A clear statement that code is provided in **supplementary material**, **appendices**, or via an **anonymous review link**\n\nReturn **No** if:\n- The code is promised for the future using phrases like \"we plan to release...\", \"code will be made available...\", or \"our tool will be publicly available...\"\n- The code is only available \"upon request\"\n- The text discusses the source code of a **third-party tool or platform that the authors used**, but does not provide their own implementation code\n- The link points to a resource that is explicitly a `dataset`, `benchmark`, `corpus`, `taxonomy`, or `data`, and does not also clearly host the source code\n- The URL provided is for a general domain, a personal homepage, **a project demonstration page, or a high-level project overview page** instead of a specific code repository\n- **The text is ambiguous or lacks a clear, affirmative statement of release**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CONCRETE ACCESS TO SOURCE CODE (specific repository link, explicit code release statement, or code in supplementary materials) for the methodology described in this paper?**\n Return 1 for yes or 0 for no and use open_source_code as the JSON key.\nDetermine whether the paper includes a link to the **actual code used to run the experiments** described in the paper.\n\nReturn **Yes** if:\n- The paper provides a link to a GitHub, GitLab, Bitbucket, or anonymous repository and does **not** specify that the code is unrelated to experiments\n- The text mentions that code, scripts, or software used to run the experiments is \"available at...\", \"shared in supplementary material\" or \"appendix\"\n- The linked repo is implied to contain code that produces the **results, tables, or figures** in the paper\n\nReturn **No** if:\n- The paper includes **no link**\n- The link is unrelated to this paper's experiments (e.g., a third-party baseline, pretrained model, or unrelated library)\n- The code is **only promised** or **available upon request**\n- The link is to a **dataset**, **benchmark**, or **corpus**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper include CONCRETE ACCESS TO EXPERIMENT CODE (specific repository links or explicit statements about code availability) used to run its experiments?**\n Return 1 for yes or 0 for no and use open_experiment_code as the JSON key.\nDetermine whether the paper explicitly states that the **dataset** used in the experiments is **publicly available** or an **open** dataset.\n\nReturn **Yes** if:\n- The paper uses a well-known public dataset (e.g., \"CIFAR-10\", \"MNIST\", \"ImageNet\", \"COCO\", \"Penn Treebank\")\n- Provides a direct URL, DOI, or specific repository name (e.g., GitHub, Zenodo, Figshare) where the dataset can be accessed\n- Cites a published paper or resource that contains the dataset with proper bibliographic information **including author names and year in brackets or parentheses**\n- States the dataset is in supplementary material with specific file names or section references\n- **References standard academic datasets with citations** or **mentions datasets from well-known repositories or benchmarks with proper attribution**\n\nReturn **No** if:\n- The paper mentions the dataset but gives no indication of availability\n- The dataset is proprietary, private, or internal\n- The authors created their own dataset but do not provide public access (no link, DOI, repository, or citation)\n- The paper describes or mentions a dataset but does not provide any source, link, citation, or repository information for accessing it\n- The dataset is described as \"available upon request\" or \"available from authors\" without permanent public access\n- The paper only describes the dataset characteristics, collection process, or statistics without providing access information\n- The paper mentions using \"publicly available data\" but does not specify the exact source or provide access details\n- **The dataset name is mentioned but no citation, link, repository, or author attribution is provided**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide CONCRETE ACCESS INFORMATION (specific link, DOI, repository name, formal citation with authors/year, or reference to established benchmark datasets) for a publicly available or open dataset?**\n Return 1 for yes or 0 for no and use train as the JSON key.\nDetermine whether the paper explicitly provides **training/test/validation dataset splits** needed to reproduce the experiment.\n\nReturn **Yes** if:\n- The paper specifies exact split percentages (e.g., \"80/10/10 split\", \"70% training, 15% validation, 15% test\")\n- Provides absolute sample counts for each split (e.g., \"40,000 training samples, 5,000 validation, 5,000 test\")\n- References predefined splits with citations (e.g., \"we use the standard train/test split from [Author et al., 2020]\")\n- Mentions specific file names or URLs for custom splits (e.g., \"train.txt, val.txt, test.txt available at...\")\n- Describes stratified or group-based splitting methodology (e.g., \"stratified by class\", \"split by subject ID\", \"temporal split\")\n- Provides random seed with splitting strategy (e.g., \"random split with seed 42\")\n- Specifies cross-validation setup (e.g., \"5-fold cross-validation\", \"leave-one-out cross-validation\")\n- Uses standard benchmark splits that are well-defined (e.g., \"CIFAR-10 standard split\", \"ImageNet validation set\")\n\nReturn **No** if:\n- References datasets without mentioning splits (e.g., \"we use the XYZ dataset\")\n- Splits are mentioned vaguely (e.g., \"we split the data appropriately\")\n- Only mentions total dataset size without split information\n- Defers split details to supplementary materials or other papers without providing access\n- Uses phrases like \"standard split\" or \"typical split\" without specification\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC DATASET SPLIT INFORMATION (exact percentages, sample counts, citations to predefined splits, or detailed splitting methodology) needed to reproduce the data partitioning?**\n Return 1 for yes or 0 for no and use validation as the JSON key.\nDetermine whether the paper explicitly states the **test data split** or **testing subset** used to evaluate the model's performance.\n\nReturn **Yes** if:\n- The paper explicitly mentions phrases like \"test set\", \"testing set\", \"test portion\", \"test split\", \"held-out test data\"\n- Mentions of dataset names used for testing (e.g., \"CIFAR-10 test set\", \"evaluated on the test set of ImageNet\")\n- Quantitative indicators such as \"10K examples for testing\", \"20% used as test data\"\n\nReturn **No** if:\n- There are vague mentions like \"test accuracy\" or \"we tested our model\" with no details about the test data\n- \"Test results\" or \"testing performance\" without indicating the data used\n- References to standard datasets (like \"we used MNIST\") without specifying the test subset or split\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper clearly describe the TEST DATA SPLIT (explicit mention of test set, split, or subset with specific details) used for evaluation?**\n Return 1 for yes or 0 for no and use test as the JSON key.\nDetermine whether the paper includes links to the **results of the experiment**.\n\nReturn **Yes** if:\n- The paper includes a URL (e.g., to GitHub, Google Drive, institutional repository, Zenodo, Dropbox, etc.) pointing to result files, visualizations, spreadsheets, or dashboards\n- It says results are in supplementary material, appendix, or provided anonymously for review\n- It includes phrases like \"Results available at...\", \"Our results can be found in...\", \"The experimental output is linked at...\"\n\nReturn **No** if:\n- Results are only shown in the paper's main text (figures or tables inside the PDF)\n- The paper mentions results will be released later or are available upon request\n- The link is only to datasets, tools, or pretrained models not tied to the paper's experimental output\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper link to or externally share CONCRETE ACCESS TO EXPERIMENTAL RESULTS (specific URLs, repositories, or supplementary materials containing result files)?**\n Return 1 for yes or 0 for no and use results as the JSON key.\nDetermine whether the paper **explicitly describes the hardware used** to run its experiments.\n\nReturn **Yes** if:\n- The paper mentions any specific hardware setup, including:\n  - **Specific GPU models** (e.g., \"NVIDIA A100\", \"RTX 2080 Ti\", \"Tesla V100\")\n  - **Specific CPU models or processors** (e.g., \"Intel Core i7-4770K\", \"Intel Xeon E5-2630\", \"AMD Ryzen 9 5950X\", \"Intel Core i5-3210M\", \"Intel i7-2600\")\n  - **TPU or other accelerator references** (e.g., \"TPU v2\", \"Google TPU\", \"Intel Neural Compute Stick\")\n  - **Cloud or cluster resources with specs** (e.g., \"AWS p3.8xlarge with V100 GPUs\", \"Google Cloud TPU v3\")\n  - **Computer specifications with processor details** (e.g., \"laptop with Intel Core i5\", \"workstation with Intel Xeon\", \"desktop PC with Intel Core i7\")\n- Direct statements about where experiments were run, such as:\n  - \"We trained our models using...\"\n  - \"Experiments were performed on...\"\n  - \"Hardware specifications include...\"\n  - \"All experiments ran on...\"\n  - \"Our machine has...\"\n  - \"Results are obtained on...\"\n\nReturn **No** if:\n- No hardware is mentioned\n- The paper only discusses software, datasets, or **vague terms like \"on a GPU\", \"using a High Performance Computing Resource\", or \"on a server\" without any specific model numbers, processor types, or memory details**\n- Any mention of hardware is disconnected from the experimental process\n- The hardware mentioned (like mobile phones, tablets, or IoT devices) is not used for training or inference in the experiments\n- **Only general computing environments are mentioned without any specific hardware details (e.g., \"on a cluster\", \"using cloud computing\" with no specifications)**\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC HARDWARE DETAILS (exact GPU/CPU models, processor types with speeds, memory amounts, or detailed computer specifications) used for running its experiments?**\n Return 1 for yes or 0 for no and use hardware_specification as the JSON key.\nDetermine whether the paper provides a reproducible description of the ancillary software. A reproducible description **must include specific version numbers** for key software components.\n\nReturn **Yes** if the paper meets one of the following criteria:\n- It lists multiple key software components with their versions (e.g., \"Python 3.8, PyTorch 1.9, and CUDA 11.1\")\n- It names a self-contained solver, simulation environment, or specialized package with a specific version number (e.g., \"CPLEX 12.4\", \"Gecode 4.2.0\", \"Choco 2.1.5\")\n\nReturn **No** if the paper only mentions:\n- Software names without version numbers (e.g., \"using Caffe\", \"the scikit-learn package\")\n- A programming language, even with a version, without listing any versioned libraries or solvers (e.g., \"implemented in Java 7\" by itself is not enough)\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper provide SPECIFIC ANCILLARY SOFTWARE DETAILS (e.g., library or solver names with version numbers like Python 3.8, CPLEX 12.4) needed to replicate the experiment?**\n Return 1 for yes or 0 for no and use software_dependencies as the JSON key.\nDetermine whether the paper explicitly provides details about the **experimental setup**, especially hyperparameters or system-level training settings.\n\nReturn **Yes** if:\n- The paper contains specific hyperparameter values (e.g., learning rate, batch size, number of epochs, optimizer settings)\n- Details on model initialization, dropout rate, or training schedules\n- A clearly labeled table or paragraph describing training settings\n- A section titled \"Experimental Setup\" or similar with configuration information\n\nReturn **No** if:\n- The paper only mentions that \"we trained a model\" or refers to \"standard settings\" without elaboration\n- The only details about training are deferred to supplemental materials, code, or prior work\n- There is no mention of hyperparameters, optimizer settings, or explicit configuration steps\n\nQuote the text from the paper that supports your decision. If the answer is No, explain briefly why the information is insufficient.\n\n**Does the paper contain SPECIFIC EXPERIMENTAL SETUP DETAILS (concrete hyperparameter values, training configurations, or system-level settings) in the main text?**\n Return 1 for yes or 0 for no and use experiment_setup as the JSON key.\n",
+  "temperature": -1,
+  "top_p": -1
+}
