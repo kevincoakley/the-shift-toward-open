@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "Extract high-quality text from academic PDF papers using unstructured"
 requires-python = ">=3.9"
 dependencies = [
-    "pillow>=10.0.0",
+    "pillow>=11.3.0",
     "pdfminer-six>=20221105",
     "python-magic>=0.4.27",
     "python-magic-bin>=0.4.14; sys_platform == 'win32'",
