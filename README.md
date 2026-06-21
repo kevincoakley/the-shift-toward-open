@@ -1,36 +1,146 @@
-# the-embrace-of-open-science
+# AI Research moves towards open and reproducible science
 
-## Repository Overview
 
-### code
-- `code/ai_papers_downloader`: Scripts to download AI research papers from AAAI, ICLR, ICML, IJCAI, and NeurIPS for 2014 to 2024.
-- `code/llm_evaluate`: Scripts used to evaluate the reproduciblity varaibles of the AI research papers using a large language model (LLM).
-- `code/pdf_to_txt`: Utilities to convert PDF documents to plain text format for analysis by the LLM.  
+### Estimated reproducibility rate of empirical AI papers from 2014 to 2024.
 
-### notebooks
-- `notebooks/paper_count`: Jupyter notebook for Figure 1, which shows the number of papers downloaded from each conference for each year.
-- `notebooks/raw_data`: Jupyter notebooks for processing raw data into csv files for analysis and verifying that all papers were evaluated by the LLM.
-- `notebooks/results`: Jupyer notebook for analyzing the results from the LLM evaluation and creating the figures for the paper.
-- `notebooks/SOTA`: Jupyter notebook for analysis of the LLM evaluation with the "State of the art: Reproducibility in artificial intelligence" from Gundersen and Kjensmo (2018) (the prompt optimization dataset).
-- `notebooks/test_set`: Jupyter notebook for analyzing the LLM evaluation vs humman annotation with the randomized dataset of the whole population (the evaluation dataset).
+![Estimated Reproducibility Rate](images/figure05.png "Estimated Reproducibility Rate")
 
-### gundersen_2018
-- Contains the ground truth for the prompt optimization dataset.
+---
 
-### paper_lists
-- `paper_lists/downloaded_papers`: Lists of papers downloaded from each conference.
-- `paper_lists/excluded_papers`: Lists of papers excluded from analysis because they were not part of the main technical track.
-- `paper_lists/llm_evaluate`: Lists of papers selected for evaluation in the llm_evaluate experiments.
+This repository contains the code, prompts, and results for the paper *AI Research moves towards open and reproducible science*, which evaluates reproducibility variables across AI research papers from five major conferences (AAAI, ICLR, ICML, IJCAI, NeurIPS) from 2014 to 2024 using large language models.
 
-### prompts
-- Contains the prompt sent to the LLM for evaluating the reproducibility variables in each paper.
+---
 
-### Results
-- `results/evaluation`: Results from the the evaluation dataset to assess if the prompt created using the prompt optimization dataset (gundersen_2018) generlizes to the whole dataset.
-- `results/experiment`: Results from evaluating the conference papers dataset.
-- `results/prompt_optimization`: Results from the prompt optimization dataset (gundersen_2018) over 5 runs.
+## Data Availability
 
-## Note about Reproducibility Variable Naming
+Raw paper PDFs and processed text files are **not distributed** in this repository due to potential copyright issues with redistributing the text of academic papers. You have two options:
 
-In order to maintain consistenacy between the prompt optimization dataset (gundersen_2018) and the experiment results, we used the same names for reproducibility variables as used in the results from Gundersen and Kjensmo (`gundersen_2018/evaluations.csv`).
-Therefore, for all results and analysis, the `train` JSON key and CSV column refers to the `open_source_code` reproducibility variable and the `validation` JSON key and CSV column refers to the `dataset_splits` reproducibility variable.
+- **Contact the authors** for a copy of the raw or processed data.
+- **Re-run Steps 1 and 2** below to collect and process the data yourself. This should take a few hours.
+
+Pre-computed results from the LLM evaluation are included in `results/` so that the analysis notebooks (Steps 4–8) can be run without re-running the full pipeline.
+
+---
+
+## Reproducing the Results
+
+### Experiment Pipeline
+
+#### Step 1 — Collect Raw Data (PDFs)
+
+**Directory:** [`code/ai_paper_downloader/`](code/ai_paper_downloader/)
+
+Downloads AI research papers from AAAI, ICLR, ICML, IJCAI, and NeurIPS (2014–2024). See the directory README for setup and usage instructions.
+
+- **Input:** Conference name and year
+- **Output:** PDFs saved to a local directory
+
+#### Step 2 — Process PDFs to Text
+
+**Directory:** [`code/pdf_to_text/`](code/pdf_to_text/)
+
+Converts the downloaded PDFs to plain text for LLM inference. See the directory README for setup and usage instructions.
+
+- **Input:** PDFs from Step 1
+- **Output:** Plain text files
+
+#### Step 3 — Run LLM Evaluation
+
+**Directory:** [`code/llm_evaluate/`](code/llm_evaluate/)
+
+Evaluates each paper's reproducibility variables using an LLM (Claude, ChatGPT, Gemini, or Ollama are all supported). See the directory README for configuration and usage instructions.
+
+- **Input:** Text files from Step 2 and paper lists from `paper_lists/llm_evaluate/`
+- **Output:** JSON result files written to `results/experiment/raw_data/`
+
+---
+
+### Postprocessing
+
+#### Step 4 — Process Raw Results
+
+**Directory:** [`notebooks/raw_data/`](notebooks/raw_data/)
+
+Aggregates the raw JSON outputs from Step 3 into CSV files for analysis and verifies that all papers were evaluated.
+
+- **Input:** `results/experiment/raw_data/`
+- **Output:** `results/experiment/llm_results.csv`
+
+---
+
+### Analysis and Figures
+
+The following notebooks can be run independently using the pre-computed results in `results/`.
+
+#### Step 5 — Paper Count (Figure 1)
+
+**Directory:** [`notebooks/paper_count/`](notebooks/paper_count/)
+
+Generates Figure 1, showing the number of papers downloaded from each conference per year.
+
+#### Step 6 — LLM Evaluation Results and Paper Figures
+
+**Directory:** [`notebooks/results/`](notebooks/results/)
+
+Analyzes the LLM evaluation results and generates the main figures for the paper.
+
+- **Input:** `results/experiment/llm_results.csv`
+
+#### Step 7 — SOTA / Prompt Optimization Analysis
+
+**Directory:** [`notebooks/SOTA/`](notebooks/SOTA/)
+
+Analyzes the LLM evaluation against the Gundersen and Kjensmo (2018) ground truth dataset (the prompt optimization dataset).
+
+- **Input:** `results/prompt_optimization/`, `gundersen_2018/`
+
+#### Step 8 — Test Set (LLM vs. Human Annotation)
+
+**Directory:** [`notebooks/test_set/`](notebooks/test_set/)
+
+Compares LLM evaluation against human annotation on a random sample from the full dataset.
+
+- **Input:** `results/evaluation/`
+
+---
+
+## Repository Structure
+
+```
+the-embrace-of-open-science/
+├── code/
+│   ├── ai_paper_downloader/   # Step 1: download PDFs
+│   ├── pdf_to_text/           # Step 2: convert PDFs to text
+│   └── llm_evaluate/          # Step 3: run LLM evaluation
+├── paper_lists/
+│   ├── downloaded_papers/     # CSV lists of papers by conference/year
+│   ├── excluded_papers/       # Papers excluded from analysis
+│   └── llm_evaluate/          # Paper batches used as input to Step 3
+├── prompts/                   # System prompt and reproducibility questions sent to the LLM
+├── gundersen_2018/            # Ground truth for prompt optimization (Gundersen & Kjensmo 2018)
+├── notebooks/
+│   ├── raw_data/              # Step 4: postprocessing
+│   ├── paper_count/           # Step 5: Figure 1
+│   ├── results/               # Step 6: main analysis and figures
+│   ├── SOTA/                  # Step 7: prompt optimization analysis
+│   └── test_set/              # Step 8: LLM vs. human annotation
+└── results/
+    ├── experiment/            # Full conference dataset results
+    ├── evaluation/            # LLM vs. human annotation results
+    └── prompt_optimization/   # Prompt optimization results (5 runs)
+```
+
+---
+
+## Note on Reproducibility Variable Naming
+
+To maintain consistency with the prompt optimization dataset, reproducibility variable names follow the convention used in Gundersen and Kjensmo (2018). In all results and analysis files:
+
+- The `train` JSON key / CSV column refers to the `open_source_code` reproducibility variable.
+- The `validation` JSON key / CSV column refers to the `dataset_splits` reproducibility variable.
+
+---
+
+## Contact
+
+To request a copy of the raw or processed data, please contact the authors.
