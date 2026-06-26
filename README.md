@@ -1,4 +1,4 @@
-# AI Research moves towards open and reproducible science
+# The Shift Toward Open and Reproducible AI Research
 
 
 ### Estimated reproducibility rate of empirical AI papers from 2014 to 2024.
